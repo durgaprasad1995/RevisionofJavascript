@@ -1,0 +1,33 @@
+<script>
+//piece of code  that do one or more actions 
+    
+function go(){ ///here we are just defining the function 
+alert("hi");
+    alert("hey");
+}    
+    //if we run this without calling this function it will not show anything why because we just defined but we are not calling this function any where
+go();//this way we call the function to execute.we can call the function n number of times
+    //function accept argument 
+    //DO NOT REPEAT YOURSEF
+    //we can declare globaly and we can call the same but it was not reusable.If we use arguments it was reusable we can call n number of time with differnt values
+    function witharg(name,age){
+        alert(name);
+        alert(age);
+    }
+    witharg("durga",23);
+    
+    //function return the a value.the best example is like promot var name = promot(); if we excute this it promot the window if we enter the value it will take the value and assign to name variable
+    //function will not worry about the what argument you passed if you are returning bull shit it will return simple find the below example
+    function add(first,second){
+        return "durga"
+    }
+    var sum = add(1,2);
+    alert(sum);
+    //the above add function it was accepting two argumnets i have passed the argument but i am retunding somenthin else it will worry it will always return simply durga
+    //simplified version in function
+    function addsum(first,second){
+        return first+second;
+    }
+    alert( addsum(1,2));//now what js first this will run why because it is inner function.I have to run this in order to know what it will return.Whateever returns it will we are passing as a value
+    //once the return call in function that function is finished it will never fire after the return 
+</script>

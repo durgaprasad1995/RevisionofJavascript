@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fibnoaci</title>
+</head>
+<body>
+    <p>Enter fibnoaci number</p>
+    <input type="text" name="fib" id="fib" onchange="fib()"/>
+    <!-- <input type="submit" onclick="fib()"/> -->
+    <p id="test"></p>
+    <script>
+        function fib(){
+            let a=0,b=1,c=[],n,i;
+            n=document.getElementById('fib').value;
+			 document.getElementById('test').innerHTML=a;
+			  document.getElementById('test').innerHTML=b;
+            for(i=0;i<=n-2;i++){
+                c[i]=a+b;
+                a=b;
+                b=c[i];
+				document.getElementById('test').innerHTML=c;
+            }
+            // alert('fibnoci'+c);
+           
+        }
+    </script>
+</body>
+</html>

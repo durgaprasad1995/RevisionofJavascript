@@ -1,0 +1,1276 @@
+1
+00:00:00,290 --> 00:00:02,070
+<font color="#E5E5E5">all right so we've been learning</font>
+
+2
+00:00:02,070 --> 00:00:03,449
+<font color="#E5E5E5">JavaScript and we've been learning</font>
+
+3
+00:00:03,449 --> 00:00:05,970
+<font color="#E5E5E5">computer programming at the same time so</font>
+
+4
+00:00:05,970 --> 00:00:07,980
+far we've<font color="#E5E5E5"> covered variables if-else</font>
+
+5
+00:00:07,980 --> 00:00:10,440
+statements<font color="#E5E5E5"> and comparison operators next</font>
+
+6
+00:00:10,440 --> 00:00:11,670
+up we're going<font color="#E5E5E5"> to learn functions</font>
+
+7
+00:00:11,670 --> 00:00:14,610
+functions<font color="#E5E5E5"> at first to a new programmer</font>
+
+8
+00:00:14,610 --> 00:00:16,710
+can feel a<font color="#CCCCCC"> little tricky</font><font color="#E5E5E5"> but I promise</font>
+
+9
+00:00:16,710 --> 00:00:18,750
+you they'll catch on a lot faster<font color="#E5E5E5"> than</font>
+
+10
+00:00:18,750 --> 00:00:20,850
+it feels like<font color="#E5E5E5"> at the very beginning so</font>
+
+11
+00:00:20,850 --> 00:00:23,160
+stick<font color="#CCCCCC"> with it and</font><font color="#E5E5E5"> do what</font><font color="#CCCCCC"> we do in this</font>
+
+12
+00:00:23,160 --> 00:00:25,019
+exercise<font color="#CCCCCC"> a</font><font color="#E5E5E5"> couple days in a row and</font>
+
+13
+00:00:25,019 --> 00:00:26,550
+you're<font color="#E5E5E5"> going to feel pretty confident</font>
+
+14
+00:00:26,550 --> 00:00:28,410
+<font color="#E5E5E5">with</font><font color="#CCCCCC"> what</font><font color="#E5E5E5"> functions are before we get</font>
+
+15
+00:00:28,410 --> 00:00:30,359
+into functions let's move<font color="#CCCCCC"> javascript</font>
+
+16
+00:00:30,359 --> 00:00:33,630
+<font color="#E5E5E5">into our web page because we don't want</font>
+
+17
+00:00:33,630 --> 00:00:35,250
+<font color="#E5E5E5">to be writing functions in the console</font>
+
+18
+00:00:35,250 --> 00:00:37,140
+it's too many lines<font color="#E5E5E5"> it would be too</font>
+
+19
+00:00:37,140 --> 00:00:39,140
+annoying<font color="#CCCCCC"> so here we go we're on our</font>
+
+20
+00:00:39,140 --> 00:00:42,180
+<font color="#CCCCCC">index.html file and if you're</font><font color="#E5E5E5"> going to</font>
+
+21
+00:00:42,180 --> 00:00:44,280
+insert CSS on your page there's two ways
+
+22
+00:00:44,280 --> 00:00:48,210
+to<font color="#CCCCCC"> do it</font><font color="#E5E5E5"> you can do a style tag and then</font>
+
+23
+00:00:48,210 --> 00:00:49,860
+<font color="#E5E5E5">anything within the style tags is</font>
+
+24
+00:00:49,860 --> 00:00:52,379
+treated as CSS or you can pull in an
+
+25
+00:00:52,379 --> 00:00:54,960
+<font color="#E5E5E5">external</font><font color="#CCCCCC"> style sheet</font><font color="#E5E5E5"> another file with a</font>
+
+26
+00:00:54,960 --> 00:00:57,600
+link tag<font color="#CCCCCC"> JavaScript works the</font><font color="#E5E5E5"> same way</font>
+
+27
+00:00:57,600 --> 00:01:02,520
+we<font color="#E5E5E5"> can run a script tag and then</font>
+
+28
+00:01:02,520 --> 00:01:04,290
+anything<font color="#E5E5E5"> within this script tag is</font>
+
+29
+00:01:04,290 --> 00:01:05,820
+treated as JavaScript<font color="#CCCCCC"> I'm going to say</font>
+
+30
+00:01:05,820 --> 00:01:08,460
+alerts<font color="#CCCCCC"> and</font><font color="#E5E5E5"> I'm also going to hit save</font>
+
+31
+00:01:08,460 --> 00:01:09,780
+and I'm running<font color="#E5E5E5"> what's called live</font>
+
+32
+00:01:09,780 --> 00:01:12,810
+reload so when I save my file<font color="#E5E5E5"> this web</font>
+
+33
+00:01:12,810 --> 00:01:14,760
+browser is<font color="#CCCCCC"> going to</font><font color="#E5E5E5"> automatically reload</font>
+
+34
+00:01:14,760 --> 00:01:17,070
+my page<font color="#E5E5E5"> if you're doing this</font><font color="#CCCCCC"> bonheur on</font>
+
+35
+00:01:17,070 --> 00:01:18,780
+your<font color="#E5E5E5"> own without live reload</font><font color="#CCCCCC"> you're</font>
+
+36
+00:01:18,780 --> 00:01:19,979
+going to have to save and<font color="#E5E5E5"> then hit</font>
+
+37
+00:01:19,979 --> 00:01:22,170
+refresh<font color="#CCCCCC"> if you want to see how I'm doing</font>
+
+38
+00:01:22,170 --> 00:01:23,939
+live reload<font color="#CCCCCC"> I'll put some links to</font><font color="#E5E5E5"> that</font>
+
+39
+00:01:23,939 --> 00:01:25,710
+in<font color="#CCCCCC"> the description but</font><font color="#E5E5E5"> it might be a</font>
+
+40
+00:01:25,710 --> 00:01:27,119
+little<font color="#E5E5E5"> over your</font><font color="#CCCCCC"> head</font><font color="#E5E5E5"> if you're a brand</font>
+
+41
+00:01:27,119 --> 00:01:28,979
+<font color="#E5E5E5">new user so there</font><font color="#CCCCCC"> you go you can</font><font color="#E5E5E5"> see</font>
+
+42
+00:01:28,979 --> 00:01:31,020
+<font color="#CCCCCC">that now my</font><font color="#E5E5E5"> web page when it reloads has</font>
+
+43
+00:01:31,020 --> 00:01:33,180
+<font color="#E5E5E5">alerted of empty alert for me and</font>
+
+44
+00:01:33,180 --> 00:01:35,670
+there's a reason I put the script tag at
+
+45
+00:01:35,670 --> 00:01:36,990
+the<font color="#E5E5E5"> bottom</font><font color="#CCCCCC"> of the page</font><font color="#E5E5E5"> and let me show</font>
+
+46
+00:01:36,990 --> 00:01:38,700
+you why by moving<font color="#E5E5E5"> it up towards the top</font>
+
+47
+00:01:38,700 --> 00:01:41,549
+<font color="#CCCCCC">I'm gonna hit save again</font><font color="#E5E5E5"> and</font><font color="#CCCCCC"> you'll</font>
+
+48
+00:01:41,549 --> 00:01:43,799
+notice<font color="#E5E5E5"> that now I get the alert</font><font color="#CCCCCC"> before</font><font color="#E5E5E5"> I</font>
+
+49
+00:01:43,799 --> 00:01:46,259
+see<font color="#CCCCCC"> my webpage I have an empty</font><font color="#E5E5E5"> page and</font>
+
+50
+00:01:46,259 --> 00:01:49,140
+the alert fires this happens<font color="#E5E5E5"> because</font>
+
+51
+00:01:49,140 --> 00:01:52,740
+JavaScript<font color="#E5E5E5"> happens in sequence as your</font>
+
+52
+00:01:52,740 --> 00:01:54,689
+<font color="#CCCCCC">webpage is rendering all the elements</font>
+
+53
+00:01:54,689 --> 00:01:57,240
+what that means is is when your browser
+
+54
+00:01:57,240 --> 00:01:59,159
+<font color="#E5E5E5">opens up your HTML file it's</font><font color="#CCCCCC"> going to</font>
+
+55
+00:01:59,159 --> 00:02:00,869
+start<font color="#CCCCCC"> going through line by line</font><font color="#E5E5E5"> and</font>
+
+56
+00:02:00,869 --> 00:02:03,119
+adding in all the<font color="#CCCCCC"> elements so when it</font>
+
+57
+00:02:03,119 --> 00:02:05,130
+gets<font color="#CCCCCC"> to a script tag</font><font color="#E5E5E5"> it's going to load</font>
+
+58
+00:02:05,130 --> 00:02:06,750
+all<font color="#CCCCCC"> that javascript and</font><font color="#E5E5E5"> then it's going</font>
+
+59
+00:02:06,750 --> 00:02:09,149
+<font color="#CCCCCC">to run it before it does anything</font><font color="#E5E5E5"> else</font>
+
+60
+00:02:09,149 --> 00:02:11,760
+<font color="#CCCCCC">so in this case it runs my alert up here</font>
+
+61
+00:02:11,760 --> 00:02:13,620
+before<font color="#CCCCCC"> it's rendered</font>
+
+62
+00:02:13,620 --> 00:02:16,050
+all these<font color="#E5E5E5"> elements</font><font color="#CCCCCC"> onto the page</font><font color="#E5E5E5"> you</font>
+
+63
+00:02:16,050 --> 00:02:18,480
+know<font color="#E5E5E5"> javascript is really pretty fast</font>
+
+64
+00:02:18,480 --> 00:02:20,459
+you're not really<font color="#E5E5E5"> doing alerts a lot so</font>
+
+65
+00:02:20,459 --> 00:02:22,860
+<font color="#E5E5E5">all the user will normally notice if you</font>
+
+66
+00:02:22,860 --> 00:02:24,720
+put your script<font color="#CCCCCC"> at the top of the page</font>
+
+67
+00:02:24,720 --> 00:02:27,030
+is<font color="#E5E5E5"> the</font><font color="#CCCCCC"> webpage might feel</font><font color="#E5E5E5"> like it</font>
+
+68
+00:02:27,030 --> 00:02:29,220
+appears a<font color="#E5E5E5"> little bit slower if you put</font>
+
+69
+00:02:29,220 --> 00:02:31,019
+it<font color="#E5E5E5"> down here at the bottom of the page</font>
+
+70
+00:02:31,019 --> 00:02:34,049
+right<font color="#E5E5E5"> before the closing body tag then</font>
+
+71
+00:02:34,049 --> 00:02:35,310
+what's<font color="#E5E5E5"> going to happen</font><font color="#CCCCCC"> is is your</font>
+
+72
+00:02:35,310 --> 00:02:37,349
+<font color="#CCCCCC">webpage will spit out all</font><font color="#E5E5E5"> the content</font>
+
+73
+00:02:37,349 --> 00:02:40,049
+first so it looks like the web page is
+
+74
+00:02:40,049 --> 00:02:42,390
+loaded and a split second later<font color="#CCCCCC"> your</font>
+
+75
+00:02:42,390 --> 00:02:44,400
+script will<font color="#CCCCCC"> be activated</font><font color="#E5E5E5"> and web</font>
+
+76
+00:02:44,400 --> 00:02:45,660
+developers<font color="#E5E5E5"> have learned over the years</font>
+
+77
+00:02:45,660 --> 00:02:48,150
+that<font color="#CCCCCC"> this creates a much faster feeling</font>
+
+78
+00:02:48,150 --> 00:02:50,489
+web page and the<font color="#E5E5E5"> user doesn't know any</font>
+
+79
+00:02:50,489 --> 00:02:52,860
+difference<font color="#CCCCCC"> so we</font><font color="#E5E5E5"> recommend they always</font>
+
+80
+00:02:52,860 --> 00:02:54,810
+put<font color="#E5E5E5"> your script tags at the bottom right</font>
+
+81
+00:02:54,810 --> 00:02:56,970
+<font color="#E5E5E5">before your closing body tag there's</font>
+
+82
+00:02:56,970 --> 00:02:59,099
+almost never a<font color="#E5E5E5"> reason that your script</font>
+
+83
+00:02:59,099 --> 00:03:01,349
+needs to<font color="#E5E5E5"> go in the</font><font color="#CCCCCC"> top</font><font color="#E5E5E5"> up in the header</font>
+
+84
+00:03:01,349 --> 00:03:04,200
+<font color="#E5E5E5">so the script tag is the first way</font><font color="#CCCCCC"> of</font>
+
+85
+00:03:04,200 --> 00:03:06,510
+doing it and<font color="#E5E5E5"> just</font><font color="#CCCCCC"> like a link tag you</font>
+
+86
+00:03:06,510 --> 00:03:08,730
+<font color="#CCCCCC">can also give the</font><font color="#E5E5E5"> script tag a file to</font>
+
+87
+00:03:08,730 --> 00:03:11,069
+pull<font color="#E5E5E5"> in as well so in this case I'm</font>
+
+88
+00:03:11,069 --> 00:03:12,720
+going<font color="#E5E5E5"> to delete the content and I'm just</font>
+
+89
+00:03:12,720 --> 00:03:15,690
+<font color="#E5E5E5">going</font><font color="#CCCCCC"> to go source SRC equals</font><font color="#E5E5E5"> and then</font>
+
+90
+00:03:15,690 --> 00:03:18,060
+that basically<font color="#CCCCCC"> is</font><font color="#E5E5E5"> like the href is for</font>
+
+91
+00:03:18,060 --> 00:03:20,730
+CSS so instead<font color="#CCCCCC"> of pulling</font><font color="#E5E5E5"> in the Styles</font>
+
+92
+00:03:20,730 --> 00:03:23,100
+main<font color="#CCCCCC"> CSS</font><font color="#E5E5E5"> I'm going to pull in the</font>
+
+93
+00:03:23,100 --> 00:03:29,099
+<font color="#E5E5E5">scripts main</font><font color="#CCCCCC"> j/s and now that file gets</font>
+
+94
+00:03:29,099 --> 00:03:31,530
+loaded<font color="#E5E5E5"> in and executed as soon as it's</font>
+
+95
+00:03:31,530 --> 00:03:33,930
+loaded the normal folder<font color="#E5E5E5"> name for</font>
+
+96
+00:03:33,930 --> 00:03:35,970
+<font color="#CCCCCC">javascript is going to be called a j/s</font>
+
+97
+00:03:35,970 --> 00:03:38,549
+folder or a scripts folder<font color="#CCCCCC"> so here we</font>
+
+98
+00:03:38,549 --> 00:03:41,430
+have scripts<font color="#CCCCCC"> j/s is just fine either one</font>
+
+99
+00:03:41,430 --> 00:03:43,500
+works<font color="#E5E5E5"> so now I'm loading in this main</font>
+
+100
+00:03:43,500 --> 00:03:46,230
+dot<font color="#CCCCCC"> JS file so if I hit alerts</font><font color="#E5E5E5"> and save</font>
+
+101
+00:03:46,230 --> 00:03:48,540
+you see I get that<font color="#CCCCCC"> alert as well</font><font color="#E5E5E5"> and</font>
+
+102
+00:03:48,540 --> 00:03:50,700
+it's already rendered<font color="#E5E5E5"> my</font><font color="#CCCCCC"> web page first</font>
+
+103
+00:03:50,700 --> 00:03:53,250
+<font color="#CCCCCC">before it's executing my</font><font color="#E5E5E5"> JavaScript so</font>
+
+104
+00:03:53,250 --> 00:03:55,380
+there's how you get<font color="#E5E5E5"> JavaScript on a page</font>
+
+105
+00:03:55,380 --> 00:03:57,660
+if you have multiple JavaScript files
+
+106
+00:03:57,660 --> 00:03:59,940
+<font color="#CCCCCC">you can do multiple script tags just</font>
+
+107
+00:03:59,940 --> 00:04:01,980
+<font color="#CCCCCC">like that and it will execute them in</font>
+
+108
+00:04:01,980 --> 00:04:04,470
+<font color="#E5E5E5">order it's going to run my main</font><font color="#CCCCCC"> TAS</font>
+
+109
+00:04:04,470 --> 00:04:06,959
+first<font color="#E5E5E5"> then my main dot</font><font color="#CCCCCC"> two then my main</font>
+
+110
+00:04:06,959 --> 00:04:09,419
+dot three then my main dot<font color="#E5E5E5"> four so</font>
+
+111
+00:04:09,419 --> 00:04:10,470
+that's what's<font color="#E5E5E5"> going to happen if you</font>
+
+112
+00:04:10,470 --> 00:04:12,599
+<font color="#CCCCCC">have multiple script tags</font><font color="#E5E5E5"> if you want to</font>
+
+113
+00:04:12,599 --> 00:04:14,250
+break<font color="#CCCCCC"> up</font><font color="#E5E5E5"> your JavaScript into several</font>
+
+114
+00:04:14,250 --> 00:04:17,039
+<font color="#E5E5E5">files to make it easier to</font><font color="#CCCCCC"> maintain so</font>
+
+115
+00:04:17,039 --> 00:04:18,298
+let's go ahead<font color="#E5E5E5"> and</font><font color="#CCCCCC"> learn</font><font color="#E5E5E5"> now functions</font>
+
+116
+00:04:18,298 --> 00:04:21,899
+<font color="#E5E5E5">so functions are basically</font><font color="#CCCCCC"> a piece of</font>
+
+117
+00:04:21,899 --> 00:04:25,730
+code<font color="#CCCCCC"> that does one or more actions peace</font>
+
+118
+00:04:25,730 --> 00:04:30,650
+of code that<font color="#E5E5E5"> does one or more actions so</font>
+
+119
+00:04:30,650 --> 00:04:32,240
+I'll just show you<font color="#E5E5E5"> what a function is</font>
+
+120
+00:04:32,240 --> 00:04:34,100
+because<font color="#E5E5E5"> it's a lot easier to see it than</font>
+
+121
+00:04:34,100 --> 00:04:35,450
+to<font color="#E5E5E5"> hear about it</font>
+
+122
+00:04:35,450 --> 00:04:37,730
+you start off by typing function<font color="#E5E5E5"> and</font>
+
+123
+00:04:37,730 --> 00:04:39,980
+we'll<font color="#E5E5E5"> just call this function go you</font>
+
+124
+00:04:39,980 --> 00:04:42,950
+open and close<font color="#CCCCCC"> your</font><font color="#E5E5E5"> parentheses and then</font>
+
+125
+00:04:42,950 --> 00:04:45,140
+<font color="#E5E5E5">you open and close</font><font color="#CCCCCC"> your curly braces</font><font color="#E5E5E5"> so</font>
+
+126
+00:04:45,140 --> 00:04:47,090
+<font color="#E5E5E5">whatever I put in here is</font><font color="#CCCCCC"> going</font><font color="#E5E5E5"> to</font>
+
+127
+00:04:47,090 --> 00:04:50,300
+execute<font color="#E5E5E5"> when the go function is called</font>
+
+128
+00:04:50,300 --> 00:04:54,920
+<font color="#E5E5E5">so let's just say alert</font><font color="#CCCCCC"> I alert hey</font>
+
+129
+00:04:54,920 --> 00:04:58,610
+there<font color="#CCCCCC"> and so it's going to</font><font color="#E5E5E5"> do two alerts</font>
+
+130
+00:04:58,610 --> 00:05:00,860
+I'm going to save my<font color="#E5E5E5"> webpage refresh is</font>
+
+131
+00:05:00,860 --> 00:05:03,110
+<font color="#E5E5E5">and guess what nothing happens because I</font>
+
+132
+00:05:03,110 --> 00:05:05,720
+defined my<font color="#CCCCCC"> ko function but I didn't call</font>
+
+133
+00:05:05,720 --> 00:05:08,600
+my<font color="#CCCCCC"> NGO function I call it by saying</font><font color="#E5E5E5"> go</font>
+
+134
+00:05:08,600 --> 00:05:11,000
+open closed parenthesis and then a
+
+135
+00:05:11,000 --> 00:05:13,460
+semicolon<font color="#E5E5E5"> now when i refresh</font><font color="#CCCCCC"> it's going</font>
+
+136
+00:05:13,460 --> 00:05:15,290
+to say hi<font color="#E5E5E5"> and then it's going to say hey</font>
+
+137
+00:05:15,290 --> 00:05:17,660
+there<font color="#E5E5E5"> I have my function</font><font color="#CCCCCC"> a cool thing</font>
+
+138
+00:05:17,660 --> 00:05:19,160
+<font color="#E5E5E5">about functions is they can be called as</font>
+
+139
+00:05:19,160 --> 00:05:21,500
+many times<font color="#E5E5E5"> as you want I can</font><font color="#CCCCCC"> call</font><font color="#E5E5E5"> go</font>
+
+140
+00:05:21,500 --> 00:05:25,280
+twice hi hey there hi<font color="#CCCCCC"> hey there so</font>
+
+141
+00:05:25,280 --> 00:05:27,710
+that's kind of<font color="#E5E5E5"> cool another thing</font><font color="#CCCCCC"> about</font>
+
+142
+00:05:27,710 --> 00:05:29,300
+functions is they accept what are called
+
+143
+00:05:29,300 --> 00:05:31,280
+arguments<font color="#CCCCCC"> let me show you what arguments</font>
+
+144
+00:05:31,280 --> 00:05:33,800
+are<font color="#E5E5E5"> I could say name age and then</font>
+
+145
+00:05:33,800 --> 00:05:35,300
+instead of<font color="#E5E5E5"> alerting hi hey there</font>
+
+146
+00:05:35,300 --> 00:05:38,480
+<font color="#E5E5E5">I can alert name and I can alert age now</font>
+
+147
+00:05:38,480 --> 00:05:39,980
+in order<font color="#E5E5E5"> for it to know what</font><font color="#CCCCCC"> the name in</font>
+
+148
+00:05:39,980 --> 00:05:42,080
+the age are I pass them in when I'm
+
+149
+00:05:42,080 --> 00:05:44,780
+calling<font color="#E5E5E5"> my function so I can say my</font><font color="#CCCCCC"> name</font>
+
+150
+00:05:44,780 --> 00:05:46,940
+is Will and<font color="#E5E5E5"> I'm 34 because I just had a</font>
+
+151
+00:05:46,940 --> 00:05:50,660
+birthday<font color="#E5E5E5"> so now will gets passed in as</font>
+
+152
+00:05:50,660 --> 00:05:54,560
+the<font color="#E5E5E5"> first</font><font color="#CCCCCC"> argument which is</font><font color="#E5E5E5"> name</font><font color="#CCCCCC"> and 34</font>
+
+153
+00:05:54,560 --> 00:05:56,090
+gets passed in is a second argument
+
+154
+00:05:56,090 --> 00:05:58,580
+<font color="#E5E5E5">which is age so now it's going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> alert</font>
+
+155
+00:05:58,580 --> 00:06:00,620
+will and then it's going<font color="#E5E5E5"> to alert 34</font>
+
+156
+00:06:00,620 --> 00:06:03,380
+<font color="#E5E5E5">let's save it</font><font color="#CCCCCC"> there you go will</font><font color="#E5E5E5"> there</font>
+
+157
+00:06:03,380 --> 00:06:05,390
+you go 34<font color="#E5E5E5"> once again these are called</font>
+
+158
+00:06:05,390 --> 00:06:07,640
+<font color="#E5E5E5">arguments and what arguments allow us to</font>
+
+159
+00:06:07,640 --> 00:06:10,550
+do is they<font color="#CCCCCC"> allow us</font><font color="#E5E5E5"> to make</font><font color="#CCCCCC"> code</font>
+
+160
+00:06:10,550 --> 00:06:12,950
+reusable because<font color="#E5E5E5"> at first you might</font>
+
+161
+00:06:12,950 --> 00:06:15,440
+<font color="#E5E5E5">think</font><font color="#CCCCCC"> hmmm I could just stick to go I</font>
+
+162
+00:06:15,440 --> 00:06:19,250
+could go<font color="#CCCCCC"> there name equals will and</font><font color="#E5E5E5"> then</font>
+
+163
+00:06:19,250 --> 00:06:23,960
+their age equals 34 and then<font color="#E5E5E5"> I could</font>
+
+164
+00:06:23,960 --> 00:06:25,970
+forget this whole arguments thing and I
+
+165
+00:06:25,970 --> 00:06:28,700
+could<font color="#CCCCCC"> just say alert name age well yep</font>
+
+166
+00:06:28,700 --> 00:06:30,140
+that's going to do the same thing it's
+
+167
+00:06:30,140 --> 00:06:31,820
+<font color="#E5E5E5">going to alert will and it's going to</font>
+
+168
+00:06:31,820 --> 00:06:35,510
+alert 34 but if<font color="#E5E5E5"> I code it with arguments</font>
+
+169
+00:06:35,510 --> 00:06:38,420
+<font color="#CCCCCC">its reusable let me show you let's go</font>
+
+170
+00:06:38,420 --> 00:06:40,030
+back to name age
+
+171
+00:06:40,030 --> 00:06:43,520
+let's go<font color="#E5E5E5"> back to</font><font color="#CCCCCC"> will 34</font><font color="#E5E5E5"> and now I can</font>
+
+172
+00:06:43,520 --> 00:06:45,380
+call<font color="#E5E5E5"> it a second time with a different</font>
+
+173
+00:06:45,380 --> 00:06:51,560
+<font color="#E5E5E5">person let's say</font><font color="#CCCCCC"> my wife Laura 28 there</font>
+
+174
+00:06:51,560 --> 00:06:53,510
+we go so now<font color="#E5E5E5"> it's going to run one time</font>
+
+175
+00:06:53,510 --> 00:06:58,460
+with will and 34 will<font color="#E5E5E5"> 34 and then the</font>
+
+176
+00:06:58,460 --> 00:06:59,840
+next<font color="#E5E5E5"> time it runs it's going</font><font color="#CCCCCC"> to run with</font>
+
+177
+00:06:59,840 --> 00:07:03,620
+Laura<font color="#E5E5E5"> 28 and so that's kind of a good</font>
+
+178
+00:07:03,620 --> 00:07:06,500
+way<font color="#CCCCCC"> of coding it's it's called dry which</font>
+
+179
+00:07:06,500 --> 00:07:11,320
+<font color="#CCCCCC">is do not repeat yourself</font>
+
+180
+00:07:11,320 --> 00:07:15,980
+if I get spell do not repeat yourself<font color="#CCCCCC"> dr</font>
+
+181
+00:07:15,980 --> 00:07:19,880
+<font color="#CCCCCC">y do not</font><font color="#E5E5E5"> repeat yourself or don't repeat</font>
+
+182
+00:07:19,880 --> 00:07:23,090
+yourself<font color="#E5E5E5"> so dry code is a good thing we</font>
+
+183
+00:07:23,090 --> 00:07:25,850
+want<font color="#E5E5E5"> to code as little as possible that</font>
+
+184
+00:07:25,850 --> 00:07:28,250
+makes it easy<font color="#E5E5E5"> to maintain that makes for</font>
+
+185
+00:07:28,250 --> 00:07:30,890
+as<font color="#E5E5E5"> few lines of code as possible</font><font color="#CCCCCC"> so</font>
+
+186
+00:07:30,890 --> 00:07:33,200
+that's<font color="#E5E5E5"> kind of what a function</font><font color="#CCCCCC"> does it</font>
+
+187
+00:07:33,200 --> 00:07:35,510
+accepts arguments and it runs multiple
+
+188
+00:07:35,510 --> 00:07:38,720
+<font color="#E5E5E5">commands now a function</font><font color="#CCCCCC"> also returns a</font>
+
+189
+00:07:38,720 --> 00:07:42,500
+value<font color="#E5E5E5"> whatever you type in return will</font>
+
+190
+00:07:42,500 --> 00:07:44,450
+actually give you a value<font color="#E5E5E5"> out</font><font color="#CCCCCC"> let me</font>
+
+191
+00:07:44,450 --> 00:07:46,700
+<font color="#E5E5E5">show you what a return value does you</font>
+
+192
+00:07:46,700 --> 00:07:49,100
+might<font color="#CCCCCC"> remember from prompt</font><font color="#E5E5E5"> earlier in</font>
+
+193
+00:07:49,100 --> 00:07:50,750
+the first lesson<font color="#CCCCCC"> we went</font><font color="#E5E5E5"> very name</font>
+
+194
+00:07:50,750 --> 00:07:54,590
+equals prompts and then prompt opened up
+
+195
+00:07:54,590 --> 00:07:56,420
+a window<font color="#CCCCCC"> I'll</font><font color="#E5E5E5"> just show you right there</font>
+
+196
+00:07:56,420 --> 00:07:59,120
+<font color="#CCCCCC">it opened up a window and then when I</font>
+
+197
+00:07:59,120 --> 00:08:01,940
+said<font color="#CCCCCC"> will enter</font><font color="#E5E5E5"> will got passed in from</font>
+
+198
+00:08:01,940 --> 00:08:05,180
+the prompt<font color="#E5E5E5"> into my name variable so what</font>
+
+199
+00:08:05,180 --> 00:08:07,340
+actually<font color="#E5E5E5"> happened was is prompt had a</font>
+
+200
+00:08:07,340 --> 00:08:11,360
+return value<font color="#E5E5E5"> that name received you see</font>
+
+201
+00:08:11,360 --> 00:08:13,910
+that it executed this first and when
+
+202
+00:08:13,910 --> 00:08:16,430
+prompt was done whatever<font color="#E5E5E5"> prompt returned</font>
+
+203
+00:08:16,430 --> 00:08:19,910
+which was my name<font color="#CCCCCC"> will went into name</font>
+
+204
+00:08:19,910 --> 00:08:22,070
+and so how you code a function like<font color="#CCCCCC"> that</font>
+
+205
+00:08:22,070 --> 00:08:25,670
+is<font color="#CCCCCC"> very simple let's make a function</font>
+
+206
+00:08:25,670 --> 00:08:27,710
+called<font color="#E5E5E5"> add</font><font color="#CCCCCC"> and let's make it first</font>
+
+207
+00:08:27,710 --> 00:08:30,650
+<font color="#E5E5E5">second we want to add two numbers</font>
+
+208
+00:08:30,650 --> 00:08:33,940
+together<font color="#CCCCCC"> and so I'm going to</font><font color="#E5E5E5"> go add</font>
+
+209
+00:08:33,940 --> 00:08:38,510
+let's say<font color="#CCCCCC"> their sum equals add</font><font color="#E5E5E5"> one and</font>
+
+210
+00:08:38,510 --> 00:08:41,330
+<font color="#E5E5E5">two so we're going to add one</font><font color="#CCCCCC"> into</font>
+
+211
+00:08:41,330 --> 00:08:43,960
+<font color="#E5E5E5">together and so instead of just</font><font color="#CCCCCC"> going</font>
+
+212
+00:08:43,960 --> 00:08:49,490
+first<font color="#E5E5E5"> plus second I'm going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> return</font>
+
+213
+00:08:49,490 --> 00:08:52,730
+first plus second so now nothing
+
+214
+00:08:52,730 --> 00:08:53,450
+actually
+
+215
+00:08:53,450 --> 00:08:55,940
+happens in this function like alerts or
+
+216
+00:08:55,940 --> 00:08:58,280
+anything like<font color="#E5E5E5"> that</font><font color="#CCCCCC"> we</font><font color="#E5E5E5"> are going</font><font color="#CCCCCC"> to</font>
+
+217
+00:08:58,280 --> 00:09:01,580
+return<font color="#CCCCCC"> the value of first plus second</font>
+
+218
+00:09:01,580 --> 00:09:02,750
+which means<font color="#CCCCCC"> it's going</font><font color="#E5E5E5"> to run the</font>
+
+219
+00:09:02,750 --> 00:09:05,390
+function<font color="#E5E5E5"> the function executes it</font>
+
+220
+00:09:05,390 --> 00:09:09,200
+returns kicks back out first plus second
+
+221
+00:09:09,200 --> 00:09:11,120
+which<font color="#E5E5E5"> means that it's going to add one</font>
+
+222
+00:09:11,120 --> 00:09:13,520
+and<font color="#CCCCCC"> two and then that is going to get</font>
+
+223
+00:09:13,520 --> 00:09:16,280
+<font color="#E5E5E5">passed into some so now I can alert some</font>
+
+224
+00:09:16,280 --> 00:09:20,180
+<font color="#E5E5E5">and</font><font color="#CCCCCC"> sum is going to be three</font><font color="#E5E5E5"> there you</font>
+
+225
+00:09:20,180 --> 00:09:23,630
+go three because I<font color="#E5E5E5"> added one and two it</font>
+
+226
+00:09:23,630 --> 00:09:26,960
+returned<font color="#E5E5E5"> that back out so I could do</font>
+
+227
+00:09:26,960 --> 00:09:30,410
+<font color="#CCCCCC">something silly like this</font><font color="#E5E5E5"> I could pass</font>
+
+228
+00:09:30,410 --> 00:09:33,560
+in add one and two that's one that's two
+
+229
+00:09:33,560 --> 00:09:36,110
+<font color="#E5E5E5">I'm just going to</font><font color="#CCCCCC"> return will so now</font>
+
+230
+00:09:36,110 --> 00:09:37,730
+it's<font color="#CCCCCC"> just going to</font><font color="#E5E5E5"> say well some equals</font>
+
+231
+00:09:37,730 --> 00:09:40,130
+<font color="#E5E5E5">will and I alerted</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> I basically</font>
+
+232
+00:09:40,130 --> 00:09:42,650
+ignored my arguments<font color="#E5E5E5"> I returned whatever</font>
+
+233
+00:09:42,650 --> 00:09:44,630
+value I wanted to return which didn't
+
+234
+00:09:44,630 --> 00:09:46,730
+<font color="#E5E5E5">make any sense</font><font color="#CCCCCC"> and that</font><font color="#E5E5E5"> value got passed</font>
+
+235
+00:09:46,730 --> 00:09:49,160
+into here<font color="#E5E5E5"> so now now no matter what</font><font color="#CCCCCC"> I</font>
+
+236
+00:09:49,160 --> 00:09:51,980
+pass<font color="#CCCCCC"> into ad function</font><font color="#E5E5E5"> it's always going</font>
+
+237
+00:09:51,980 --> 00:09:54,440
+<font color="#CCCCCC">to return we'll of</font><font color="#E5E5E5"> course again that's</font>
+
+238
+00:09:54,440 --> 00:09:57,020
+kind<font color="#CCCCCC"> of silly I want to return one plus</font>
+
+239
+00:09:57,020 --> 00:10:01,040
+two<font color="#E5E5E5"> and now I have my ad function</font>
+
+240
+00:10:01,040 --> 00:10:03,560
+another<font color="#E5E5E5"> way that you can do this with a</font>
+
+241
+00:10:03,560 --> 00:10:06,170
+little<font color="#E5E5E5"> bit less code is I could just</font>
+
+242
+00:10:06,170 --> 00:10:10,190
+alert<font color="#E5E5E5"> add one and two so it's going</font><font color="#CCCCCC"> to</font>
+
+243
+00:10:10,190 --> 00:10:12,200
+run<font color="#E5E5E5"> this first because this is an inner</font>
+
+244
+00:10:12,200 --> 00:10:13,880
+function javascript is going<font color="#CCCCCC"> to know I</font>
+
+245
+00:10:13,880 --> 00:10:15,980
+have to run<font color="#E5E5E5"> this in order to know what</font>
+
+246
+00:10:15,980 --> 00:10:18,530
+<font color="#E5E5E5">to give to</font><font color="#CCCCCC"> alert whatever this returns</font>
+
+247
+00:10:18,530 --> 00:10:21,470
+<font color="#E5E5E5">I'm going to pass into my alert function</font>
+
+248
+00:10:21,470 --> 00:10:23,960
+<font color="#CCCCCC">as the value so this will do the exact</font>
+
+249
+00:10:23,960 --> 00:10:26,360
+same<font color="#E5E5E5"> thing it's going to run one and two</font>
+
+250
+00:10:26,360 --> 00:10:30,260
+one and two returns<font color="#CCCCCC"> three</font><font color="#E5E5E5"> and then as</font>
+
+251
+00:10:30,260 --> 00:10:32,060
+far as<font color="#CCCCCC"> JavaScript is concerned it's just</font>
+
+252
+00:10:32,060 --> 00:10:34,820
+<font color="#E5E5E5">going to alert that returned value so</font>
+
+253
+00:10:34,820 --> 00:10:37,700
+I'm going to save that<font color="#E5E5E5"> you see it alerts</font>
+
+254
+00:10:37,700 --> 00:10:39,530
+<font color="#CCCCCC">three</font><font color="#E5E5E5"> let me show you what happens if</font>
+
+255
+00:10:39,530 --> 00:10:41,650
+<font color="#CCCCCC">you alert if you return a second time</font>
+
+256
+00:10:41,650 --> 00:10:46,490
+let's return<font color="#CCCCCC"> will now it does absolutely</font>
+
+257
+00:10:46,490 --> 00:10:48,950
+nothing<font color="#CCCCCC"> because as soon as</font><font color="#E5E5E5"> the return</font>
+
+258
+00:10:48,950 --> 00:10:51,680
+happens<font color="#E5E5E5"> this function is finished what</font>
+
+259
+00:10:51,680 --> 00:10:53,980
+happens after the return<font color="#E5E5E5"> never fires</font>
+
+260
+00:10:53,980 --> 00:10:57,100
+<font color="#CCCCCC">javascript is done so I can</font><font color="#E5E5E5"> say alerts</font>
+
+261
+00:10:57,100 --> 00:11:00,830
+hi there and you're never going<font color="#CCCCCC"> to see</font>
+
+262
+00:11:00,830 --> 00:11:03,080
+alert hi there<font color="#E5E5E5"> it alerts three from down</font>
+
+263
+00:11:03,080 --> 00:11:05,600
+here<font color="#E5E5E5"> and I never see the alert hi there</font>
+
+264
+00:11:05,600 --> 00:11:07,430
+up<font color="#CCCCCC"> here the function ran</font>
+
+265
+00:11:07,430 --> 00:11:10,279
+it returned<font color="#E5E5E5"> and then the function was</font>
+
+266
+00:11:10,279 --> 00:11:12,410
+finished now<font color="#E5E5E5"> you can have multiple</font>
+
+267
+00:11:12,410 --> 00:11:16,870
+returns<font color="#E5E5E5"> you could do something like</font><font color="#CCCCCC"> hmm</font>
+
+268
+00:11:16,870 --> 00:11:20,839
+let's go<font color="#CCCCCC"> their name equals we'll say</font>
+
+269
+00:11:20,839 --> 00:11:30,110
+<font color="#CCCCCC">this let's go alert</font><font color="#E5E5E5"> add add is kind of a</font>
+
+270
+00:11:30,110 --> 00:11:31,550
+bad<font color="#E5E5E5"> it will</font><font color="#CCCCCC"> call</font><font color="#E5E5E5"> will go back to</font><font color="#CCCCCC"> go</font>
+
+271
+00:11:31,550 --> 00:11:32,990
+since we're not<font color="#E5E5E5"> going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> be doing adding</font>
+
+272
+00:11:32,990 --> 00:11:38,170
+will and<font color="#CCCCCC"> we'll go</font><font color="#E5E5E5"> back to my age</font><font color="#CCCCCC"> of 34</font>
+
+273
+00:11:38,170 --> 00:11:40,810
+so this is going<font color="#E5E5E5"> to be now called go</font>
+
+274
+00:11:40,810 --> 00:11:52,250
+<font color="#E5E5E5">name age if age is less than 20</font><font color="#CCCCCC"> then we</font>
+
+275
+00:11:52,250 --> 00:11:56,570
+are<font color="#E5E5E5"> going</font><font color="#CCCCCC"> to</font><font color="#E5E5E5"> return name plus an</font>
+
+276
+00:11:56,570 --> 00:11:58,520
+exclamation mark<font color="#CCCCCC"> because after all in</font>
+
+277
+00:11:58,520 --> 00:12:01,760
+less<font color="#E5E5E5"> than 20 that's pretty cool else</font><font color="#CCCCCC"> we</font>
+
+278
+00:12:01,760 --> 00:12:04,820
+<font color="#E5E5E5">are just going</font><font color="#CCCCCC"> to return my name</font><font color="#E5E5E5"> so now</font>
+
+279
+00:12:04,820 --> 00:12:07,610
+this will<font color="#E5E5E5"> return a different thing if</font><font color="#CCCCCC"> my</font>
+
+280
+00:12:07,610 --> 00:12:09,860
+age is less<font color="#CCCCCC"> than</font><font color="#E5E5E5"> 20</font><font color="#CCCCCC"> then I'm going to</font>
+
+281
+00:12:09,860 --> 00:12:12,920
+<font color="#E5E5E5">return</font><font color="#CCCCCC"> name shouted else I'm</font><font color="#E5E5E5"> going to</font>
+
+282
+00:12:12,920 --> 00:12:16,130
+return<font color="#E5E5E5"> just my name so go now we'll</font>
+
+283
+00:12:16,130 --> 00:12:17,450
+check this out and<font color="#E5E5E5"> it's</font><font color="#CCCCCC"> just going to</font>
+
+284
+00:12:17,450 --> 00:12:19,279
+<font color="#E5E5E5">return</font><font color="#CCCCCC"> my name because</font><font color="#E5E5E5"> I'm older</font><font color="#CCCCCC"> than 20</font>
+
+285
+00:12:19,279 --> 00:12:21,200
+<font color="#E5E5E5">and then I'm going to alert that there</font>
+
+286
+00:12:21,200 --> 00:12:23,420
+you go just will so let's change my name
+
+287
+00:12:23,420 --> 00:12:26,779
+to 19<font color="#E5E5E5"> and now it's going to shout my</font>
+
+288
+00:12:26,779 --> 00:12:27,230
+<font color="#CCCCCC">name</font>
+
+289
+00:12:27,230 --> 00:12:28,910
+so after<font color="#CCCCCC"> all you shout at teenagers a</font>
+
+290
+00:12:28,910 --> 00:12:32,029
+lot more than you do at<font color="#CCCCCC"> adults and what</font>
+
+291
+00:12:32,029 --> 00:12:34,010
+happens if I don't<font color="#E5E5E5"> return anything at</font>
+
+292
+00:12:34,010 --> 00:12:37,630
+all<font color="#E5E5E5"> let's say I say go name and age and</font>
+
+293
+00:12:37,630 --> 00:12:41,089
+I'm going<font color="#E5E5E5"> to get undefined</font><font color="#CCCCCC"> so this</font>
+
+294
+00:12:41,089 --> 00:12:43,339
+function<font color="#CCCCCC"> has no return</font><font color="#E5E5E5"> which means it's</font>
+
+295
+00:12:43,339 --> 00:12:45,650
+<font color="#E5E5E5">returning nothing which means</font><font color="#CCCCCC"> it's</font>
+
+296
+00:12:45,650 --> 00:12:48,140
+returning undefined<font color="#CCCCCC"> which</font><font color="#E5E5E5"> brings us to</font>
+
+297
+00:12:48,140 --> 00:12:50,270
+<font color="#E5E5E5">one more of</font><font color="#CCCCCC"> our types in JavaScript and</font>
+
+298
+00:12:50,270 --> 00:12:54,950
+that is the undefined<font color="#CCCCCC"> type if I say</font>
+
+299
+00:12:54,950 --> 00:12:58,580
+there a but I don't give it a<font color="#CCCCCC"> value then</font>
+
+300
+00:12:58,580 --> 00:13:00,950
+<font color="#E5E5E5">I alert a it's going to alert undefined</font>
+
+301
+00:13:00,950 --> 00:13:04,400
+<font color="#CCCCCC">I define a as</font><font color="#E5E5E5"> a variable but</font><font color="#CCCCCC"> I didn't</font>
+
+302
+00:13:04,400 --> 00:13:07,610
+define the value of a so another type in
+
+303
+00:13:07,610 --> 00:13:09,860
+<font color="#CCCCCC">JavaScript</font><font color="#E5E5E5"> is undefined</font><font color="#CCCCCC"> and it means</font>
+
+304
+00:13:09,860 --> 00:13:13,550
+<font color="#E5E5E5">simply well undefined</font><font color="#CCCCCC"> so that's</font><font color="#E5E5E5"> about</font>
+
+305
+00:13:13,550 --> 00:13:15,050
+<font color="#E5E5E5">all you need to know with that so by</font>
+
+306
+00:13:15,050 --> 00:13:17,690
+default<font color="#E5E5E5"> every function is going to</font>
+
+307
+00:13:17,690 --> 00:13:20,390
+<font color="#CCCCCC">return undefined unless you give it a</font>
+
+308
+00:13:20,390 --> 00:13:22,390
+return<font color="#E5E5E5"> value</font>
+
+309
+00:13:22,390 --> 00:13:24,950
+<font color="#E5E5E5">we'll again so there you go that's</font>
+
+310
+00:13:24,950 --> 00:13:28,640
+functions let's um let's<font color="#CCCCCC"> leave it</font><font color="#E5E5E5"> there</font>
+
+311
+00:13:28,640 --> 00:13:30,230
+for now<font color="#CCCCCC"> so I'm going</font><font color="#E5E5E5"> to say go ahead</font>
+
+312
+00:13:30,230 --> 00:13:32,540
+<font color="#CCCCCC">make</font><font color="#E5E5E5"> an addition</font><font color="#CCCCCC"> function</font><font color="#E5E5E5"> make a</font>
+
+313
+00:13:32,540 --> 00:13:34,280
+subtraction function make a
+
+314
+00:13:34,280 --> 00:13:36,650
+multiplication function make some
+
+315
+00:13:36,650 --> 00:13:38,960
+functions play around with them<font color="#E5E5E5"> and once</font>
+
+316
+00:13:38,960 --> 00:13:40,610
+you feel confident<font color="#E5E5E5"> with that let's move</font>
+
+317
+00:13:40,610 --> 00:13:42,920
+on to<font color="#CCCCCC"> our</font><font color="#E5E5E5"> last lesson</font><font color="#CCCCCC"> before we get into</font>
+
+318
+00:13:42,920 --> 00:13:44,930
+<font color="#E5E5E5">some actual useful things that</font><font color="#CCCCCC"> we can</font>
+
+319
+00:13:44,930 --> 00:00:00,000
+use<font color="#CCCCCC"> JavaScript for on our web page</font>
+

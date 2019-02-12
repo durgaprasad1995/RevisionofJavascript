@@ -1,0 +1,3548 @@
+1
+00:00:07,280 --> 00:00:11,639
+<font color="#E5E5E5">okay good morning</font><font color="#CCCCCC"> welcome to my talk</font>
+
+2
+00:00:11,639 --> 00:00:13,469
+<font color="#E5E5E5">about</font><font color="#CCCCCC"> Night Watch which is a testing</font>
+
+3
+00:00:13,469 --> 00:00:16,079
+framework<font color="#E5E5E5"> written in JavaScript</font><font color="#CCCCCC"> designed</font>
+
+4
+00:00:16,079 --> 00:00:18,949
+for web developers<font color="#E5E5E5"> a little bit about me</font>
+
+5
+00:00:18,949 --> 00:00:23,789
+<font color="#CCCCCC">my name is</font><font color="#E5E5E5"> Seth</font><font color="#CCCCCC"> McLaughlin I am a mostly</font>
+
+6
+00:00:23,789 --> 00:00:25,650
+a front-end engineer<font color="#CCCCCC"> I work a little</font><font color="#E5E5E5"> bit</font>
+
+7
+00:00:25,650 --> 00:00:27,869
+on<font color="#E5E5E5"> the</font><font color="#CCCCCC"> on the backend as well</font><font color="#E5E5E5"> while I</font>
+
+8
+00:00:27,869 --> 00:00:29,400
+was at LinkedIn for<font color="#CCCCCC"> a couple years</font><font color="#E5E5E5"> I</font>
+
+9
+00:00:29,400 --> 00:00:31,529
+worked on a<font color="#E5E5E5"> couple of different testing</font>
+
+10
+00:00:31,529 --> 00:00:34,170
+frameworks<font color="#E5E5E5"> we developed a framework</font>
+
+11
+00:00:34,170 --> 00:00:35,880
+<font color="#E5E5E5">called</font><font color="#CCCCCC"> Venus jeaious which is</font><font color="#E5E5E5"> more</font>
+
+12
+00:00:35,880 --> 00:00:38,160
+focused on unit testing<font color="#E5E5E5"> JavaScript</font><font color="#CCCCCC"> code</font>
+
+13
+00:00:38,160 --> 00:00:39,780
+which is<font color="#E5E5E5"> not what we're</font><font color="#CCCCCC"> talking about</font>
+
+14
+00:00:39,780 --> 00:00:41,640
+today<font color="#CCCCCC"> I mean I also worked on the</font>
+
+15
+00:00:41,640 --> 00:00:43,739
+<font color="#E5E5E5">central QA team where I helped out with</font>
+
+16
+00:00:43,739 --> 00:00:45,739
+some of the core selenium<font color="#E5E5E5"> testing</font>
+
+17
+00:00:45,739 --> 00:00:47,989
+infrastructure for<font color="#E5E5E5"> LinkedIn and</font>
+
+18
+00:00:47,989 --> 00:00:50,070
+currently I'm working<font color="#CCCCCC"> for</font><font color="#E5E5E5"> a company</font>
+
+19
+00:00:50,070 --> 00:00:51,930
+<font color="#CCCCCC">called</font><font color="#E5E5E5"> shape security</font><font color="#CCCCCC"> we're a web</font>
+
+20
+00:00:51,930 --> 00:00:53,460
+security<font color="#CCCCCC"> startup based</font><font color="#E5E5E5"> out of Mountain</font>
+
+21
+00:00:53,460 --> 00:00:57,899
+View so the topic of today of<font color="#E5E5E5"> course is</font>
+
+22
+00:00:57,899 --> 00:00:58,980
+Nightwatch
+
+23
+00:00:58,980 --> 00:01:01,590
+so what is Nightwatch<font color="#CCCCCC"> it is a project</font>
+
+24
+00:01:01,590 --> 00:01:05,188
+implemented with<font color="#E5E5E5"> nodejs</font><font color="#CCCCCC"> and it basically</font>
+
+25
+00:01:05,188 --> 00:01:08,700
+<font color="#E5E5E5">allows you</font><font color="#CCCCCC"> to write functional tests so</font>
+
+26
+00:01:08,700 --> 00:01:09,900
+just a quick show of hands<font color="#E5E5E5"> how many</font>
+
+27
+00:01:09,900 --> 00:01:13,170
+<font color="#CCCCCC">people are either QA engineers or</font><font color="#E5E5E5"> write</font>
+
+28
+00:01:13,170 --> 00:01:15,380
+functional tests today<font color="#E5E5E5"> for their job</font>
+
+29
+00:01:15,380 --> 00:01:18,659
+<font color="#E5E5E5">great and out of out</font><font color="#CCCCCC"> of you guys how</font>
+
+30
+00:01:18,659 --> 00:01:20,040
+<font color="#CCCCCC">many of you actually</font><font color="#E5E5E5"> use</font><font color="#CCCCCC"> javascript to</font>
+
+31
+00:01:20,040 --> 00:01:24,210
+implement<font color="#E5E5E5"> those tests</font><font color="#CCCCCC"> ok</font><font color="#E5E5E5"> good number</font><font color="#CCCCCC"> do</font>
+
+32
+00:01:24,210 --> 00:01:27,689
+<font color="#E5E5E5">you guys use Nightwatch</font><font color="#CCCCCC"> ok not not as</font>
+
+33
+00:01:27,689 --> 00:01:32,880
+many a couple<font color="#E5E5E5"> ok cool so this morning I</font>
+
+34
+00:01:32,880 --> 00:01:34,110
+<font color="#E5E5E5">want to talk</font><font color="#CCCCCC"> about three main things</font>
+
+35
+00:01:34,110 --> 00:01:35,520
+<font color="#E5E5E5">we're going to do a quick project</font>
+
+36
+00:01:35,520 --> 00:01:37,530
+<font color="#E5E5E5">overview</font><font color="#CCCCCC"> just to introduce</font><font color="#E5E5E5"> Nightwatch</font>
+
+37
+00:01:37,530 --> 00:01:38,909
+for those of you who maybe haven't<font color="#E5E5E5"> heard</font>
+
+38
+00:01:38,909 --> 00:01:40,049
+of it<font color="#CCCCCC"> or</font><font color="#E5E5E5"> aren't familiar with where it</font>
+
+39
+00:01:40,049 --> 00:01:42,720
+came from<font color="#CCCCCC"> and I'll list out some of the</font>
+
+40
+00:01:42,720 --> 00:01:44,520
+features<font color="#E5E5E5"> it supports so you can kind of</font>
+
+41
+00:01:44,520 --> 00:01:45,930
+<font color="#E5E5E5">compare that against other tools that</font>
+
+42
+00:01:45,930 --> 00:01:48,180
+<font color="#E5E5E5">you may be using today</font><font color="#CCCCCC"> and finally I</font>
+
+43
+00:01:48,180 --> 00:01:50,130
+want<font color="#CCCCCC"> to show you some code samples to</font>
+
+44
+00:01:50,130 --> 00:01:51,600
+give you a flavor of<font color="#CCCCCC"> what it feels like</font>
+
+45
+00:01:51,600 --> 00:01:54,329
+<font color="#E5E5E5">to write tests with Nightwatch and how</font>
+
+46
+00:01:54,329 --> 00:01:55,649
+you can go ahead<font color="#E5E5E5"> and</font><font color="#CCCCCC"> actually just</font><font color="#E5E5E5"> start</font>
+
+47
+00:01:55,649 --> 00:01:57,299
+it<font color="#CCCCCC"> yourself if you're curious check it</font>
+
+48
+00:01:57,299 --> 00:02:01,649
+out<font color="#E5E5E5"> so first let's talk a little bit</font>
+
+49
+00:02:01,649 --> 00:02:04,979
+<font color="#CCCCCC">about what</font><font color="#E5E5E5"> exactly is end-to-end testing</font>
+
+50
+00:02:04,979 --> 00:02:07,140
+<font color="#CCCCCC">most of you</font><font color="#E5E5E5"> are probably familiar but</font>
+
+51
+00:02:07,140 --> 00:02:09,389
+just in case<font color="#E5E5E5"> you're</font><font color="#CCCCCC"> not intend testing</font>
+
+52
+00:02:09,389 --> 00:02:11,819
+is designed to allow<font color="#CCCCCC"> you as a</font><font color="#E5E5E5"> developer</font>
+
+53
+00:02:11,819 --> 00:02:13,090
+or<font color="#E5E5E5"> as a test engineer</font>
+
+54
+00:02:13,090 --> 00:02:16,330
+<font color="#CCCCCC">to write automated tests which capture</font>
+
+55
+00:02:16,330 --> 00:02:18,760
+<font color="#E5E5E5">users interactions with your website so</font>
+
+56
+00:02:18,760 --> 00:02:21,489
+for example you might be<font color="#CCCCCC"> testing that</font><font color="#E5E5E5"> a</font>
+
+57
+00:02:21,489 --> 00:02:24,700
+user can<font color="#E5E5E5"> log</font><font color="#CCCCCC"> into your</font><font color="#E5E5E5"> website</font><font color="#CCCCCC"> so this</font>
+
+58
+00:02:24,700 --> 00:02:27,069
+<font color="#E5E5E5">level of testing is very I would say</font>
+
+59
+00:02:27,069 --> 00:02:29,590
+<font color="#CCCCCC">blackbox</font><font color="#E5E5E5"> in that you don't really care</font>
+
+60
+00:02:29,590 --> 00:02:31,420
+<font color="#CCCCCC">or understand how need to understand how</font>
+
+61
+00:02:31,420 --> 00:02:33,160
+the code works<font color="#CCCCCC"> you're basically just</font>
+
+62
+00:02:33,160 --> 00:02:34,840
+<font color="#E5E5E5">automating a browser</font><font color="#CCCCCC"> to go through the</font>
+
+63
+00:02:34,840 --> 00:02:37,360
+same actions<font color="#E5E5E5"> that a user would take when</font>
+
+64
+00:02:37,360 --> 00:02:38,140
+<font color="#E5E5E5">they're interacting with your website</font>
+
+65
+00:02:38,140 --> 00:02:40,510
+<font color="#CCCCCC">and it's really</font><font color="#E5E5E5"> useful to automate this</font>
+
+66
+00:02:40,510 --> 00:02:42,099
+because you know say you're<font color="#E5E5E5"> working on a</font>
+
+67
+00:02:42,099 --> 00:02:43,959
+web app every time you deploy you don't
+
+68
+00:02:43,959 --> 00:02:45,519
+want to have to test these<font color="#CCCCCC"> scenarios</font>
+
+69
+00:02:45,519 --> 00:02:47,560
+over<font color="#CCCCCC"> and over again manually</font><font color="#E5E5E5"> you much</font>
+
+70
+00:02:47,560 --> 00:02:49,090
+rather be<font color="#E5E5E5"> able to just run an automation</font>
+
+71
+00:02:49,090 --> 00:02:51,579
+suite maybe even automatically<font color="#E5E5E5"> run it in</font>
+
+72
+00:02:51,579 --> 00:02:53,470
+all the major<font color="#CCCCCC"> browsers you support</font><font color="#E5E5E5"> like</font>
+
+73
+00:02:53,470 --> 00:02:55,329
+Firefox<font color="#E5E5E5"> you know Chrome Internet</font>
+
+74
+00:02:55,329 --> 00:02:58,540
+Explorer<font color="#E5E5E5"> and get some results</font><font color="#CCCCCC"> that gives</font>
+
+75
+00:02:58,540 --> 00:03:00,190
+you confidence<font color="#E5E5E5"> that you can deploy</font><font color="#CCCCCC"> and</font>
+
+76
+00:03:00,190 --> 00:03:01,840
+there's no problem<font color="#E5E5E5"> with your with</font><font color="#CCCCCC"> your</font>
+
+77
+00:03:01,840 --> 00:03:05,379
+app so in this case if we were testing a
+
+78
+00:03:05,379 --> 00:03:07,510
+login flow<font color="#CCCCCC"> it might we might</font><font color="#E5E5E5"> define</font><font color="#CCCCCC"> it</font>
+
+79
+00:03:07,510 --> 00:03:10,390
+as these six steps<font color="#CCCCCC"> we might say</font><font color="#E5E5E5"> okay</font>
+
+80
+00:03:10,390 --> 00:03:12,640
+first we have to<font color="#E5E5E5"> open the browser and</font>
+
+81
+00:03:12,640 --> 00:03:14,549
+navigate to<font color="#E5E5E5"> the login page</font>
+
+82
+00:03:14,549 --> 00:03:17,590
+<font color="#E5E5E5">second we locate a form field the</font>
+
+83
+00:03:17,590 --> 00:03:20,639
+<font color="#E5E5E5">username field and we type in a user</font>
+
+84
+00:03:20,639 --> 00:03:23,139
+third we locate the password field<font color="#E5E5E5"> type</font>
+
+85
+00:03:23,139 --> 00:03:26,350
+<font color="#E5E5E5">in a password value fourth we submit the</font>
+
+86
+00:03:26,350 --> 00:03:28,150
+button we click<font color="#E5E5E5"> the submit</font><font color="#CCCCCC"> button to</font>
+
+87
+00:03:28,150 --> 00:03:31,269
+submit<font color="#E5E5E5"> the form we wait for that form</font>
+
+88
+00:03:31,269 --> 00:03:32,829
+submission to complete<font color="#CCCCCC"> perhaps it's a</font>
+
+89
+00:03:32,829 --> 00:03:35,260
+page load perhaps you know it's an ajax
+
+90
+00:03:35,260 --> 00:03:38,799
+request and then you verify some aspect
+
+91
+00:03:38,799 --> 00:03:41,470
+<font color="#E5E5E5">of the state of the resulting page to</font>
+
+92
+00:03:41,470 --> 00:03:44,290
+<font color="#E5E5E5">ensure</font><font color="#CCCCCC"> that your</font><font color="#E5E5E5"> action succeeded now in</font>
+
+93
+00:03:44,290 --> 00:03:45,700
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> example I'm just verifying that the</font>
+
+94
+00:03:45,700 --> 00:03:47,349
+page title changed<font color="#E5E5E5"> but you could verify</font>
+
+95
+00:03:47,349 --> 00:03:49,870
+that certain content is in<font color="#E5E5E5"> the</font><font color="#CCCCCC"> DOM or</font>
+
+96
+00:03:49,870 --> 00:03:52,299
+any number<font color="#E5E5E5"> of</font><font color="#CCCCCC"> things which would</font><font color="#E5E5E5"> be the</font>
+
+97
+00:03:52,299 --> 00:03:55,680
+success criteria for<font color="#E5E5E5"> your test</font>
+
+98
+00:03:57,520 --> 00:03:59,890
+so looking at a<font color="#CCCCCC"> high-level architectural</font>
+
+99
+00:03:59,890 --> 00:04:01,930
+<font color="#CCCCCC">overview of how this</font><font color="#E5E5E5"> stuff works</font>
+
+100
+00:04:01,930 --> 00:04:04,750
+working<font color="#CCCCCC"> backwards from the right we have</font>
+
+101
+00:04:04,750 --> 00:04:07,000
+<font color="#CCCCCC">the web browser of course which is being</font>
+
+102
+00:04:07,000 --> 00:04:09,580
+scripted<font color="#E5E5E5"> to perform these actions as a</font>
+
+103
+00:04:09,580 --> 00:04:12,310
+real user would then we have something
+
+104
+00:04:12,310 --> 00:04:14,620
+<font color="#CCCCCC">called</font><font color="#E5E5E5"> selenium webdriver</font><font color="#CCCCCC"> which is a</font>
+
+105
+00:04:14,620 --> 00:04:16,630
+tool<font color="#E5E5E5"> which allows</font><font color="#CCCCCC"> you to</font><font color="#E5E5E5"> control</font><font color="#CCCCCC"> the</font>
+
+106
+00:04:16,630 --> 00:04:19,269
+browser<font color="#E5E5E5"> and it's interesting</font><font color="#CCCCCC"> that this</font>
+
+107
+00:04:19,269 --> 00:04:23,320
+started<font color="#E5E5E5"> out</font><font color="#CCCCCC"> as a as a</font><font color="#E5E5E5"> kind of a</font><font color="#CCCCCC"> third</font>
+
+108
+00:04:23,320 --> 00:04:25,300
+<font color="#CCCCCC">party approach where there's different</font>
+
+109
+00:04:25,300 --> 00:04:27,520
+<font color="#E5E5E5">drivers that control different browsers</font>
+
+110
+00:04:27,520 --> 00:04:29,440
+but webdriver itself is actually
+
+111
+00:04:29,440 --> 00:04:33,040
+<font color="#E5E5E5">becoming a w3c spec so all major</font>
+
+112
+00:04:33,040 --> 00:04:34,630
+browsers<font color="#CCCCCC"> should support it natively</font>
+
+113
+00:04:34,630 --> 00:04:36,610
+which will be good<font color="#CCCCCC"> because that'll be</font>
+
+114
+00:04:36,610 --> 00:04:40,270
+just<font color="#E5E5E5"> probably a lot smoother interaction</font>
+
+115
+00:04:40,270 --> 00:04:42,520
+than what we've<font color="#CCCCCC"> seen</font><font color="#E5E5E5"> in the past</font><font color="#CCCCCC"> but</font>
+
+116
+00:04:42,520 --> 00:04:44,140
+<font color="#CCCCCC">today you can use webdriver with all the</font>
+
+117
+00:04:44,140 --> 00:04:46,900
+major browsers<font color="#E5E5E5"> and additionally Internet</font>
+
+118
+00:04:46,900 --> 00:04:49,660
+Explorer<font color="#E5E5E5"> 12 supports webdriver natively</font>
+
+119
+00:04:49,660 --> 00:04:51,610
+which is which<font color="#CCCCCC"> is great I believe</font>
+
+120
+00:04:51,610 --> 00:04:55,080
+they've back ported it to<font color="#E5E5E5"> IE 11 as</font><font color="#CCCCCC"> well</font>
+
+121
+00:04:55,080 --> 00:04:59,890
+<font color="#CCCCCC">and told the spec will be finalized</font><font color="#E5E5E5"> next</font>
+
+122
+00:04:59,890 --> 00:05:03,070
+<font color="#CCCCCC">I think</font><font color="#E5E5E5"> not quite sure</font><font color="#CCCCCC"> is this year or</font>
+
+123
+00:05:03,070 --> 00:05:04,810
+next year<font color="#CCCCCC"> but it's making really good</font>
+
+124
+00:05:04,810 --> 00:05:07,930
+progress<font color="#CCCCCC"> and then so the next</font><font color="#E5E5E5"> step is</font>
+
+125
+00:05:07,930 --> 00:05:09,910
+you have<font color="#CCCCCC"> a testimony</font><font color="#E5E5E5"> and this is what</font>
+
+126
+00:05:09,910 --> 00:05:12,070
+<font color="#CCCCCC">Nightwatch rides for you</font><font color="#E5E5E5"> so this is</font>
+
+127
+00:05:12,070 --> 00:05:13,570
+<font color="#E5E5E5">something that will reading a test and</font>
+
+128
+00:05:13,570 --> 00:05:16,720
+then issue commands<font color="#E5E5E5"> over HTTP to</font>
+
+129
+00:05:16,720 --> 00:05:18,340
+selenium which<font color="#E5E5E5"> then gets translated into</font>
+
+130
+00:05:18,340 --> 00:05:22,080
+actual commands to control<font color="#CCCCCC"> the browser</font>
+
+131
+00:05:22,380 --> 00:05:24,640
+<font color="#E5E5E5">so these different parts</font><font color="#CCCCCC"> that I've</font>
+
+132
+00:05:24,640 --> 00:05:26,050
+highlighted in the dotted lines could
+
+133
+00:05:26,050 --> 00:05:27,490
+<font color="#E5E5E5">actually live</font><font color="#CCCCCC"> on different systems and</font>
+
+134
+00:05:27,490 --> 00:05:31,570
+often do okay so<font color="#CCCCCC"> Nightwatch itself</font><font color="#E5E5E5"> like</font>
+
+135
+00:05:31,570 --> 00:05:33,370
+I mentioned is giving you these<font color="#E5E5E5"> two</font>
+
+136
+00:05:33,370 --> 00:05:35,710
+<font color="#E5E5E5">components on the left so it gives you</font>
+
+137
+00:05:35,710 --> 00:05:38,290
+an<font color="#E5E5E5"> API for writing your tests and your</font>
+
+138
+00:05:38,290 --> 00:05:40,000
+tests<font color="#E5E5E5"> are</font><font color="#CCCCCC"> actually just node modules so</font>
+
+139
+00:05:40,000 --> 00:05:41,320
+if you're already familiar with node
+
+140
+00:05:41,320 --> 00:05:44,440
+it's pretty trivial to implement<font color="#E5E5E5"> a basic</font>
+
+141
+00:05:44,440 --> 00:05:46,780
+test<font color="#E5E5E5"> and then the test Runner itself is</font>
+
+142
+00:05:46,780 --> 00:05:48,910
+a node.js application which you can
+
+143
+00:05:48,910 --> 00:05:52,320
+easily<font color="#E5E5E5"> install with an NPM install</font>
+
+144
+00:05:53,370 --> 00:05:56,080
+it's important<font color="#E5E5E5"> to note that not</font>
+
+145
+00:05:56,080 --> 00:05:57,759
+<font color="#E5E5E5">surprisingly Nightwatch will also work</font>
+
+146
+00:05:57,759 --> 00:05:59,440
+<font color="#E5E5E5">with</font><font color="#CCCCCC"> selenium grid if you're familiar</font>
+
+147
+00:05:59,440 --> 00:06:02,350
+with<font color="#E5E5E5"> slam testing you've probably either</font>
+
+148
+00:06:02,350 --> 00:06:04,060
+used grid or know what it is<font color="#CCCCCC"> but</font>
+
+149
+00:06:04,060 --> 00:06:05,770
+<font color="#E5E5E5">essentially what it allows you to do is</font>
+
+150
+00:06:05,770 --> 00:06:08,680
+<font color="#E5E5E5">manage a pool of browsers so then you</font>
+
+151
+00:06:08,680 --> 00:06:10,389
+can when you start up a test your test
+
+152
+00:06:10,389 --> 00:06:12,310
+<font color="#E5E5E5">runner just talks to the grid and says</font>
+
+153
+00:06:12,310 --> 00:06:15,130
+hey I want<font color="#CCCCCC"> to run</font><font color="#E5E5E5"> my test with a node</font>
+
+154
+00:06:15,130 --> 00:06:16,990
+that<font color="#CCCCCC"> has</font><font color="#E5E5E5"> these capabilities</font><font color="#CCCCCC"> like</font><font color="#E5E5E5"> it</font>
+
+155
+00:06:16,990 --> 00:06:18,850
+could<font color="#E5E5E5"> be</font><font color="#CCCCCC"> I want Chrome where I want I II</font>
+
+156
+00:06:18,850 --> 00:06:20,860
+or Firefox or<font color="#CCCCCC"> I want this</font><font color="#E5E5E5"> version of</font>
+
+157
+00:06:20,860 --> 00:06:26,289
+<font color="#E5E5E5">Windows to</font><font color="#CCCCCC"> run the</font><font color="#E5E5E5"> test so what does</font>
+
+158
+00:06:26,289 --> 00:06:29,349
+<font color="#E5E5E5">Nightwatch offer you first of all I</font>
+
+159
+00:06:29,349 --> 00:06:31,270
+think<font color="#E5E5E5"> it has fairly good documentation</font>
+
+160
+00:06:31,270 --> 00:06:33,370
+it could of course<font color="#E5E5E5"> always be improved so</font>
+
+161
+00:06:33,370 --> 00:06:34,780
+if you're<font color="#E5E5E5"> interested in this stuff</font><font color="#CCCCCC"> I</font>
+
+162
+00:06:34,780 --> 00:06:36,699
+highly<font color="#CCCCCC"> encourage you</font><font color="#E5E5E5"> to jump in and help</font>
+
+163
+00:06:36,699 --> 00:06:39,639
+<font color="#E5E5E5">make it</font><font color="#CCCCCC"> better but the author has done a</font>
+
+164
+00:06:39,639 --> 00:06:41,229
+really good<font color="#E5E5E5"> job</font><font color="#CCCCCC"> of getting a baseline</font><font color="#E5E5E5"> of</font>
+
+165
+00:06:41,229 --> 00:06:43,060
+documentation<font color="#CCCCCC"> I think if you go to</font>
+
+166
+00:06:43,060 --> 00:06:46,389
+<font color="#CCCCCC">Nightwatch the Nightwatch website you'll</font>
+
+167
+00:06:46,389 --> 00:06:48,360
+have all you<font color="#CCCCCC"> need there to</font><font color="#E5E5E5"> get started</font>
+
+168
+00:06:48,360 --> 00:06:50,770
+<font color="#E5E5E5">when you're actually</font><font color="#CCCCCC"> interacting with</font>
+
+169
+00:06:50,770 --> 00:06:53,320
+your page you can<font color="#E5E5E5"> use</font><font color="#CCCCCC"> either CSS or</font>
+
+170
+00:06:53,320 --> 00:06:56,770
+XPath selectors<font color="#E5E5E5"> which is great because</font>
+
+171
+00:06:56,770 --> 00:06:58,120
+if you're a web developer<font color="#CCCCCC"> you already</font>
+
+172
+00:06:58,120 --> 00:07:00,820
+know<font color="#E5E5E5"> CSS</font><font color="#CCCCCC"> and it's pretty</font><font color="#E5E5E5"> easy to script</font>
+
+173
+00:07:00,820 --> 00:07:04,150
+those tests the test<font color="#CCCCCC"> Runner itself can</font>
+
+174
+00:07:04,150 --> 00:07:06,070
+execute<font color="#E5E5E5"> tests either sequentially</font><font color="#CCCCCC"> or in</font>
+
+175
+00:07:06,070 --> 00:07:08,110
+parallel<font color="#CCCCCC"> so parallel execution is nice</font>
+
+176
+00:07:08,110 --> 00:07:10,539
+<font color="#E5E5E5">because</font><font color="#CCCCCC"> it just speeds</font><font color="#E5E5E5"> up the process</font><font color="#CCCCCC"> of</font>
+
+177
+00:07:10,539 --> 00:07:12,729
+running<font color="#E5E5E5"> all of your tests and then you</font>
+
+178
+00:07:12,729 --> 00:07:15,310
+<font color="#CCCCCC">have some control over which tests get</font>
+
+179
+00:07:15,310 --> 00:07:16,840
+run so<font color="#CCCCCC"> you may have a large</font><font color="#E5E5E5"> corpus of</font>
+
+180
+00:07:16,840 --> 00:07:18,460
+<font color="#E5E5E5">tests maybe a thousand different tests</font>
+
+181
+00:07:18,460 --> 00:07:20,139
+<font color="#E5E5E5">but you only want to run a subset of</font>
+
+182
+00:07:20,139 --> 00:07:23,130
+those on every<font color="#E5E5E5"> every build or every</font>
+
+183
+00:07:23,130 --> 00:07:24,940
+release or something<font color="#CCCCCC"> like</font><font color="#E5E5E5"> that</font>
+
+184
+00:07:24,940 --> 00:07:27,610
+so you<font color="#CCCCCC"> can you can</font><font color="#E5E5E5"> either select to run</font>
+
+185
+00:07:27,610 --> 00:07:29,830
+tests by<font color="#CCCCCC"> powder matching the file name</font>
+
+186
+00:07:29,830 --> 00:07:32,110
+you<font color="#CCCCCC"> can organize your</font><font color="#E5E5E5"> tests into folders</font>
+
+187
+00:07:32,110 --> 00:07:34,630
+or even more flexibly you could add tags
+
+188
+00:07:34,630 --> 00:07:36,699
+<font color="#E5E5E5">to your tests</font><font color="#CCCCCC"> and then say okay I'm</font>
+
+189
+00:07:36,699 --> 00:07:38,830
+going<font color="#E5E5E5"> to tag you know test a B and C as</font>
+
+190
+00:07:38,830 --> 00:07:41,530
+sanity so I<font color="#E5E5E5"> always run those tests for</font>
+
+191
+00:07:41,530 --> 00:07:45,340
+<font color="#E5E5E5">example I think this is pretty</font><font color="#CCCCCC"> much</font>
+
+192
+00:07:45,340 --> 00:07:46,870
+expected in<font color="#CCCCCC"> this day and age but also</font>
+
+193
+00:07:46,870 --> 00:07:49,180
+<font color="#E5E5E5">integrates with cloud providers like</font>
+
+194
+00:07:49,180 --> 00:07:51,610
+<font color="#E5E5E5">sauce labs and browser stack so this is</font>
+
+195
+00:07:51,610 --> 00:07:53,289
+really<font color="#E5E5E5"> great</font><font color="#CCCCCC"> because</font><font color="#E5E5E5"> if you're a small</font>
+
+196
+00:07:53,289 --> 00:07:55,780
+small team<font color="#CCCCCC"> or a small company and you</font>
+
+197
+00:07:55,780 --> 00:07:58,150
+don't<font color="#CCCCCC"> have the internal resources</font><font color="#E5E5E5"> to</font>
+
+198
+00:07:58,150 --> 00:08:01,150
+<font color="#CCCCCC">setup your own</font><font color="#E5E5E5"> test lab that's running</font>
+
+199
+00:08:01,150 --> 00:08:02,650
+<font color="#E5E5E5">all these different OSS with all these</font>
+
+200
+00:08:02,650 --> 00:08:04,840
+different<font color="#CCCCCC"> browser versions</font><font color="#E5E5E5"> you can sort</font>
+
+201
+00:08:04,840 --> 00:08:06,490
+of outsource that to<font color="#E5E5E5"> sauce labs and</font>
+
+202
+00:08:06,490 --> 00:08:06,909
+they'll
+
+203
+00:08:06,909 --> 00:08:09,159
+provide any browser<font color="#CCCCCC"> you want basically</font>
+
+204
+00:08:09,159 --> 00:08:11,249
+to<font color="#E5E5E5"> run your tests</font>
+
+205
+00:08:11,249 --> 00:08:15,219
+it also features<font color="#E5E5E5"> j-unit</font><font color="#CCCCCC"> xml formatting</font>
+
+206
+00:08:15,219 --> 00:08:17,110
+for test<font color="#CCCCCC"> results</font><font color="#E5E5E5"> which is pretty</font>
+
+207
+00:08:17,110 --> 00:08:18,999
+<font color="#CCCCCC">standard so if you're using a continuous</font>
+
+208
+00:08:18,999 --> 00:08:20,770
+<font color="#E5E5E5">integration system like Hudson or</font>
+
+209
+00:08:20,770 --> 00:08:23,129
+Jenkins for example they<font color="#CCCCCC"> can</font><font color="#E5E5E5"> already</font>
+
+210
+00:08:23,129 --> 00:08:25,869
+read this<font color="#E5E5E5"> test format so it's very</font><font color="#CCCCCC"> easy</font>
+
+211
+00:08:25,869 --> 00:08:27,580
+to<font color="#E5E5E5"> integrate Nightwatch with your</font>
+
+212
+00:08:27,580 --> 00:08:30,849
+<font color="#CCCCCC">existing workflow</font><font color="#E5E5E5"> and finally there is</font>
+
+213
+00:08:30,849 --> 00:08:32,740
+an extension model<font color="#E5E5E5"> so if there's a</font>
+
+214
+00:08:32,740 --> 00:08:37,899
+<font color="#CCCCCC">particular API</font><font color="#E5E5E5"> or feature that you don't</font>
+
+215
+00:08:37,899 --> 00:08:40,539
+see in Nightwatch<font color="#CCCCCC"> you can go ahead and</font>
+
+216
+00:08:40,539 --> 00:08:42,009
+<font color="#CCCCCC">implement that yourself and</font><font color="#E5E5E5"> there's</font>
+
+217
+00:08:42,009 --> 00:08:43,750
+fairly<font color="#E5E5E5"> good documentation around that</font>
+
+218
+00:08:43,750 --> 00:08:45,430
+and I'll<font color="#E5E5E5"> show a couple of examples</font><font color="#CCCCCC"> of</font>
+
+219
+00:08:45,430 --> 00:08:50,380
+<font color="#E5E5E5">doing of doing</font><font color="#CCCCCC"> that just</font><font color="#E5E5E5"> that so who</font>
+
+220
+00:08:50,380 --> 00:08:52,120
+created Nightwatch<font color="#CCCCCC"> so</font><font color="#E5E5E5"> it was created by</font>
+
+221
+00:08:52,120 --> 00:08:54,459
+a guy named Andre<font color="#E5E5E5"> he actually lives in</font>
+
+222
+00:08:54,459 --> 00:08:57,819
+<font color="#E5E5E5">Norway</font><font color="#CCCCCC"> and he started</font><font color="#E5E5E5"> working on this</font>
+
+223
+00:08:57,819 --> 00:09:00,399
+<font color="#E5E5E5">project as far</font><font color="#CCCCCC"> as I can tell about about</font>
+
+224
+00:09:00,399 --> 00:09:02,620
+two years<font color="#E5E5E5"> ago</font><font color="#CCCCCC"> but</font><font color="#E5E5E5"> it really seems</font><font color="#CCCCCC"> like</font>
+
+225
+00:09:02,620 --> 00:09:06,339
+it picked up<font color="#E5E5E5"> speed</font><font color="#CCCCCC"> in late 2013</font><font color="#E5E5E5"> he</font><font color="#CCCCCC"> goes</font>
+
+226
+00:09:06,339 --> 00:09:08,589
+by<font color="#CCCCCC"> the</font><font color="#E5E5E5"> name of</font><font color="#CCCCCC"> beat factor</font><font color="#E5E5E5"> and if you're</font>
+
+227
+00:09:08,589 --> 00:09:09,759
+<font color="#E5E5E5">interested</font><font color="#CCCCCC"> in learning more about</font><font color="#E5E5E5"> what</font>
+
+228
+00:09:09,759 --> 00:09:12,399
+he does<font color="#E5E5E5"> he's a friend developer and you</font>
+
+229
+00:09:12,399 --> 00:09:13,720
+can check out his<font color="#CCCCCC"> LinkedIn profile which</font>
+
+230
+00:09:13,720 --> 00:09:17,259
+<font color="#CCCCCC">I've linked</font><font color="#E5E5E5"> to at the bottom</font><font color="#CCCCCC"> here</font><font color="#E5E5E5"> so</font><font color="#CCCCCC"> a</font>
+
+231
+00:09:17,259 --> 00:09:19,689
+couple<font color="#E5E5E5"> of quick stats looking at NPM we</font>
+
+232
+00:09:19,689 --> 00:09:22,180
+can see that<font color="#E5E5E5"> it's fairly popular</font><font color="#CCCCCC"> we've</font>
+
+233
+00:09:22,180 --> 00:09:24,880
+got<font color="#E5E5E5"> nine thousand downloads roughly last</font>
+
+234
+00:09:24,880 --> 00:09:27,069
+month<font color="#E5E5E5"> it's not huge not anything</font>
+
+235
+00:09:27,069 --> 00:09:28,720
+compared to mocha or some other<font color="#E5E5E5"> testing</font>
+
+236
+00:09:28,720 --> 00:09:29,829
+libraries but I think it's definitely
+
+237
+00:09:29,829 --> 00:09:33,069
+growing<font color="#CCCCCC"> I gave this talk last</font><font color="#E5E5E5"> June and</font>
+
+238
+00:09:33,069 --> 00:09:34,209
+at that<font color="#E5E5E5"> point in time</font><font color="#CCCCCC"> that got about</font>
+
+239
+00:09:34,209 --> 00:09:35,589
+5,000 downloads a<font color="#CCCCCC"> month so we're</font>
+
+240
+00:09:35,589 --> 00:09:36,790
+definitely seeing<font color="#E5E5E5"> a trend towards</font>
+
+241
+00:09:36,790 --> 00:09:39,189
+adoption<font color="#CCCCCC"> a lot of stars on github</font><font color="#E5E5E5"> a lot</font>
+
+242
+00:09:39,189 --> 00:09:41,290
+<font color="#E5E5E5">of</font><font color="#CCCCCC"> Forks a fairly good code coverage</font>
+
+243
+00:09:41,290 --> 00:09:43,420
+which<font color="#CCCCCC"> is important you'd</font><font color="#E5E5E5"> probably expect</font>
+
+244
+00:09:43,420 --> 00:09:44,980
+that coming from<font color="#E5E5E5"> you know a test</font>
+
+245
+00:09:44,980 --> 00:09:47,259
+framework<font color="#CCCCCC"> should be tested right and</font>
+
+246
+00:09:47,259 --> 00:09:49,480
+it's also<font color="#E5E5E5"> under active development we</font>
+
+247
+00:09:49,480 --> 00:09:51,399
+<font color="#CCCCCC">can see at</font><font color="#E5E5E5"> the bottom</font><font color="#CCCCCC"> here that it</font><font color="#E5E5E5"> was</font>
+
+248
+00:09:51,399 --> 00:09:55,779
+last updated<font color="#CCCCCC"> five days ago couple more</font>
+
+249
+00:09:55,779 --> 00:09:57,639
+stats<font color="#CCCCCC"> you know a fair number of</font>
+
+250
+00:09:57,639 --> 00:10:00,490
+contributors there's a fairly<font color="#E5E5E5"> healthy</font>
+
+251
+00:10:00,490 --> 00:10:02,230
+<font color="#E5E5E5">you know pull</font><font color="#CCCCCC"> request activity there's</font>
+
+252
+00:10:02,230 --> 00:10:03,130
+one<font color="#E5E5E5"> that's kind of been hanging around</font>
+
+253
+00:10:03,130 --> 00:10:05,259
+<font color="#CCCCCC">for</font><font color="#E5E5E5"> a while you</font><font color="#CCCCCC"> know a bunch of</font><font color="#E5E5E5"> opening</font>
+
+254
+00:10:05,259 --> 00:10:07,149
+issues people<font color="#E5E5E5"> are using the tool filing</font>
+
+255
+00:10:07,149 --> 00:10:09,130
+issues and issues<font color="#CCCCCC"> are</font><font color="#E5E5E5"> getting fixed</font><font color="#CCCCCC"> so</font>
+
+256
+00:10:09,130 --> 00:10:11,680
+that's always good<font color="#E5E5E5"> to see in an open</font>
+
+257
+00:10:11,680 --> 00:10:12,610
+<font color="#E5E5E5">source project</font><font color="#CCCCCC"> that you're thinking</font>
+
+258
+00:10:12,610 --> 00:10:14,949
+<font color="#CCCCCC">about adopting</font><font color="#E5E5E5"> because you want if</font>
+
+259
+00:10:14,949 --> 00:10:16,240
+<font color="#E5E5E5">you're gonna actually use this you know</font>
+
+260
+00:10:16,240 --> 00:10:18,130
+<font color="#CCCCCC">at your at your job you want to</font><font color="#E5E5E5"> make you</font>
+
+261
+00:10:18,130 --> 00:10:20,200
+want feel like it's being supported<font color="#CCCCCC"> and</font>
+
+262
+00:10:20,200 --> 00:10:22,240
+you'll have somewhere to go<font color="#E5E5E5"> to get</font><font color="#CCCCCC"> help</font>
+
+263
+00:10:22,240 --> 00:10:24,700
+<font color="#E5E5E5">if you</font><font color="#CCCCCC"> run</font><font color="#E5E5E5"> into issues or</font><font color="#CCCCCC"> just want new</font>
+
+264
+00:10:24,700 --> 00:10:30,220
+features<font color="#E5E5E5"> add it to a tool so drilling a</font>
+
+265
+00:10:30,220 --> 00:10:32,170
+little bit more on contribution activity
+
+266
+00:10:32,170 --> 00:10:34,840
+<font color="#E5E5E5">as like I mentioned it's really more in</font>
+
+267
+00:10:34,840 --> 00:10:37,180
+late 2013<font color="#E5E5E5"> where stuff really happened it</font>
+
+268
+00:10:37,180 --> 00:10:38,620
+looks<font color="#E5E5E5"> like maybe</font><font color="#CCCCCC"> Andrzej created the</font>
+
+269
+00:10:38,620 --> 00:10:41,320
+repo<font color="#E5E5E5"> back in 2012 and then really just</font>
+
+270
+00:10:41,320 --> 00:10:44,020
+<font color="#E5E5E5">let it sit dormant for quite a while</font><font color="#CCCCCC"> but</font>
+
+271
+00:10:44,020 --> 00:10:46,210
+<font color="#E5E5E5">in late 2013 it really picked up speed</font>
+
+272
+00:10:46,210 --> 00:10:47,560
+<font color="#E5E5E5">and there's been a lot of activity ever</font>
+
+273
+00:10:47,560 --> 00:10:50,620
+since I've helped<font color="#E5E5E5"> out a little bit with</font>
+
+274
+00:10:50,620 --> 00:10:52,090
+the project<font color="#E5E5E5"> I implemented</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> test</font>
+
+275
+00:10:52,090 --> 00:10:55,000
+<font color="#CCCCCC">tagging feature</font><font color="#E5E5E5"> but you can see from the</font>
+
+276
+00:10:55,000 --> 00:10:57,220
+commits that<font color="#E5E5E5"> is predominantly</font><font color="#CCCCCC"> Andrzej</font>
+
+277
+00:10:57,220 --> 00:11:02,530
+writing the code for now<font color="#CCCCCC"> ok so going</font>
+
+278
+00:11:02,530 --> 00:11:05,230
+back to<font color="#CCCCCC"> our</font><font color="#E5E5E5"> simple example</font><font color="#CCCCCC"> let's look at</font>
+
+279
+00:11:05,230 --> 00:11:08,430
+how we would<font color="#CCCCCC"> actually implement a</font>
+
+280
+00:11:08,430 --> 00:11:13,390
+functional<font color="#E5E5E5"> test</font><font color="#CCCCCC"> to to test this user</font>
+
+281
+00:11:13,390 --> 00:11:17,770
+scenario of logging<font color="#E5E5E5"> into a</font><font color="#CCCCCC"> website so</font>
+
+282
+00:11:17,770 --> 00:11:20,170
+first thing<font color="#E5E5E5"> we'll look at is our project</font>
+
+283
+00:11:20,170 --> 00:11:22,480
+directory structure<font color="#E5E5E5"> so you could of</font>
+
+284
+00:11:22,480 --> 00:11:24,150
+course<font color="#E5E5E5"> if you're if</font><font color="#CCCCCC"> you're already</font>
+
+285
+00:11:24,150 --> 00:11:26,380
+building your web app as a node.js app
+
+286
+00:11:26,380 --> 00:11:28,180
+you could just store your test files in
+
+287
+00:11:28,180 --> 00:11:29,530
+the same repo<font color="#E5E5E5"> or same directory</font>
+
+288
+00:11:29,530 --> 00:11:32,170
+structure as your project<font color="#CCCCCC"> I</font><font color="#E5E5E5"> personally</font>
+
+289
+00:11:32,170 --> 00:11:34,570
+like<font color="#CCCCCC"> to separate it</font><font color="#E5E5E5"> out</font><font color="#CCCCCC"> so my</font><font color="#E5E5E5"> projects</font>
+
+290
+00:11:34,570 --> 00:11:36,310
+start pretty simple like this you have a
+
+291
+00:11:36,310 --> 00:11:38,410
+<font color="#E5E5E5">Nightwatch JS file and that's your</font>
+
+292
+00:11:38,410 --> 00:11:40,180
+configuration which we'll look at<font color="#E5E5E5"> in a</font>
+
+293
+00:11:40,180 --> 00:11:42,810
+<font color="#CCCCCC">minute</font><font color="#E5E5E5"> and then you have a test folder</font>
+
+294
+00:11:42,810 --> 00:11:45,040
+and then<font color="#E5E5E5"> the test folder this is where</font>
+
+295
+00:11:45,040 --> 00:11:47,590
+you put<font color="#CCCCCC"> your well your tests</font><font color="#E5E5E5"> right so</font>
+
+296
+00:11:47,590 --> 00:11:49,270
+let's look<font color="#E5E5E5"> at login</font><font color="#CCCCCC"> j/s which is going</font>
+
+297
+00:11:49,270 --> 00:11:52,920
+<font color="#E5E5E5">to test that</font><font color="#CCCCCC"> login scenario for us</font>
+
+298
+00:11:54,080 --> 00:11:56,630
+so like I<font color="#CCCCCC"> mentioned earlier</font><font color="#E5E5E5"> a test is</font>
+
+299
+00:11:56,630 --> 00:12:01,370
+simply<font color="#CCCCCC"> a node.js module</font><font color="#E5E5E5"> so very simple</font>
+
+300
+00:12:01,370 --> 00:12:04,310
+<font color="#E5E5E5">you just create this object</font><font color="#CCCCCC"> and you</font><font color="#E5E5E5"> can</font>
+
+301
+00:12:04,310 --> 00:12:05,899
+give it<font color="#CCCCCC"> a descriptive name if you'd like</font>
+
+302
+00:12:05,899 --> 00:12:08,269
+<font color="#E5E5E5">like for example here I use the name</font>
+
+303
+00:12:08,269 --> 00:12:12,620
+fill out form and<font color="#CCCCCC"> login and that is</font><font color="#E5E5E5"> just</font>
+
+304
+00:12:12,620 --> 00:12:14,829
+a function<font color="#E5E5E5"> which accepts this</font><font color="#CCCCCC"> object</font>
+
+305
+00:12:14,829 --> 00:12:18,370
+<font color="#E5E5E5">from the framework called client and</font>
+
+306
+00:12:18,370 --> 00:12:20,990
+client is what you call to interact with
+
+307
+00:12:20,990 --> 00:12:23,990
+<font color="#E5E5E5">the browser essentially so first off I'm</font>
+
+308
+00:12:23,990 --> 00:12:26,899
+using<font color="#E5E5E5"> this API here URL which allows me</font>
+
+309
+00:12:26,899 --> 00:12:28,760
+to<font color="#CCCCCC"> direct the browser to load this</font><font color="#E5E5E5"> web</font>
+
+310
+00:12:28,760 --> 00:12:32,420
+<font color="#E5E5E5">page and then I'm</font><font color="#CCCCCC"> doing an assertion</font><font color="#E5E5E5"> to</font>
+
+311
+00:12:32,420 --> 00:12:34,519
+say I expect something<font color="#E5E5E5"> so I expect the</font>
+
+312
+00:12:34,519 --> 00:12:37,279
+page title to equal this string awesome
+
+313
+00:12:37,279 --> 00:12:40,370
+app and this is where I'm going<font color="#E5E5E5"> to</font>
+
+314
+00:12:40,370 --> 00:12:42,769
+<font color="#E5E5E5">interact with the form so I'm setting a</font>
+
+315
+00:12:42,769 --> 00:12:44,750
+value<font color="#E5E5E5"> and then the first parameter is</font>
+
+316
+00:12:44,750 --> 00:12:47,570
+<font color="#CCCCCC">the CSS selector</font><font color="#E5E5E5"> why or I tell it you</font>
+
+317
+00:12:47,570 --> 00:12:49,130
+<font color="#E5E5E5">know which field I want to operate on</font>
+
+318
+00:12:49,130 --> 00:12:51,140
+and the<font color="#E5E5E5"> second parameter is the value so</font>
+
+319
+00:12:51,140 --> 00:12:53,300
+I want to<font color="#E5E5E5"> set that field to the value of</font>
+
+320
+00:12:53,300 --> 00:12:56,209
+Seth<font color="#CCCCCC"> I do the</font><font color="#E5E5E5"> same thing for the</font>
+
+321
+00:12:56,209 --> 00:13:00,260
+<font color="#CCCCCC">password</font><font color="#E5E5E5"> field and that happens click</font>
+
+322
+00:13:00,260 --> 00:13:03,470
+API<font color="#E5E5E5"> so I can very easily</font><font color="#CCCCCC"> just click an</font>
+
+323
+00:13:03,470 --> 00:13:06,020
+element<font color="#E5E5E5"> on the page and again using a</font>
+
+324
+00:13:06,020 --> 00:13:09,020
+CSS selector<font color="#E5E5E5"> to locate that element and</font>
+
+325
+00:13:09,020 --> 00:13:12,680
+then finally I assert that after the
+
+326
+00:13:12,680 --> 00:13:14,839
+page has has loaded<font color="#E5E5E5"> or the form has been</font>
+
+327
+00:13:14,839 --> 00:13:16,880
+submitted<font color="#E5E5E5"> that now the page title is</font>
+
+328
+00:13:16,880 --> 00:13:19,459
+welcome which is what I expect it to be
+
+329
+00:13:19,459 --> 00:13:24,140
+<font color="#E5E5E5">when I've successfully logged in and</font>
+
+330
+00:13:24,140 --> 00:13:25,700
+<font color="#E5E5E5">finally it's important to call end and</font>
+
+331
+00:13:25,700 --> 00:13:27,320
+that tells<font color="#E5E5E5"> Nightwatch that you're done</font>
+
+332
+00:13:27,320 --> 00:13:28,820
+with<font color="#CCCCCC"> the test so it can close the</font>
+
+333
+00:13:28,820 --> 00:13:30,260
+<font color="#E5E5E5">browser and doing</font><font color="#CCCCCC"> kind</font><font color="#E5E5E5"> of</font><font color="#CCCCCC"> cleanup that</font>
+
+334
+00:13:30,260 --> 00:13:35,470
+<font color="#CCCCCC">it needs</font><font color="#E5E5E5"> to do so pretty</font><font color="#CCCCCC"> straightforward</font>
+
+335
+00:13:37,200 --> 00:13:39,850
+so one thing that's interesting this
+
+336
+00:13:39,850 --> 00:13:41,590
+trips up a lot of<font color="#E5E5E5"> people especially</font><font color="#CCCCCC"> if</font>
+
+337
+00:13:41,590 --> 00:13:43,710
+you've come from<font color="#E5E5E5"> maybe using Python Ruby</font>
+
+338
+00:13:43,710 --> 00:13:46,900
+<font color="#CCCCCC">for</font><font color="#E5E5E5"> doing this type of testing all of</font>
+
+339
+00:13:46,900 --> 00:13:50,740
+these API calls are asynchronous so I've
+
+340
+00:13:50,740 --> 00:13:52,540
+seen this a lot<font color="#E5E5E5"> where</font><font color="#CCCCCC"> people will you</font>
+
+341
+00:13:52,540 --> 00:13:55,120
+know<font color="#E5E5E5"> basically send all these commands</font>
+
+342
+00:13:55,120 --> 00:13:57,970
+<font color="#E5E5E5">and then at the end do something like</font>
+
+343
+00:13:57,970 --> 00:13:59,590
+<font color="#E5E5E5">you know console dot log or some other</font>
+
+344
+00:13:59,590 --> 00:14:02,350
+operation and they expect<font color="#E5E5E5"> that console</font>
+
+345
+00:14:02,350 --> 00:14:04,780
+dot log will be will<font color="#CCCCCC"> be executed after</font>
+
+346
+00:14:04,780 --> 00:14:06,670
+<font color="#CCCCCC">all the previous commands</font><font color="#E5E5E5"> that executed</font>
+
+347
+00:14:06,670 --> 00:14:08,290
+<font color="#E5E5E5">and that's not actually the case because</font>
+
+348
+00:14:08,290 --> 00:14:09,460
+what's going<font color="#E5E5E5"> on here is every time we</font>
+
+349
+00:14:09,460 --> 00:14:12,280
+<font color="#E5E5E5">call client and calling API and client</font>
+
+350
+00:14:12,280 --> 00:14:15,810
+is basically queuing<font color="#E5E5E5"> up that</font><font color="#CCCCCC"> that</font><font color="#E5E5E5"> action</font>
+
+351
+00:14:15,810 --> 00:14:18,880
+<font color="#CCCCCC">so way</font><font color="#E5E5E5"> to get around this is that</font><font color="#CCCCCC"> Andre</font>
+
+352
+00:14:18,880 --> 00:14:23,200
+recently added a perform<font color="#E5E5E5"> API so you call</font>
+
+353
+00:14:23,200 --> 00:14:25,300
+client dot perform and<font color="#CCCCCC"> that takes a</font>
+
+354
+00:14:25,300 --> 00:14:27,730
+function<font color="#E5E5E5"> and then you can do something</font>
+
+355
+00:14:27,730 --> 00:14:30,670
+inside of that function<font color="#CCCCCC"> and then that</font>
+
+356
+00:14:30,670 --> 00:14:32,800
+way the console dot log will be queued
+
+357
+00:14:32,800 --> 00:14:35,820
+up<font color="#E5E5E5"> to run after</font><font color="#CCCCCC"> the cert ran</font><font color="#E5E5E5"> before it</font>
+
+358
+00:14:35,820 --> 00:14:39,160
+and you also have this done callback
+
+359
+00:14:39,160 --> 00:14:41,320
+that<font color="#CCCCCC"> you can call to</font><font color="#E5E5E5"> let the framework</font>
+
+360
+00:14:41,320 --> 00:14:44,440
+know when you're done<font color="#E5E5E5"> executing so for</font>
+
+361
+00:14:44,440 --> 00:14:47,440
+example we might<font color="#CCCCCC"> want to I don't</font><font color="#E5E5E5"> know</font>
+
+362
+00:14:47,440 --> 00:14:50,110
+get some dynamically generated value for
+
+363
+00:14:50,110 --> 00:14:50,800
+our<font color="#CCCCCC"> test</font>
+
+364
+00:14:50,800 --> 00:14:53,350
+that's an async operation<font color="#E5E5E5"> so we can do</font>
+
+365
+00:14:53,350 --> 00:14:55,690
+that<font color="#E5E5E5"> and then when we're done</font><font color="#CCCCCC"> we just</font>
+
+366
+00:14:55,690 --> 00:14:58,089
+<font color="#E5E5E5">simply call done to continue</font><font color="#CCCCCC"> the flow</font>
+
+367
+00:14:58,089 --> 00:15:01,830
+<font color="#E5E5E5">the execution flow</font><font color="#CCCCCC"> of the test</font>
+
+368
+00:15:05,490 --> 00:15:07,930
+<font color="#E5E5E5">okay so next let's let's look at the</font>
+
+369
+00:15:07,930 --> 00:15:09,490
+Nightwatch<font color="#E5E5E5"> JS file which is our</font>
+
+370
+00:15:09,490 --> 00:15:11,850
+configuration
+
+371
+00:15:17,880 --> 00:15:21,000
+so there's a lot of<font color="#E5E5E5"> stuff in here</font>
+
+372
+00:15:21,000 --> 00:15:22,899
+<font color="#CCCCCC">there's actually quite a few more</font>
+
+373
+00:15:22,899 --> 00:15:24,100
+<font color="#CCCCCC">options that</font><font color="#E5E5E5"> I'm not showing on this</font>
+
+374
+00:15:24,100 --> 00:15:27,459
+slide but the<font color="#CCCCCC"> docs have very good</font>
+
+375
+00:15:27,459 --> 00:15:29,320
+<font color="#E5E5E5">documentation for all these</font><font color="#CCCCCC"> options so</font>
+
+376
+00:15:29,320 --> 00:15:32,110
+<font color="#CCCCCC">if you</font><font color="#E5E5E5"> check out</font><font color="#CCCCCC"> Night Watch JSC org</font><font color="#E5E5E5"> you</font>
+
+377
+00:15:32,110 --> 00:15:33,910
+can find a great reference<font color="#CCCCCC"> for this</font>
+
+378
+00:15:33,910 --> 00:15:36,010
+stuff but just touching on<font color="#CCCCCC"> a couple</font><font color="#E5E5E5"> of</font>
+
+379
+00:15:36,010 --> 00:15:38,620
+them probably<font color="#E5E5E5"> arguably one of the</font><font color="#CCCCCC"> most</font>
+
+380
+00:15:38,620 --> 00:15:40,690
+important options is telling the
+
+381
+00:15:40,690 --> 00:15:42,250
+framework where your tests are located
+
+382
+00:15:42,250 --> 00:15:44,649
+so in my directory structure I put my
+
+383
+00:15:44,649 --> 00:15:47,380
+tests under<font color="#E5E5E5"> the folder named tests but</font>
+
+384
+00:15:47,380 --> 00:15:48,880
+that's<font color="#E5E5E5"> arbitrary you could store them</font>
+
+385
+00:15:48,880 --> 00:15:51,850
+<font color="#E5E5E5">wherever you want to the I specifying</font>
+
+386
+00:15:51,850 --> 00:15:53,620
+output folder which<font color="#CCCCCC"> is where my results</font>
+
+387
+00:15:53,620 --> 00:15:58,120
+will be stored and here I define some
+
+388
+00:15:58,120 --> 00:15:59,649
+information about the selenium<font color="#E5E5E5"> so</font>
+
+389
+00:15:59,649 --> 00:16:02,889
+<font color="#E5E5E5">Nightwatch itself does not come with the</font>
+
+390
+00:16:02,889 --> 00:16:05,320
+selenium jar<font color="#CCCCCC"> but it</font><font color="#E5E5E5"> will start it for</font>
+
+391
+00:16:05,320 --> 00:16:07,269
+<font color="#CCCCCC">you</font><font color="#E5E5E5"> automatically</font><font color="#CCCCCC"> if you wanted</font><font color="#E5E5E5"> to and</font>
+
+392
+00:16:07,269 --> 00:16:10,029
+to do that you have to<font color="#E5E5E5"> tell it where the</font>
+
+393
+00:16:10,029 --> 00:16:12,399
+jar file lives on disk<font color="#CCCCCC"> so this is where</font>
+
+394
+00:16:12,399 --> 00:16:15,010
+<font color="#CCCCCC">I'm</font><font color="#E5E5E5"> doing</font><font color="#CCCCCC"> that</font><font color="#E5E5E5"> you can also specify</font>
+
+395
+00:16:15,010 --> 00:16:16,660
+where<font color="#CCCCCC"> this excuse me where the selenium</font>
+
+396
+00:16:16,660 --> 00:16:18,760
+<font color="#E5E5E5">log path would go and</font><font color="#CCCCCC"> a few other things</font>
+
+397
+00:16:18,760 --> 00:16:22,690
+<font color="#E5E5E5">about selenium and here we can define</font>
+
+398
+00:16:22,690 --> 00:16:26,290
+<font color="#E5E5E5">our test settings and each section</font>
+
+399
+00:16:26,290 --> 00:16:30,970
+<font color="#CCCCCC">inside of this this block so default</font>
+
+400
+00:16:30,970 --> 00:16:32,529
+would<font color="#E5E5E5"> be considered what's called the</font>
+
+401
+00:16:32,529 --> 00:16:34,089
+environment<font color="#E5E5E5"> so I could have multiple</font>
+
+402
+00:16:34,089 --> 00:16:35,880
+environments<font color="#CCCCCC"> set up in my configuration</font>
+
+403
+00:16:35,880 --> 00:16:38,860
+<font color="#E5E5E5">here I'm just configuring one</font>
+
+404
+00:16:38,860 --> 00:16:40,720
+environment<font color="#E5E5E5"> but I can tell it for</font>
+
+405
+00:16:40,720 --> 00:16:42,779
+example<font color="#CCCCCC"> you know where to find selenium</font>
+
+406
+00:16:42,779 --> 00:16:45,640
+<font color="#E5E5E5">in this case I'm running it locally so</font>
+
+407
+00:16:45,640 --> 00:16:46,990
+I'm<font color="#E5E5E5"> just using one two seven</font><font color="#CCCCCC"> zero zero</font>
+
+408
+00:16:46,990 --> 00:16:49,420
+<font color="#E5E5E5">one but it could be running on a</font>
+
+409
+00:16:49,420 --> 00:16:52,600
+<font color="#CCCCCC">different box and I</font><font color="#E5E5E5"> can tell it some</font>
+
+410
+00:16:52,600 --> 00:16:53,800
+<font color="#E5E5E5">things about where to store screenshots</font>
+
+411
+00:16:53,800 --> 00:16:56,529
+<font color="#E5E5E5">and probably most importantly here I can</font>
+
+412
+00:16:56,529 --> 00:16:58,120
+<font color="#E5E5E5">tell it where or excuse me</font>
+
+413
+00:16:58,120 --> 00:17:00,579
+which browser I want to use so in this
+
+414
+00:17:00,579 --> 00:17:04,569
+case I'm using<font color="#CCCCCC"> Firefox</font><font color="#E5E5E5"> okay so that's</font>
+
+415
+00:17:04,569 --> 00:17:06,130
+great<font color="#E5E5E5"> but how</font><font color="#CCCCCC"> do we</font><font color="#E5E5E5"> actually run our</font>
+
+416
+00:17:06,130 --> 00:17:08,859
+<font color="#CCCCCC">tests so that's also</font><font color="#E5E5E5"> fairly simple</font><font color="#CCCCCC"> you</font>
+
+417
+00:17:08,859 --> 00:17:10,959
+<font color="#CCCCCC">install</font><font color="#E5E5E5"> Nightwatch you can either</font>
+
+418
+00:17:10,959 --> 00:17:12,760
+install<font color="#E5E5E5"> it globally in this case that's</font>
+
+419
+00:17:12,760 --> 00:17:14,140
+<font color="#E5E5E5">what</font><font color="#CCCCCC"> I've done or you can</font><font color="#E5E5E5"> install up to</font>
+
+420
+00:17:14,140 --> 00:17:17,109
+your<font color="#CCCCCC"> local project directory if you're</font>
+
+421
+00:17:17,109 --> 00:17:18,970
+familiar with NPM to install globally
+
+422
+00:17:18,970 --> 00:17:21,760
+you just do MPM install -<font color="#CCCCCC"> JEE</font><font color="#E5E5E5"> Nightwatch</font>
+
+423
+00:17:21,760 --> 00:17:24,459
+<font color="#CCCCCC">and</font><font color="#E5E5E5"> that would get installed and so I</font>
+
+424
+00:17:24,459 --> 00:17:26,980
+run<font color="#E5E5E5"> Nightwatch</font><font color="#CCCCCC"> I use the</font><font color="#E5E5E5"> -</font><font color="#CCCCCC"> C</font><font color="#E5E5E5"> option to</font>
+
+425
+00:17:26,980 --> 00:17:28,480
+tell it where the config file is and
+
+426
+00:17:28,480 --> 00:17:30,970
+then I tell it which environment<font color="#CCCCCC"> I</font>
+
+427
+00:17:30,970 --> 00:17:34,840
+want to use from that config file<font color="#CCCCCC"> and if</font>
+
+428
+00:17:34,840 --> 00:17:37,360
+I wanted<font color="#CCCCCC"> to I could specify</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> the test</font>
+
+429
+00:17:37,360 --> 00:17:39,250
+<font color="#E5E5E5">tags to run or</font><font color="#CCCCCC"> you know</font><font color="#E5E5E5"> other options</font>
+
+430
+00:17:39,250 --> 00:17:41,020
+about which tests<font color="#CCCCCC"> to</font><font color="#E5E5E5"> run but here I'm</font>
+
+431
+00:17:41,020 --> 00:17:43,740
+<font color="#CCCCCC">just running everything</font><font color="#E5E5E5"> basically</font>
+
+432
+00:17:43,740 --> 00:17:46,030
+so what's that once<font color="#E5E5E5"> that runs you'll get</font>
+
+433
+00:17:46,030 --> 00:17:47,919
+some nice console output<font color="#E5E5E5"> where I'll show</font>
+
+434
+00:17:47,919 --> 00:17:50,230
+<font color="#CCCCCC">you the name</font><font color="#E5E5E5"> of the test suite</font><font color="#CCCCCC"> login and</font>
+
+435
+00:17:50,230 --> 00:17:52,030
+that's just derived from the file name
+
+436
+00:17:52,030 --> 00:17:55,210
+<font color="#E5E5E5">itself and then each test within that</font>
+
+437
+00:17:55,210 --> 00:17:57,850
+suite<font color="#E5E5E5"> will be will</font><font color="#CCCCCC"> be printed with</font>
+
+438
+00:17:57,850 --> 00:18:00,070
+results<font color="#E5E5E5"> so here I have</font><font color="#CCCCCC"> my fill out form</font>
+
+439
+00:18:00,070 --> 00:18:03,730
+and login<font color="#E5E5E5"> test and each assertion</font><font color="#CCCCCC"> that I</font>
+
+440
+00:18:03,730 --> 00:18:06,460
+made is printed out<font color="#E5E5E5"> and then a green</font>
+
+441
+00:18:06,460 --> 00:18:08,230
+<font color="#E5E5E5">checkmark is displayed since that</font>
+
+442
+00:18:08,230 --> 00:18:09,789
+assertion passed<font color="#CCCCCC"> and at the end</font><font color="#E5E5E5"> it'll</font>
+
+443
+00:18:09,789 --> 00:18:11,380
+tell me<font color="#CCCCCC"> how many assertions passed</font><font color="#E5E5E5"> and</font>
+
+444
+00:18:11,380 --> 00:18:13,600
+also how<font color="#CCCCCC"> long it took to</font><font color="#E5E5E5"> run the entire</font>
+
+445
+00:18:13,600 --> 00:18:15,960
+<font color="#E5E5E5">test</font>
+
+446
+00:18:23,170 --> 00:18:27,140
+<font color="#E5E5E5">okay so going back to</font><font color="#CCCCCC"> our first example</font>
+
+447
+00:18:27,140 --> 00:18:28,910
+anybody<font color="#E5E5E5"> that's sort of familiar with</font>
+
+448
+00:18:28,910 --> 00:18:30,800
+<font color="#E5E5E5">writing</font><font color="#CCCCCC"> tests can you tell me what what</font>
+
+449
+00:18:30,800 --> 00:18:32,060
+<font color="#CCCCCC">what we might</font><font color="#E5E5E5"> want</font><font color="#CCCCCC"> to change about how</font>
+
+450
+00:18:32,060 --> 00:18:34,580
+we wrote<font color="#E5E5E5"> this test like is this this is</font>
+
+451
+00:18:34,580 --> 00:18:35,510
+a good way to write<font color="#CCCCCC"> tests</font>
+
+452
+00:18:35,510 --> 00:18:37,160
+is there any no anti patterning<font color="#CCCCCC"> that you</font>
+
+453
+00:18:37,160 --> 00:18:42,560
+can see here before<font color="#E5E5E5"> range before</font><font color="#CCCCCC"> each o</font>
+
+454
+00:18:42,560 --> 00:18:44,930
+<font color="#CCCCCC">for test</font><font color="#E5E5E5"> test hook</font><font color="#CCCCCC"> see yeah</font><font color="#E5E5E5"> you could</font>
+
+455
+00:18:44,930 --> 00:18:47,360
+you could do that<font color="#E5E5E5"> but what I'm talking</font>
+
+456
+00:18:47,360 --> 00:18:50,960
+<font color="#CCCCCC">about in particular is these values</font><font color="#E5E5E5"> so</font>
+
+457
+00:18:50,960 --> 00:18:54,140
+they're<font color="#E5E5E5"> hard-coded right which isn't</font>
+
+458
+00:18:54,140 --> 00:18:57,260
+super flexible<font color="#CCCCCC"> one common scenario might</font>
+
+459
+00:18:57,260 --> 00:18:59,780
+be like say you're testing a large site
+
+460
+00:18:59,780 --> 00:19:00,920
+I<font color="#CCCCCC"> mean we did this at</font><font color="#E5E5E5"> LinkedIn for</font>
+
+461
+00:19:00,920 --> 00:19:02,870
+example so every time you<font color="#E5E5E5"> run</font><font color="#CCCCCC"> a test</font><font color="#E5E5E5"> you</font>
+
+462
+00:19:02,870 --> 00:19:04,670
+might want to have an<font color="#E5E5E5"> API where</font><font color="#CCCCCC"> you call</font>
+
+463
+00:19:04,670 --> 00:19:06,350
+to get<font color="#CCCCCC"> a valid set of user credentials</font>
+
+464
+00:19:06,350 --> 00:19:07,820
+so rather<font color="#E5E5E5"> than hard coding your user</font>
+
+465
+00:19:07,820 --> 00:19:10,580
+credentials to<font color="#E5E5E5"> login with you can call</font>
+
+466
+00:19:10,580 --> 00:19:12,650
+some services hey you know<font color="#E5E5E5"> just create</font>
+
+467
+00:19:12,650 --> 00:19:14,930
+me a you know a throwaway<font color="#E5E5E5"> test account</font>
+
+468
+00:19:14,930 --> 00:19:17,930
+<font color="#E5E5E5">so we want to make our tests ideally</font>
+
+469
+00:19:17,930 --> 00:19:22,130
+more<font color="#CCCCCC"> data-driven so we can do this</font>
+
+470
+00:19:22,130 --> 00:19:23,990
+<font color="#E5E5E5">fairly easily with Nightwatch in this</font>
+
+471
+00:19:23,990 --> 00:19:25,310
+case<font color="#CCCCCC"> I'm going</font><font color="#E5E5E5"> to show</font><font color="#CCCCCC"> how</font><font color="#E5E5E5"> you could do</font>
+
+472
+00:19:25,310 --> 00:19:28,100
+<font color="#CCCCCC">this just by storing the the data for</font>
+
+473
+00:19:28,100 --> 00:19:30,230
+the<font color="#E5E5E5"> test separately from the test itself</font>
+
+474
+00:19:30,230 --> 00:19:32,990
+<font color="#E5E5E5">so a simple pattern to use is to create</font>
+
+475
+00:19:32,990 --> 00:19:35,270
+a data directory in<font color="#CCCCCC"> your project</font>
+
+476
+00:19:35,270 --> 00:19:37,940
+directory<font color="#E5E5E5"> and then you can a here in</font>
+
+477
+00:19:37,940 --> 00:19:39,290
+this case I've sort of split it up by
+
+478
+00:19:39,290 --> 00:19:41,270
+test environment so imagine you have<font color="#CCCCCC"> a</font>
+
+479
+00:19:41,270 --> 00:19:42,950
+dev<font color="#CCCCCC"> environment for locally running your</font>
+
+480
+00:19:42,950 --> 00:19:44,710
+tests<font color="#CCCCCC"> and then a staging</font><font color="#E5E5E5"> environment</font>
+
+481
+00:19:44,710 --> 00:19:46,880
+<font color="#E5E5E5">where you have a staging server set</font><font color="#CCCCCC"> up</font>
+
+482
+00:19:46,880 --> 00:19:48,410
+to run<font color="#E5E5E5"> some final testing before</font>
+
+483
+00:19:48,410 --> 00:19:50,890
+<font color="#E5E5E5">deploying</font>
+
+484
+00:19:52,030 --> 00:19:55,900
+so my dev<font color="#CCCCCC"> Jas is simply a node module</font>
+
+485
+00:19:55,900 --> 00:19:58,600
+<font color="#E5E5E5">it's really a simple object</font><font color="#CCCCCC"> where I can</font>
+
+486
+00:19:58,600 --> 00:20:01,240
+store key value pairs of data that I
+
+487
+00:20:01,240 --> 00:20:03,520
+want<font color="#CCCCCC"> to be able to reference from</font><font color="#E5E5E5"> within</font>
+
+488
+00:20:03,520 --> 00:20:07,060
+my tests in this case I only<font color="#CCCCCC"> have</font><font color="#E5E5E5"> three</font>
+
+489
+00:20:07,060 --> 00:20:09,130
+values<font color="#CCCCCC"> fairly</font><font color="#E5E5E5"> straightforward I'm going</font>
+
+490
+00:20:09,130 --> 00:20:11,110
+to store my<font color="#CCCCCC"> username</font><font color="#E5E5E5"> and password</font><font color="#CCCCCC"> I'm</font>
+
+491
+00:20:11,110 --> 00:20:13,630
+going to use for<font color="#CCCCCC"> the</font><font color="#E5E5E5"> test</font><font color="#CCCCCC"> and I'm going</font>
+
+492
+00:20:13,630 --> 00:20:16,090
+to<font color="#E5E5E5"> store the URL of the login page that</font>
+
+493
+00:20:16,090 --> 00:20:18,250
+I actually want<font color="#E5E5E5"> to navigate to during</font>
+
+494
+00:20:18,250 --> 00:20:25,870
+the test<font color="#E5E5E5"> I have to make one small tweak</font>
+
+495
+00:20:25,870 --> 00:20:27,970
+<font color="#CCCCCC">to my</font><font color="#E5E5E5"> Nightwatch</font><font color="#CCCCCC"> JS configuration file</font>
+
+496
+00:20:27,970 --> 00:20:30,010
+<font color="#E5E5E5">to make this work</font><font color="#CCCCCC"> so under the</font>
+
+497
+00:20:30,010 --> 00:20:32,110
+environment section<font color="#E5E5E5"> you can specify a</font>
+
+498
+00:20:32,110 --> 00:20:35,380
+<font color="#E5E5E5">Global's key and here we just</font><font color="#CCCCCC"> I'm just</font>
+
+499
+00:20:35,380 --> 00:20:37,450
+requiring that file<font color="#E5E5E5"> so I'm setting</font>
+
+500
+00:20:37,450 --> 00:20:40,510
+Global's to that object basically<font color="#E5E5E5"> that</font>
+
+501
+00:20:40,510 --> 00:20:46,270
+has those<font color="#CCCCCC"> values inside of it so one</font>
+
+502
+00:20:46,270 --> 00:20:47,380
+thing I could do is I might<font color="#CCCCCC"> want to</font>
+
+503
+00:20:47,380 --> 00:20:48,910
+<font color="#E5E5E5">create a separate environment called</font>
+
+504
+00:20:48,910 --> 00:20:50,800
+staging<font color="#E5E5E5"> or something else like that</font><font color="#CCCCCC"> and</font>
+
+505
+00:20:50,800 --> 00:20:52,750
+then I would<font color="#E5E5E5"> require my staging data</font>
+
+506
+00:20:52,750 --> 00:20:56,260
+file so<font color="#E5E5E5"> accessing this data from with</font>
+
+507
+00:20:56,260 --> 00:20:58,890
+<font color="#CCCCCC">inside of your test is very simple</font>
+
+508
+00:20:58,890 --> 00:21:02,800
+<font color="#E5E5E5">there's a Global's object that you can</font>
+
+509
+00:21:02,800 --> 00:21:04,780
+<font color="#E5E5E5">reference from the client object</font><font color="#CCCCCC"> so here</font>
+
+510
+00:21:04,780 --> 00:21:05,200
+I'm saying
+
+511
+00:21:05,200 --> 00:21:07,450
+<font color="#E5E5E5">my data is equal to client ID Global's</font>
+
+512
+00:21:07,450 --> 00:21:09,790
+and now I can just<font color="#E5E5E5"> reference that within</font>
+
+513
+00:21:09,790 --> 00:21:12,460
+the test<font color="#E5E5E5"> so I'm using</font><font color="#CCCCCC"> one set one</font>
+
+514
+00:21:12,460 --> 00:21:14,710
+<font color="#E5E5E5">selecting the URL to go to instead of</font>
+
+515
+00:21:14,710 --> 00:21:17,500
+that hard-coded string I'm saying data
+
+516
+00:21:17,500 --> 00:21:19,780
+<font color="#CCCCCC">URL</font><font color="#E5E5E5"> logging which is going to give me</font>
+
+517
+00:21:19,780 --> 00:21:22,660
+that that string value for me and the
+
+518
+00:21:22,660 --> 00:21:24,010
+same thing here<font color="#E5E5E5"> when I'm filling out my</font>
+
+519
+00:21:24,010 --> 00:21:27,730
+form<font color="#E5E5E5"> so</font><font color="#CCCCCC"> I</font><font color="#E5E5E5"> can say data</font><font color="#CCCCCC"> username and data</font>
+
+520
+00:21:27,730 --> 00:21:31,110
+<font color="#E5E5E5">dot password to get those values</font>
+
+521
+00:21:33,390 --> 00:21:36,370
+another thing<font color="#CCCCCC"> that's</font><font color="#E5E5E5"> that you can do</font>
+
+522
+00:21:36,370 --> 00:21:38,080
+<font color="#E5E5E5">that's worth mentioning</font><font color="#CCCCCC"> is you can</font>
+
+523
+00:21:38,080 --> 00:21:39,730
+<font color="#CCCCCC">actually split</font><font color="#E5E5E5"> up your test into</font>
+
+524
+00:21:39,730 --> 00:21:42,970
+multiple steps<font color="#E5E5E5"> so here I split up my</font>
+
+525
+00:21:42,970 --> 00:21:44,679
+<font color="#CCCCCC">test into two parts</font><font color="#E5E5E5"> first part I'm</font>
+
+526
+00:21:44,679 --> 00:21:46,990
+filling<font color="#E5E5E5"> out the form and the second part</font>
+
+527
+00:21:46,990 --> 00:21:50,380
+I'm<font color="#E5E5E5"> submitting the form so this might</font><font color="#CCCCCC"> be</font>
+
+528
+00:21:50,380 --> 00:21:51,970
+<font color="#CCCCCC">interesting to do especially</font><font color="#E5E5E5"> if you have</font>
+
+529
+00:21:51,970 --> 00:21:55,630
+a very large test suite if there's a lot
+
+530
+00:21:55,630 --> 00:21:57,640
+a lot<font color="#CCCCCC"> of functionality you can split it</font>
+
+531
+00:21:57,640 --> 00:22:00,250
+up<font color="#E5E5E5"> the other key</font><font color="#CCCCCC"> benefit of doing</font><font color="#E5E5E5"> this</font>
+
+532
+00:22:00,250 --> 00:22:06,160
+<font color="#E5E5E5">is that</font><font color="#CCCCCC"> the entire sequence of steps</font>
+
+533
+00:22:06,160 --> 00:22:09,040
+<font color="#E5E5E5">with within each section is fully</font>
+
+534
+00:22:09,040 --> 00:22:11,320
+executed before<font color="#E5E5E5"> moving on so this kind</font>
+
+535
+00:22:11,320 --> 00:22:12,190
+of<font color="#CCCCCC"> helps</font><font color="#E5E5E5"> you deal with some of those</font>
+
+536
+00:22:12,190 --> 00:22:14,260
+asynchronous issues as well<font color="#CCCCCC"> so in this</font>
+
+537
+00:22:14,260 --> 00:22:16,750
+case<font color="#E5E5E5"> I'm you know it's in fill out forms</font>
+
+538
+00:22:16,750 --> 00:22:19,900
+in the fill out form step<font color="#E5E5E5"> I'm going</font><font color="#CCCCCC"> to</font>
+
+539
+00:22:19,900 --> 00:22:21,580
+the<font color="#E5E5E5"> web page I was doing a search I'm</font>
+
+540
+00:22:21,580 --> 00:22:23,320
+filling out<font color="#E5E5E5"> the form and then in the</font>
+
+541
+00:22:23,320 --> 00:22:24,790
+submit form step I'm actually submitting
+
+542
+00:22:24,790 --> 00:22:25,179
+the form
+
+543
+00:22:25,179 --> 00:22:27,700
+so this console dot log message won't
+
+544
+00:22:27,700 --> 00:22:29,380
+actually<font color="#E5E5E5"> print out until the entire</font>
+
+545
+00:22:29,380 --> 00:22:35,830
+<font color="#CCCCCC">previous step is complete so looking at</font>
+
+546
+00:22:35,830 --> 00:22:37,270
+the output<font color="#CCCCCC"> of this it's very</font><font color="#E5E5E5"> similar</font>
+
+547
+00:22:37,270 --> 00:22:38,860
+<font color="#E5E5E5">it's just that we've now split it up</font>
+
+548
+00:22:38,860 --> 00:22:41,530
+into<font color="#CCCCCC"> two different test tests or test</font>
+
+549
+00:22:41,530 --> 00:22:43,990
+steps<font color="#E5E5E5"> so we have fill out form with the</font>
+
+550
+00:22:43,990 --> 00:22:46,120
+results and then submit form with the
+
+551
+00:22:46,120 --> 00:22:48,540
+results
+
+552
+00:22:49,850 --> 00:22:52,920
+so terminology is pretty simple<font color="#CCCCCC"> the</font>
+
+553
+00:22:52,920 --> 00:22:56,250
+<font color="#E5E5E5">login file is referred to as a test</font>
+
+554
+00:22:56,250 --> 00:22:58,890
+suite<font color="#CCCCCC"> and then each of</font><font color="#E5E5E5"> those sections or</font>
+
+555
+00:22:58,890 --> 00:23:01,140
+are referred to as tests we have the
+
+556
+00:23:01,140 --> 00:23:03,090
+<font color="#CCCCCC">Philip form test and the</font><font color="#E5E5E5"> submit form</font>
+
+557
+00:23:03,090 --> 00:23:09,810
+test another<font color="#E5E5E5"> thing that is useful to</font>
+
+558
+00:23:09,810 --> 00:23:11,640
+<font color="#E5E5E5">know when you're writing tests is what</font>
+
+559
+00:23:11,640 --> 00:23:14,130
+are your<font color="#CCCCCC"> options for checking</font><font color="#E5E5E5"> the state</font>
+
+560
+00:23:14,130 --> 00:23:17,250
+of the page<font color="#E5E5E5"> so we have two AP is we have</font>
+
+561
+00:23:17,250 --> 00:23:21,810
+<font color="#CCCCCC">assert and verify and they both let you</font>
+
+562
+00:23:21,810 --> 00:23:24,210
+check if something is<font color="#E5E5E5"> true and the key</font>
+
+563
+00:23:24,210 --> 00:23:27,030
+difference<font color="#CCCCCC"> is that</font><font color="#E5E5E5"> a cert will stop the</font>
+
+564
+00:23:27,030 --> 00:23:30,540
+test<font color="#CCCCCC"> if if it fails if the assertion</font>
+
+565
+00:23:30,540 --> 00:23:32,610
+fails verify won't it will log the
+
+566
+00:23:32,610 --> 00:23:35,040
+<font color="#E5E5E5">message saying this failed but it</font><font color="#CCCCCC"> will</font>
+
+567
+00:23:35,040 --> 00:23:37,320
+keep<font color="#CCCCCC"> going so depending on</font><font color="#E5E5E5"> your use case</font>
+
+568
+00:23:37,320 --> 00:23:41,630
+<font color="#CCCCCC">you have these two api's to choose from</font>
+
+569
+00:23:42,350 --> 00:23:45,090
+another thing that's<font color="#CCCCCC"> really important to</font>
+
+570
+00:23:45,090 --> 00:23:46,590
+know<font color="#CCCCCC"> is how do you</font><font color="#E5E5E5"> go ahead and debug</font>
+
+571
+00:23:46,590 --> 00:23:48,480
+<font color="#E5E5E5">your test so you might write a test and</font>
+
+572
+00:23:48,480 --> 00:23:50,280
+you expect it<font color="#CCCCCC"> to pass but it's just not</font>
+
+573
+00:23:50,280 --> 00:23:52,590
+passing you can't figure out why there's
+
+574
+00:23:52,590 --> 00:23:54,750
+a couple of options<font color="#CCCCCC"> you</font><font color="#E5E5E5"> can do first</font>
+
+575
+00:23:54,750 --> 00:23:56,490
+<font color="#E5E5E5">probably one</font><font color="#CCCCCC"> of the</font><font color="#E5E5E5"> most useful API</font><font color="#CCCCCC"> is</font>
+
+576
+00:23:56,490 --> 00:23:59,430
+is pause<font color="#E5E5E5"> so you</font><font color="#CCCCCC"> can call pause on the</font>
+
+577
+00:23:59,430 --> 00:24:02,610
+client object<font color="#CCCCCC"> and this will well pause</font>
+
+578
+00:24:02,610 --> 00:24:04,620
+the<font color="#E5E5E5"> test and</font><font color="#CCCCCC"> leave the browser window</font>
+
+579
+00:24:04,620 --> 00:24:06,270
+open<font color="#CCCCCC"> so you could then go ahead and dig</font>
+
+580
+00:24:06,270 --> 00:24:08,460
+<font color="#CCCCCC">into dev tools</font><font color="#E5E5E5"> or just you know look at</font>
+
+581
+00:24:08,460 --> 00:24:10,380
+the page and kind<font color="#E5E5E5"> of try to figure out</font>
+
+582
+00:24:10,380 --> 00:24:16,020
+you know<font color="#E5E5E5"> what the heck is going on the</font>
+
+583
+00:24:16,020 --> 00:24:17,460
+<font color="#E5E5E5">other option is</font><font color="#CCCCCC"> if you're trying to</font>
+
+584
+00:24:17,460 --> 00:24:21,150
+debug<font color="#E5E5E5"> your your test code itself</font><font color="#CCCCCC"> the</font>
+
+585
+00:24:21,150 --> 00:24:22,590
+probably easiest way to do it in my
+
+586
+00:24:22,590 --> 00:24:24,360
+<font color="#E5E5E5">opinion is to</font><font color="#CCCCCC"> just use</font><font color="#E5E5E5"> the debugger</font>
+
+587
+00:24:24,360 --> 00:24:26,100
+statement and then hop into the node
+
+588
+00:24:26,100 --> 00:24:29,430
+debugger to step through your code<font color="#E5E5E5"> if</font>
+
+589
+00:24:29,430 --> 00:24:30,690
+you're<font color="#E5E5E5"> not familiar with a node debugger</font>
+
+590
+00:24:30,690 --> 00:24:32,160
+<font color="#E5E5E5">you can there's a link at the</font><font color="#CCCCCC"> bottom</font>
+
+591
+00:24:32,160 --> 00:24:34,250
+<font color="#E5E5E5">where you can</font><font color="#CCCCCC"> look at the</font><font color="#E5E5E5"> API Docs</font>
+
+592
+00:24:34,250 --> 00:24:36,510
+there's also some instructions on<font color="#E5E5E5"> the</font>
+
+593
+00:24:36,510 --> 00:24:39,030
+Nightwatch website<font color="#E5E5E5"> on how</font><font color="#CCCCCC"> to set this up</font>
+
+594
+00:24:39,030 --> 00:24:40,710
+<font color="#E5E5E5">with webstorm</font><font color="#CCCCCC"> so if</font><font color="#E5E5E5"> you like more of a</font>
+
+595
+00:24:40,710 --> 00:24:42,990
+<font color="#E5E5E5">visual or GUI debugger you</font><font color="#CCCCCC"> can do that</font>
+
+596
+00:24:42,990 --> 00:24:45,320
+as<font color="#E5E5E5"> well</font>
+
+597
+00:24:51,380 --> 00:24:56,870
+<font color="#CCCCCC">notice spectacle work as well</font><font color="#E5E5E5"> yep so</font>
+
+598
+00:24:56,870 --> 00:24:58,820
+there's lots of commands<font color="#CCCCCC"> available it</font>
+
+599
+00:24:58,820 --> 00:25:00,620
+pretty much<font color="#E5E5E5"> Maps just standard selenium</font>
+
+600
+00:25:00,620 --> 00:25:03,740
+API<font color="#E5E5E5"> for the most part you can</font><font color="#CCCCCC"> do</font><font color="#E5E5E5"> things</font>
+
+601
+00:25:03,740 --> 00:25:05,270
+<font color="#E5E5E5">like you know check the attributes get</font>
+
+602
+00:25:05,270 --> 00:25:07,400
+the attributes on element<font color="#E5E5E5"> of course</font><font color="#CCCCCC"> get</font>
+
+603
+00:25:07,400 --> 00:25:08,960
+title<font color="#CCCCCC"> of</font><font color="#E5E5E5"> the page basically inspect</font>
+
+604
+00:25:08,960 --> 00:25:10,190
+<font color="#E5E5E5">anything about the page that you're</font>
+
+605
+00:25:10,190 --> 00:25:13,180
+currently looking<font color="#E5E5E5"> at</font>
+
+606
+00:25:14,760 --> 00:25:17,830
+you also have a fair<font color="#E5E5E5"> number of</font>
+
+607
+00:25:17,830 --> 00:25:20,170
+assertions<font color="#E5E5E5"> and you can use these with</font>
+
+608
+00:25:20,170 --> 00:25:22,300
+either the assert or<font color="#E5E5E5"> verify method</font>
+
+609
+00:25:22,300 --> 00:25:24,520
+depending<font color="#E5E5E5"> on what you what you what kind</font>
+
+610
+00:25:24,520 --> 00:25:25,780
+of behavior<font color="#E5E5E5"> you want to happen if it</font>
+
+611
+00:25:25,780 --> 00:25:28,360
+fails you<font color="#CCCCCC"> can assert on things like you</font>
+
+612
+00:25:28,360 --> 00:25:30,370
+<font color="#CCCCCC">know is</font><font color="#E5E5E5"> a attribute on element a certain</font>
+
+613
+00:25:30,370 --> 00:25:32,890
+value<font color="#E5E5E5"> is something hidden is the page</font>
+
+614
+00:25:32,890 --> 00:25:36,190
+title<font color="#CCCCCC"> an expected value is an element on</font>
+
+615
+00:25:36,190 --> 00:25:38,770
+the page<font color="#CCCCCC"> as</font><font color="#E5E5E5"> a not on the page etc so</font>
+
+616
+00:25:38,770 --> 00:25:40,900
+there's quite<font color="#E5E5E5"> a lot</font><font color="#CCCCCC"> of flexibility in in</font>
+
+617
+00:25:40,900 --> 00:25:43,140
+here between the commands<font color="#E5E5E5"> and assertions</font>
+
+618
+00:25:43,140 --> 00:25:46,270
+<font color="#CCCCCC">however if you need to do</font><font color="#E5E5E5"> something</font>
+
+619
+00:25:46,270 --> 00:25:48,640
+which<font color="#CCCCCC"> is not already supported</font><font color="#E5E5E5"> you can</font>
+
+620
+00:25:48,640 --> 00:25:50,620
+<font color="#CCCCCC">create your</font><font color="#E5E5E5"> own custom commands and</font>
+
+621
+00:25:50,620 --> 00:25:52,929
+<font color="#CCCCCC">assertions</font><font color="#E5E5E5"> so here's an</font><font color="#CCCCCC"> example</font><font color="#E5E5E5"> where I</font>
+
+622
+00:25:52,929 --> 00:25:58,030
+created a somewhat contrived<font color="#CCCCCC"> example</font>
+
+623
+00:25:58,030 --> 00:26:00,040
+creating a custom command<font color="#E5E5E5"> so in this</font>
+
+624
+00:26:00,040 --> 00:26:02,679
+case I'm going<font color="#CCCCCC"> to this webpage</font><font color="#E5E5E5"> Netflix</font>
+
+625
+00:26:02,679 --> 00:26:06,010
+<font color="#E5E5E5">and then take account is a custom</font>
+
+626
+00:26:06,010 --> 00:26:09,880
+command<font color="#E5E5E5"> that I created and basically</font>
+
+627
+00:26:09,880 --> 00:26:12,610
+what this does<font color="#E5E5E5"> is it</font><font color="#CCCCCC"> lets me give a</font>
+
+628
+00:26:12,610 --> 00:26:15,490
+particular<font color="#E5E5E5"> element type or tag in this</font>
+
+629
+00:26:15,490 --> 00:26:18,880
+case an anchor and then get a result of
+
+630
+00:26:18,880 --> 00:26:20,200
+happening if those<font color="#E5E5E5"> elements are</font><font color="#CCCCCC"> on</font><font color="#E5E5E5"> the</font>
+
+631
+00:26:20,200 --> 00:26:27,160
+<font color="#E5E5E5">page here I'm defining a custom</font>
+
+632
+00:26:27,160 --> 00:26:29,170
+assertion so if I want<font color="#E5E5E5"> to assert that</font>
+
+633
+00:26:29,170 --> 00:26:32,650
+<font color="#CCCCCC">there are at least a hundred</font><font color="#E5E5E5"> anchor</font>
+
+634
+00:26:32,650 --> 00:26:34,750
+elements on the page I could do that
+
+635
+00:26:34,750 --> 00:26:37,690
+with<font color="#E5E5E5"> this API call so this is showing</font>
+
+636
+00:26:37,690 --> 00:26:40,929
+<font color="#E5E5E5">how to use the custom extensions and</font>
+
+637
+00:26:40,929 --> 00:26:42,309
+next I'm going to<font color="#E5E5E5"> talk about how you</font>
+
+638
+00:26:42,309 --> 00:26:45,179
+actually<font color="#E5E5E5"> implement those</font>
+
+639
+00:26:46,640 --> 00:26:49,010
+so doing a command<font color="#E5E5E5"> I think is arguably</font>
+
+640
+00:26:49,010 --> 00:26:51,740
+easier than<font color="#CCCCCC"> doing an insertion this is</font>
+
+641
+00:26:51,740 --> 00:26:53,920
+an example<font color="#E5E5E5"> of how we would implement our</font>
+
+642
+00:26:53,920 --> 00:26:58,790
+tag name so essentially all you do is
+
+643
+00:26:58,790 --> 00:27:03,320
+implement<font color="#E5E5E5"> a node module</font><font color="#CCCCCC"> and it takes a</font>
+
+644
+00:27:03,320 --> 00:27:07,660
+<font color="#CCCCCC">callback and then in this</font><font color="#E5E5E5"> case a value</font>
+
+645
+00:27:07,660 --> 00:27:10,220
+mapping<font color="#E5E5E5"> to the tag name that</font><font color="#CCCCCC"> you want</font><font color="#E5E5E5"> to</font>
+
+646
+00:27:10,220 --> 00:27:13,549
+<font color="#E5E5E5">check</font><font color="#CCCCCC"> for</font><font color="#E5E5E5"> and so then we just call</font>
+
+647
+00:27:13,549 --> 00:27:17,090
+execute and what<font color="#E5E5E5"> this is doing is saying</font>
+
+648
+00:27:17,090 --> 00:27:20,620
+<font color="#E5E5E5">I</font><font color="#CCCCCC"> want to</font><font color="#E5E5E5"> execute the following code</font>
+
+649
+00:27:20,620 --> 00:27:23,480
+within<font color="#CCCCCC"> the</font><font color="#E5E5E5"> context of the</font><font color="#CCCCCC"> webpage</font><font color="#E5E5E5"> not</font>
+
+650
+00:27:23,480 --> 00:27:24,950
+within the node context<font color="#E5E5E5"> but within the</font>
+
+651
+00:27:24,950 --> 00:27:27,860
+<font color="#E5E5E5">actual browser that</font><font color="#CCCCCC"> we're observing</font>
+
+652
+00:27:27,860 --> 00:27:31,040
+through<font color="#E5E5E5"> this test so this is one reason</font>
+
+653
+00:27:31,040 --> 00:27:32,720
+why<font color="#CCCCCC"> I actually prefer writing</font><font color="#E5E5E5"> my</font>
+
+654
+00:27:32,720 --> 00:27:35,299
+selenium<font color="#E5E5E5"> tests in JavaScript because if</font>
+
+655
+00:27:35,299 --> 00:27:36,830
+you're ever<font color="#CCCCCC"> doing if you're ever</font><font color="#E5E5E5"> trying</font>
+
+656
+00:27:36,830 --> 00:27:38,450
+<font color="#E5E5E5">to inject JavaScript into the page is</font>
+
+657
+00:27:38,450 --> 00:27:42,410
+much more natural<font color="#CCCCCC"> more natural since</font>
+
+658
+00:27:42,410 --> 00:27:44,330
+you're already writing the<font color="#E5E5E5"> tests code</font>
+
+659
+00:27:44,330 --> 00:27:46,429
+itself<font color="#E5E5E5"> in JavaScript versus something</font>
+
+660
+00:27:46,429 --> 00:27:47,600
+like<font color="#E5E5E5"> Python where you're writing in</font>
+
+661
+00:27:47,600 --> 00:27:48,830
+Python and<font color="#E5E5E5"> then you have to sort</font><font color="#CCCCCC"> of</font>
+
+662
+00:27:48,830 --> 00:27:50,929
+inline some JavaScript<font color="#CCCCCC"> it's just</font>
+
+663
+00:27:50,929 --> 00:27:54,230
+personal<font color="#CCCCCC"> preference but anyway so it's</font>
+
+664
+00:27:54,230 --> 00:27:56,210
+<font color="#E5E5E5">is pretty</font><font color="#CCCCCC"> straightforward</font><font color="#E5E5E5"> so that gets</font>
+
+665
+00:27:56,210 --> 00:27:59,480
+the values by calling<font color="#E5E5E5"> get elements by</font>
+
+666
+00:27:59,480 --> 00:28:01,429
+tag<font color="#E5E5E5"> name and then we're looking at the</font>
+
+667
+00:28:01,429 --> 00:28:04,190
+length of<font color="#E5E5E5"> that value that's returned and</font>
+
+668
+00:28:04,190 --> 00:28:07,750
+then we call back with<font color="#E5E5E5"> the results</font><font color="#CCCCCC"> I</font>
+
+669
+00:28:07,750 --> 00:28:09,950
+realize<font color="#E5E5E5"> this is probably too small for</font>
+
+670
+00:28:09,950 --> 00:28:11,840
+most<font color="#E5E5E5"> of you to see this is an example of</font>
+
+671
+00:28:11,840 --> 00:28:14,210
+<font color="#E5E5E5">writing a custom assertion as you can</font>
+
+672
+00:28:14,210 --> 00:28:16,790
+sort of tell<font color="#E5E5E5"> from the length of this</font>
+
+673
+00:28:16,790 --> 00:28:18,710
+slide<font color="#E5E5E5"> there's a bit more code you have</font>
+
+674
+00:28:18,710 --> 00:28:21,530
+<font color="#E5E5E5">to implement to write a custom assertion</font>
+
+675
+00:28:21,530 --> 00:28:23,900
+is still<font color="#E5E5E5"> not too hard and I encourage</font>
+
+676
+00:28:23,900 --> 00:28:26,120
+you<font color="#CCCCCC"> to</font><font color="#E5E5E5"> check out the API</font><font color="#CCCCCC"> Doc's there's a</font>
+
+677
+00:28:26,120 --> 00:28:27,650
+great talk<font color="#CCCCCC"> about how to do this</font><font color="#E5E5E5"> for</font>
+
+678
+00:28:27,650 --> 00:28:29,780
+yourself<font color="#CCCCCC"> additionally at the end of this</font>
+
+679
+00:28:29,780 --> 00:28:32,480
+talk I'm linked to a github repo<font color="#CCCCCC"> that I</font>
+
+680
+00:28:32,480 --> 00:28:34,730
+put<font color="#CCCCCC"> together</font><font color="#E5E5E5"> where you can see all this</font>
+
+681
+00:28:34,730 --> 00:28:38,410
+sample code<font color="#CCCCCC"> that I'm</font><font color="#E5E5E5"> showing you today</font>
+
+682
+00:28:38,799 --> 00:28:41,630
+so the final<font color="#CCCCCC"> step to</font><font color="#E5E5E5"> actually using</font>
+
+683
+00:28:41,630 --> 00:28:43,820
+<font color="#CCCCCC">these extensions is to hook</font><font color="#E5E5E5"> it up by</font>
+
+684
+00:28:43,820 --> 00:28:46,130
+referencing them in your<font color="#CCCCCC"> Nightwatch</font>
+
+685
+00:28:46,130 --> 00:28:48,980
+<font color="#E5E5E5">configuration so you just add two new</font>
+
+686
+00:28:48,980 --> 00:28:51,169
+values custom commands<font color="#E5E5E5"> path and custom</font>
+
+687
+00:28:51,169 --> 00:28:52,789
+assertions path to tell the framework
+
+688
+00:28:52,789 --> 00:29:00,230
+where your extensions live so there's a
+
+689
+00:29:00,230 --> 00:29:03,409
+lot<font color="#E5E5E5"> more to explore with Nightwatch</font><font color="#CCCCCC"> it</font>
+
+690
+00:29:03,409 --> 00:29:05,390
+does support<font color="#CCCCCC"> before and after</font><font color="#E5E5E5"> test hooks</font>
+
+691
+00:29:05,390 --> 00:29:08,150
+<font color="#E5E5E5">like most testing frameworks you can</font>
+
+692
+00:29:08,150 --> 00:29:10,130
+take screenshots<font color="#CCCCCC"> as</font><font color="#E5E5E5"> I mentioned</font><font color="#CCCCCC"> before</font>
+
+693
+00:29:10,130 --> 00:29:12,140
+<font color="#CCCCCC">you can</font><font color="#E5E5E5"> use cloud services such</font><font color="#CCCCCC"> as sauce</font>
+
+694
+00:29:12,140 --> 00:29:15,250
+labs<font color="#E5E5E5"> to actually execute</font><font color="#CCCCCC"> the tests and</font>
+
+695
+00:29:15,250 --> 00:29:17,000
+<font color="#E5E5E5">you know a whole</font><font color="#CCCCCC"> bunch of other things</font>
+
+696
+00:29:17,000 --> 00:29:20,000
+<font color="#E5E5E5">to explore so I really encourage you</font><font color="#CCCCCC"> to</font>
+
+697
+00:29:20,000 --> 00:29:21,919
+try it<font color="#E5E5E5"> out if you're at all interested</font>
+
+698
+00:29:21,919 --> 00:29:26,450
+in functional testing<font color="#CCCCCC"> and you know give</font>
+
+699
+00:29:26,450 --> 00:29:28,070
+back to the community as well<font color="#CCCCCC"> so</font><font color="#E5E5E5"> go</font>
+
+700
+00:29:28,070 --> 00:29:30,020
+ahead<font color="#E5E5E5"> and</font><font color="#CCCCCC"> you know I know one user for</font>
+
+701
+00:29:30,020 --> 00:29:33,880
+example<font color="#E5E5E5"> recently wrote a nice</font>
+
+702
+00:29:33,880 --> 00:29:35,960
+<font color="#E5E5E5">documentation about</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> using the page</font>
+
+703
+00:29:35,960 --> 00:29:39,260
+<font color="#CCCCCC">object model with</font><font color="#E5E5E5"> Nightwatch so if you</font>
+
+704
+00:29:39,260 --> 00:29:41,240
+if you come across<font color="#E5E5E5"> something that</font><font color="#CCCCCC"> isn't</font>
+
+705
+00:29:41,240 --> 00:29:43,789
+documented<font color="#CCCCCC"> well or</font><font color="#E5E5E5"> you think could be</font>
+
+706
+00:29:43,789 --> 00:29:44,809
+explained better<font color="#E5E5E5"> you know just write</font>
+
+707
+00:29:44,809 --> 00:29:46,070
+<font color="#E5E5E5">some documentation that's a great way to</font>
+
+708
+00:29:46,070 --> 00:29:50,750
+contribute<font color="#CCCCCC"> as well and getting started</font>
+
+709
+00:29:50,750 --> 00:29:52,549
+is really<font color="#CCCCCC"> easy like I mentioned before</font>
+
+710
+00:29:52,549 --> 00:29:54,620
+you<font color="#E5E5E5"> just have to</font><font color="#CCCCCC"> install Nightwatch with</font>
+
+711
+00:29:54,620 --> 00:29:56,929
+NPM of course<font color="#E5E5E5"> a prereq</font><font color="#CCCCCC"> to that is having</font>
+
+712
+00:29:56,929 --> 00:29:58,909
+<font color="#CCCCCC">node installed</font><font color="#E5E5E5"> which is also fairly easy</font>
+
+713
+00:29:58,909 --> 00:30:00,950
+<font color="#E5E5E5">to get up and</font><font color="#CCCCCC"> running</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> can then</font>
+
+714
+00:30:00,950 --> 00:30:02,960
+<font color="#CCCCCC">download the</font><font color="#E5E5E5"> selenium jar separately and</font>
+
+715
+00:30:02,960 --> 00:30:04,870
+<font color="#E5E5E5">then you configure</font><font color="#CCCCCC"> your Nightwatch</font>
+
+716
+00:30:04,870 --> 00:30:09,280
+<font color="#E5E5E5">project and you just write some tests</font>
+
+717
+00:30:09,760 --> 00:30:11,950
+so to make this process<font color="#E5E5E5"> even easier</font><font color="#CCCCCC"> I</font>
+
+718
+00:30:11,950 --> 00:30:14,500
+put together<font color="#E5E5E5"> a yeoman generator that you</font>
+
+719
+00:30:14,500 --> 00:30:18,070
+can grab<font color="#E5E5E5"> and that takes care of there's</font>
+
+720
+00:30:18,070 --> 00:30:20,650
+like<font color="#CCCCCC"> a and rapper known modular</font>
+
+721
+00:30:20,650 --> 00:30:21,670
+<font color="#E5E5E5">rappers that will take care of like</font>
+
+722
+00:30:21,670 --> 00:30:23,650
+downloading<font color="#CCCCCC"> slam jar for you and giving</font>
+
+723
+00:30:23,650 --> 00:30:26,470
+you<font color="#E5E5E5"> a saying default</font><font color="#CCCCCC"> you know Nightwatch</font>
+
+724
+00:30:26,470 --> 00:30:29,440
+configuration file<font color="#CCCCCC"> so if you go ahead</font>
+
+725
+00:30:29,440 --> 00:30:31,870
+<font color="#E5E5E5">and</font><font color="#CCCCCC"> use this it's like really really</font>
+
+726
+00:30:31,870 --> 00:30:33,190
+simple<font color="#E5E5E5"> just to get up and</font><font color="#CCCCCC"> running and</font>
+
+727
+00:30:33,190 --> 00:30:38,620
+write some tests so a couple of<font color="#E5E5E5"> closing</font>
+
+728
+00:30:38,620 --> 00:30:41,320
+thoughts<font color="#E5E5E5"> this is obviously controversial</font>
+
+729
+00:30:41,320 --> 00:30:44,770
+perhaps but in my opinion<font color="#CCCCCC"> net washe</font>
+
+730
+00:30:44,770 --> 00:30:46,450
+<font color="#E5E5E5">guess is probably your best</font><font color="#CCCCCC"> option for</font>
+
+731
+00:30:46,450 --> 00:30:48,760
+<font color="#CCCCCC">doing</font><font color="#E5E5E5"> selenium testing with JavaScript</font><font color="#CCCCCC"> I</font>
+
+732
+00:30:48,760 --> 00:30:50,800
+would<font color="#E5E5E5"> love to be proven</font><font color="#CCCCCC"> wrong if any of</font>
+
+733
+00:30:50,800 --> 00:30:52,060
+you know<font color="#CCCCCC"> of even betting even better</font>
+
+734
+00:30:52,060 --> 00:30:53,650
+framework<font color="#E5E5E5"> I'd love to hear about</font><font color="#CCCCCC"> it I</font>
+
+735
+00:30:53,650 --> 00:30:56,560
+<font color="#E5E5E5">think it's an area that is valuable</font><font color="#CCCCCC"> to</font>
+
+736
+00:30:56,560 --> 00:30:58,900
+pursue because one problem a<font color="#E5E5E5"> lot of</font>
+
+737
+00:30:58,900 --> 00:31:00,520
+organizations have<font color="#CCCCCC"> is that</font><font color="#E5E5E5"> there are</font>
+
+738
+00:31:00,520 --> 00:31:04,060
+slam tests<font color="#E5E5E5"> over in in Ruby or Python and</font>
+
+739
+00:31:04,060 --> 00:31:05,830
+that that's<font color="#E5E5E5"> a that creates a barrier</font><font color="#CCCCCC"> to</font>
+
+740
+00:31:05,830 --> 00:31:07,030
+<font color="#E5E5E5">entry</font><font color="#CCCCCC"> for web developers to actually</font>
+
+741
+00:31:07,030 --> 00:31:08,740
+<font color="#E5E5E5">start helping out</font><font color="#CCCCCC"> a writing test because</font>
+
+742
+00:31:08,740 --> 00:31:10,420
+<font color="#E5E5E5">they may</font><font color="#CCCCCC"> not know those languages</font>
+
+743
+00:31:10,420 --> 00:31:12,040
+whereas if we<font color="#E5E5E5"> use a language like</font>
+
+744
+00:31:12,040 --> 00:31:13,570
+JavaScript which are all really familiar
+
+745
+00:31:13,570 --> 00:31:15,520
+<font color="#E5E5E5">with</font><font color="#CCCCCC"> already</font><font color="#E5E5E5"> is much easier to get</font>
+
+746
+00:31:15,520 --> 00:31:19,450
+started<font color="#CCCCCC"> writing</font><font color="#E5E5E5"> tests like I said before</font>
+
+747
+00:31:19,450 --> 00:31:21,880
+it's got<font color="#E5E5E5"> a really good community a lot</font>
+
+748
+00:31:21,880 --> 00:31:25,660
+<font color="#E5E5E5">of activity on the github repo</font><font color="#CCCCCC"> and it's</font>
+
+749
+00:31:25,660 --> 00:31:27,850
+you know<font color="#E5E5E5"> really trivial to get started</font>
+
+750
+00:31:27,850 --> 00:31:32,800
+<font color="#CCCCCC">so go ahead</font><font color="#E5E5E5"> and check it</font><font color="#CCCCCC"> out here are</font>
+
+751
+00:31:32,800 --> 00:31:35,740
+some resources that<font color="#CCCCCC"> you can use to help</font>
+
+752
+00:31:35,740 --> 00:31:37,000
+<font color="#E5E5E5">you on your journey</font>
+
+753
+00:31:37,000 --> 00:31:39,370
+there's the guiding<font color="#E5E5E5"> API</font><font color="#CCCCCC"> Doc's on</font><font color="#E5E5E5"> the</font>
+
+754
+00:31:39,370 --> 00:31:43,300
+official website<font color="#CCCCCC"> I've got the github</font>
+
+755
+00:31:43,300 --> 00:31:44,740
+<font color="#CCCCCC">repo for this talk with all the code</font>
+
+756
+00:31:44,740 --> 00:31:47,860
+samples up there on github as well as
+
+757
+00:31:47,860 --> 00:31:51,150
+the Nightwatch generator for yeoman and
+
+758
+00:31:51,150 --> 00:31:53,460
+finally<font color="#E5E5E5"> Nightwatch does have</font>
+
+759
+00:31:53,460 --> 00:31:55,510
+<font color="#E5E5E5">experimental support for a page object</font>
+
+760
+00:31:55,510 --> 00:31:56,980
+<font color="#E5E5E5">model which</font><font color="#CCCCCC"> i didn't</font><font color="#E5E5E5"> talk about too much</font>
+
+761
+00:31:56,980 --> 00:31:58,570
+<font color="#E5E5E5">but</font><font color="#CCCCCC"> if you're familiar with selenium</font>
+
+762
+00:31:58,570 --> 00:32:00,820
+<font color="#E5E5E5">testing in general</font><font color="#CCCCCC"> the main idea behind</font>
+
+763
+00:32:00,820 --> 00:32:02,620
+<font color="#CCCCCC">a page object</font><font color="#E5E5E5"> model is that you</font>
+
+764
+00:32:02,620 --> 00:32:04,930
+<font color="#CCCCCC">encapsulate the interaction with a</font>
+
+765
+00:32:04,930 --> 00:32:07,360
+particular<font color="#CCCCCC"> webpage in its own file and</font>
+
+766
+00:32:07,360 --> 00:32:09,730
+<font color="#CCCCCC">it kind of serves</font><font color="#E5E5E5"> like</font><font color="#CCCCCC"> an api to the</font>
+
+767
+00:32:09,730 --> 00:32:11,680
+<font color="#E5E5E5">webpage</font><font color="#CCCCCC"> rather than hard coding your CSS</font>
+
+768
+00:32:11,680 --> 00:32:15,010
+CSS selectors<font color="#CCCCCC"> in</font><font color="#E5E5E5"> every single test that</font>
+
+769
+00:32:15,010 --> 00:32:17,080
+you write you can<font color="#E5E5E5"> just include this page</font>
+
+770
+00:32:17,080 --> 00:32:20,040
+object<font color="#E5E5E5"> and say you know like get me</font>
+
+771
+00:32:20,040 --> 00:32:22,270
+<font color="#CCCCCC">content</font><font color="#E5E5E5"> from search</font><font color="#CCCCCC"> results or something</font>
+
+772
+00:32:22,270 --> 00:32:23,030
+like<font color="#E5E5E5"> that</font>
+
+773
+00:32:23,030 --> 00:32:25,070
+so check that<font color="#CCCCCC"> out the official</font>
+
+774
+00:32:25,070 --> 00:32:27,380
+documentation doesn't<font color="#E5E5E5"> have anything</font>
+
+775
+00:32:27,380 --> 00:32:29,300
+about<font color="#E5E5E5"> the page object model yet it was</font>
+
+776
+00:32:29,300 --> 00:32:33,530
+in fluent it fairly<font color="#E5E5E5"> recently</font><font color="#CCCCCC"> but a user</font>
+
+777
+00:32:33,530 --> 00:32:36,020
+did go ahead<font color="#CCCCCC"> and</font><font color="#E5E5E5"> write some pretty good</font>
+
+778
+00:32:36,020 --> 00:32:38,930
+<font color="#E5E5E5">documentation which is on a github issue</font>
+
+779
+00:32:38,930 --> 00:32:40,430
+right now<font color="#CCCCCC"> and hopefully Andre will</font>
+
+780
+00:32:40,430 --> 00:32:42,050
+<font color="#CCCCCC">incorporate</font><font color="#E5E5E5"> that incorporate that back</font>
+
+781
+00:32:42,050 --> 00:32:45,770
+<font color="#CCCCCC">into</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> the main documentation site</font><font color="#E5E5E5"> but</font>
+
+782
+00:32:45,770 --> 00:32:49,660
+<font color="#E5E5E5">you can find that at the last link below</font>
+
+783
+00:32:49,720 --> 00:32:52,310
+so that's<font color="#E5E5E5"> pretty</font><font color="#CCCCCC"> much</font><font color="#E5E5E5"> all I have but I</font>
+
+784
+00:32:52,310 --> 00:32:54,880
+save<font color="#CCCCCC"> time at the end</font><font color="#E5E5E5"> for questions so if</font>
+
+785
+00:32:54,880 --> 00:32:58,130
+<font color="#CCCCCC">anybody's curious about</font><font color="#E5E5E5"> anything</font><font color="#CCCCCC"> that</font>
+
+786
+00:32:58,130 --> 00:32:59,960
+I've talked<font color="#CCCCCC"> about</font><font color="#E5E5E5"> please</font><font color="#CCCCCC"> feel free to</font>
+
+787
+00:32:59,960 --> 00:33:04,190
+<font color="#E5E5E5">ask some questions this</font><font color="#CCCCCC"> is</font><font color="#E5E5E5"> just use</font>
+
+788
+00:33:04,190 --> 00:33:09,980
+webdriver<font color="#CCCCCC"> J's yeah good question</font><font color="#E5E5E5"> so for</font>
+
+789
+00:33:09,980 --> 00:33:12,530
+the communication with selenium<font color="#E5E5E5"> does it</font>
+
+790
+00:33:12,530 --> 00:33:15,380
+use<font color="#E5E5E5"> webdriver</font><font color="#CCCCCC"> j/s or another existing</font>
+
+791
+00:33:15,380 --> 00:33:17,900
+module<font color="#CCCCCC"> no it last</font><font color="#E5E5E5"> time I checked it does</font>
+
+792
+00:33:17,900 --> 00:33:20,260
+<font color="#E5E5E5">not he</font><font color="#CCCCCC"> actually implemented</font><font color="#E5E5E5"> his own</font>
+
+793
+00:33:20,260 --> 00:33:23,770
+client for the API
+
+794
+00:33:38,540 --> 00:33:40,040
+<font color="#E5E5E5">and</font>
+
+795
+00:33:40,040 --> 00:33:43,070
+<font color="#E5E5E5">okay yeah so the question</font><font color="#CCCCCC"> is if you look</font>
+
+796
+00:33:43,070 --> 00:33:44,780
+at some other<font color="#E5E5E5"> frameworks like protractor</font>
+
+797
+00:33:44,780 --> 00:33:47,630
+<font color="#E5E5E5">how do you decide</font><font color="#CCCCCC"> between that option</font>
+
+798
+00:33:47,630 --> 00:33:49,580
+versus Nightwatch to be perfectly honest
+
+799
+00:33:49,580 --> 00:33:51,470
+I<font color="#E5E5E5"> haven't looked into protractor too</font>
+
+800
+00:33:51,470 --> 00:33:53,570
+much if anybody here has<font color="#E5E5E5"> experience with</font>
+
+801
+00:33:53,570 --> 00:33:55,280
+it and<font color="#E5E5E5"> can offer some insight</font><font color="#CCCCCC"> on the</font>
+
+802
+00:33:55,280 --> 00:33:56,780
+kind of<font color="#E5E5E5"> pros and</font><font color="#CCCCCC"> cons that'd be great</font>
+
+803
+00:33:56,780 --> 00:33:58,820
+<font color="#E5E5E5">but I honestly</font><font color="#CCCCCC"> am</font><font color="#E5E5E5"> Not sure</font><font color="#CCCCCC"> my</font>
+
+804
+00:33:58,820 --> 00:34:00,620
+<font color="#CCCCCC">understanding is that protractor is is</font>
+
+805
+00:34:00,620 --> 00:34:04,190
+designed<font color="#E5E5E5"> to be very very good</font><font color="#CCCCCC"> at testing</font>
+
+806
+00:34:04,190 --> 00:34:06,590
+angular apps<font color="#E5E5E5"> and I assume</font><font color="#CCCCCC"> it'll</font><font color="#E5E5E5"> work</font>
+
+807
+00:34:06,590 --> 00:34:10,570
+with other apps<font color="#E5E5E5"> but I don't really know</font>
+
+808
+00:34:15,310 --> 00:34:19,300
+general mission is how<font color="#CCCCCC"> long's</font><font color="#E5E5E5"> this stuff</font>
+
+809
+00:34:19,300 --> 00:34:22,300
+<font color="#E5E5E5">circling</font>
+
+810
+00:34:34,889 --> 00:34:37,270
+require
+
+811
+00:34:37,270 --> 00:34:40,840
+yep<font color="#E5E5E5"> so the I think two questions first</font>
+
+812
+00:34:40,840 --> 00:34:41,860
+part was<font color="#CCCCCC"> about continuous integration</font>
+
+813
+00:34:41,860 --> 00:34:44,110
+how it integrates with<font color="#E5E5E5"> existing services</font>
+
+814
+00:34:44,110 --> 00:34:47,050
+like Travis and<font color="#CCCCCC"> CN circle</font><font color="#E5E5E5"> CI</font><font color="#CCCCCC"> so I've</font>
+
+815
+00:34:47,050 --> 00:34:48,159
+used<font color="#CCCCCC"> it with Travis it seems to work</font>
+
+816
+00:34:48,159 --> 00:34:49,750
+<font color="#E5E5E5">fine</font><font color="#CCCCCC"> I imagine would be similar</font>
+
+817
+00:34:49,750 --> 00:34:51,639
+experience with circle
+
+818
+00:34:51,639 --> 00:34:54,668
+second question<font color="#E5E5E5"> was for the global data</font>
+
+819
+00:34:54,668 --> 00:34:57,790
+<font color="#E5E5E5">or the</font><font color="#CCCCCC"> Global's why do</font><font color="#E5E5E5"> i why did I</font><font color="#CCCCCC"> use</font>
+
+820
+00:34:57,790 --> 00:34:59,260
+the<font color="#E5E5E5"> Global's option in the Nightwatch</font>
+
+821
+00:34:59,260 --> 00:35:01,270
+config instead of<font color="#E5E5E5"> just requiring the</font>
+
+822
+00:35:01,270 --> 00:35:04,869
+data object directly<font color="#E5E5E5"> so one reason is</font>
+
+823
+00:35:04,869 --> 00:35:06,160
+<font color="#CCCCCC">that you can take</font><font color="#E5E5E5"> advantage</font><font color="#CCCCCC"> of</font><font color="#E5E5E5"> the</font>
+
+824
+00:35:06,160 --> 00:35:07,750
+concept of different environments more
+
+825
+00:35:07,750 --> 00:35:08,260
+<font color="#E5E5E5">easily</font>
+
+826
+00:35:08,260 --> 00:35:10,300
+so in the Nightwatch config<font color="#E5E5E5"> you can</font>
+
+827
+00:35:10,300 --> 00:35:11,830
+<font color="#CCCCCC">unify in this case I just had one</font>
+
+828
+00:35:11,830 --> 00:35:13,660
+environment the default<font color="#CCCCCC"> environment</font><font color="#E5E5E5"> but</font>
+
+829
+00:35:13,660 --> 00:35:15,340
+<font color="#CCCCCC">you</font><font color="#E5E5E5"> might have you know multiple ones</font>
+
+830
+00:35:15,340 --> 00:35:19,840
+<font color="#CCCCCC">like staging you know</font><font color="#E5E5E5"> test</font><font color="#CCCCCC"> I don't know</font>
+
+831
+00:35:19,840 --> 00:35:21,040
+<font color="#E5E5E5">other environments that you</font><font color="#CCCCCC"> wanted to</font>
+
+832
+00:35:21,040 --> 00:35:23,800
+<font color="#CCCCCC">configure and that just kind of</font><font color="#E5E5E5"> takes</font>
+
+833
+00:35:23,800 --> 00:35:26,200
+<font color="#E5E5E5">advantage of that existing nomenclature</font>
+
+834
+00:35:26,200 --> 00:35:29,110
+so I know<font color="#E5E5E5"> okay I'm in my my dev</font>
+
+835
+00:35:29,110 --> 00:35:32,230
+environment<font color="#E5E5E5"> because that's been selected</font>
+
+836
+00:35:32,230 --> 00:35:34,210
+when I invoke the framework and now I
+
+837
+00:35:34,210 --> 00:35:36,100
+<font color="#E5E5E5">automatically get that data set so</font>
+
+838
+00:35:36,100 --> 00:35:37,690
+that's the only<font color="#CCCCCC"> reason you could totally</font>
+
+839
+00:35:37,690 --> 00:35:40,030
+<font color="#E5E5E5">just require the object a more</font>
+
+840
+00:35:40,030 --> 00:35:45,190
+traditional<font color="#E5E5E5"> way as well think I</font><font color="#CCCCCC"> solves</font>
+
+841
+00:35:45,190 --> 00:35:48,920
+<font color="#CCCCCC">that you can basically judge on script</font>
+
+842
+00:35:48,920 --> 00:36:01,100
+yes yep slow because<font color="#CCCCCC"> everytime requests</font>
+
+843
+00:36:01,100 --> 00:36:04,760
+<font color="#CCCCCC">acids</font><font color="#E5E5E5"> round</font><font color="#CCCCCC"> trip yesterday support</font>
+
+844
+00:36:04,760 --> 00:36:07,820
+built-in for<font color="#CCCCCC"> assertions that you can run</font>
+
+845
+00:36:07,820 --> 00:36:10,960
+sort<font color="#E5E5E5"> of</font><font color="#CCCCCC"> client-side</font>
+
+846
+00:36:13,229 --> 00:36:16,859
+<font color="#E5E5E5">okay okay yes</font><font color="#CCCCCC"> I think</font><font color="#E5E5E5"> the question</font><font color="#CCCCCC"> was</font>
+
+847
+00:36:16,859 --> 00:36:20,079
+yeah<font color="#E5E5E5"> so I think the</font><font color="#CCCCCC"> question was first</font>
+
+848
+00:36:20,079 --> 00:36:23,079
+<font color="#E5E5E5">of all performance generally slam tests</font>
+
+849
+00:36:23,079 --> 00:36:26,049
+yes generally slam tests are relatively
+
+850
+00:36:26,049 --> 00:36:28,900
+slow<font color="#CCCCCC"> as certainly</font><font color="#E5E5E5"> much much much slower</font>
+
+851
+00:36:28,900 --> 00:36:32,019
+<font color="#E5E5E5">than unit tests Nightwatch tries to help</font>
+
+852
+00:36:32,019 --> 00:36:33,849
+<font color="#E5E5E5">out with that by allowing you to execute</font>
+
+853
+00:36:33,849 --> 00:36:36,929
+<font color="#E5E5E5">tests in</font><font color="#CCCCCC"> parallel which helps somewhat I</font>
+
+854
+00:36:36,929 --> 00:36:38,799
+think<font color="#CCCCCC"> the second part of</font><font color="#E5E5E5"> your question</font>
+
+855
+00:36:38,799 --> 00:36:41,589
+was is there some notion of doing
+
+856
+00:36:41,589 --> 00:36:44,380
+assertions client side rather than on
+
+857
+00:36:44,380 --> 00:36:48,489
+the node<font color="#E5E5E5"> side in which in which case you</font>
+
+858
+00:36:48,489 --> 00:36:49,989
+<font color="#E5E5E5">have to kind of cross that barrier to</font>
+
+859
+00:36:49,989 --> 00:36:51,039
+the client every time you make the
+
+860
+00:36:51,039 --> 00:36:53,380
+assertion<font color="#CCCCCC"> there's not</font><font color="#E5E5E5"> that I know</font><font color="#CCCCCC"> of but</font>
+
+861
+00:36:53,380 --> 00:36:54,459
+<font color="#CCCCCC">that actually is a really interesting</font>
+
+862
+00:36:54,459 --> 00:36:56,759
+idea
+
+863
+00:37:09,170 --> 00:37:11,760
+so<font color="#E5E5E5"> have</font><font color="#CCCCCC"> I tested anything caught</font><font color="#E5E5E5"> more</font>
+
+864
+00:37:11,760 --> 00:37:13,079
+<font color="#E5E5E5">complicated such as drag and</font><font color="#CCCCCC"> drop</font>
+
+865
+00:37:13,079 --> 00:37:16,470
+you eyes I actually haven't<font color="#CCCCCC"> I know that</font>
+
+866
+00:37:16,470 --> 00:37:18,390
+you can hook up to<font color="#E5E5E5"> pretty much any Mouse</font>
+
+867
+00:37:18,390 --> 00:37:21,210
+event or type of Dom event<font color="#E5E5E5"> so in theory</font>
+
+868
+00:37:21,210 --> 00:37:23,460
+is totally possible<font color="#CCCCCC"> I can't really</font>
+
+869
+00:37:23,460 --> 00:37:25,980
+comment as<font color="#CCCCCC"> to how complex it would be</font>
+
+870
+00:37:25,980 --> 00:37:28,290
+the implement though<font color="#E5E5E5"> but that's a good</font>
+
+871
+00:37:28,290 --> 00:37:32,490
+<font color="#E5E5E5">idea</font><font color="#CCCCCC"> to think about so maybe you should</font>
+
+872
+00:37:32,490 --> 00:37:34,680
+go<font color="#CCCCCC"> home and</font><font color="#E5E5E5"> try it out and</font><font color="#CCCCCC"> then post to</font>
+
+873
+00:37:34,680 --> 00:37:46,760
+the project I'm sorry for native apps
+
+874
+00:37:46,760 --> 00:37:52,170
+<font color="#E5E5E5">we're going for Cordova</font><font color="#CCCCCC"> apps not</font><font color="#E5E5E5"> that</font>
+
+875
+00:37:52,170 --> 00:37:53,940
+I've tried<font color="#E5E5E5"> I don't see why</font><font color="#CCCCCC"> it couldn't</font>
+
+876
+00:37:53,940 --> 00:37:57,359
+<font color="#CCCCCC">work I know that</font><font color="#E5E5E5"> those are the guys at</font>
+
+877
+00:37:57,359 --> 00:37:59,640
+Yahoo that created a selenium<font color="#E5E5E5"> driver for</font>
+
+878
+00:37:59,640 --> 00:38:02,339
+<font color="#CCCCCC">Cordova I can't</font><font color="#E5E5E5"> remember but I would</font>
+
+879
+00:38:02,339 --> 00:38:06,770
+imagine<font color="#E5E5E5"> that</font><font color="#CCCCCC"> it at the</font>
+
+880
+00:38:10,260 --> 00:38:13,690
+okay great<font color="#CCCCCC"> so</font><font color="#E5E5E5"> you use</font><font color="#CCCCCC"> appium as an</font>
+
+881
+00:38:13,690 --> 00:38:19,810
+option I'm not I'm not<font color="#E5E5E5"> sure</font><font color="#CCCCCC"> but</font><font color="#E5E5E5"> again</font>
+
+882
+00:38:19,810 --> 00:38:28,510
+try it<font color="#E5E5E5"> out cool</font><font color="#CCCCCC"> we have an expert</font><font color="#E5E5E5"> from</font>
+
+883
+00:38:28,510 --> 00:38:29,680
+sauce labs here so if you have any
+
+884
+00:38:29,680 --> 00:38:32,610
+questions about sauce
+
+885
+00:38:37,670 --> 00:38:39,680
+<font color="#E5E5E5">okay well thank you</font><font color="#CCCCCC"> very much I'm going</font>
+
+886
+00:38:39,680 --> 00:38:41,150
+<font color="#E5E5E5">to stick around for a</font><font color="#CCCCCC"> while so if you</font>
+
+887
+00:38:41,150 --> 00:00:00,000
+have any other questions
+

@@ -1,0 +1,31 @@
+<output id="out"></output>
+<script type="text/html" id="myTemplate">
+  I am <%= name %>. <br>
+  My weight is <%= weight %>. <br>
+  My height is <%= height %>.<br>
+  My job is <%= job %>.<br>
+</script>
+<style>
+  body {
+    font-family: "Brush Script MT", cursive;
+    font-size: 200%;
+  }
+</style>
+<script>
+  // constructor
+  function People(name, weight, height) {
+    this.name = name || "Anonymous";
+    this.weight = weight || "65kg";
+    this.height = height || "170cm";
+  }
+
+  // methods go inside the associated prototype
+  People.prototype.introduce = function() {
+    out.innerHTML = _.template(myTemplate.innerHTML, this);
+  };
+
+  People.prototype.job = "programmer";
+
+  var juan = new People("", "178cm", "75kg");
+  juan.introduce();
+</script>

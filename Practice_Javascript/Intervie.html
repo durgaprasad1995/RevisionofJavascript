@@ -1,0 +1,121 @@
+<!doctype>
+<html>
+<p id="demo"></p>
+<script>
+function settime(){
+console.log(1);
+//setTimeout(function (){console.log(2)},0);
+//setTimeout(function (){console.log(3)},0);
+console.log(4)
+}
+settime()
+
+function array(){
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+console.log("arr2 reverse",arr2);
+var arr3 = "jones".split('');
+console.log("arr3 reverse",arr3);
+arr2.push(arr3);
+console.log("array 1:length=" + arr1.length + "Last = " + arr1.slice(-1));
+console.log("array 2:length=" + arr2.length + "Last = " + arr2.slice(-1));
+}
+array()
+
+function math(){
+console.log(1+"2"+"2");
+//console.log(1++"2"+"2"); //error
+console.log(1+ -"1"+"2");
+console.log(+"1"+"2"+"2");
+console.log("A" - "B"+"2");
+console.log("A"-"B"+2);
+
+}
+math()
+
+//var list = readhugelist();
+var nextlisttem = function(){
+var item = list.pop()
+if(item)
+{
+nextlisttem();
+console.log("test");
+}
+}
+
+var x=100;
+function test()
+{
+if(false)
+{
+var x=199
+}
+console.log("kkkk",x);//undefind
+}
+test()
+
+var x=100;
+function test2()
+{
+var x=150;
+console.log("=======",this.x);//accessing the out side value using this or window
+}
+test2()
+
+//console.log(a)
+//console.log(b)
+//var b=10;
+var undefind
+if("true" == true)
+console.log("true with string");
+else
+console.log("false with string");
+if(undefind == null)
+console.log("true with string undefind")
+else
+console.log("false with string undefind");
+if(undefind === null)
+console.log("true with undefind ===");
+else
+console.log("false with undefind ===");
+
+function stingvalu(val){
+for(i=0;i<val;i++)
+{
+str = "hello"
+document.getElementById("demo").innerHTML=str;
+console.log("Hello");
+}
+
+}
+stingvalu(3);
+
+function myFunction() {
+  var str = "Hello";
+  document.getElementById("demo").innerHTML = str.repeat(3);
+}
+myFunction()
+
+
+console.log('10'+20,"10"-20,20*2)
+console.log(20+"10","20"-10,"10"*2);
+function employee(name,jobtitle,born){
+this.name = name;
+this.jobtitle = jobtitle;
+this.born = born;
+}
+var person = new employee("Durga Prasad","software Developer",24)
+//employee.proptype.salary = 20000;
+console.log(person.salary);
+
+
+
+
+</script>
+
+<P>
+test
+</p>
+</html>
+
+

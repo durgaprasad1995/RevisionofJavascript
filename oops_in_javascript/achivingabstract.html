@@ -1,0 +1,16 @@
+<script>
+   var shape = function(){
+       this.shapeName = "none";//here we create property
+       throw new Error("canot create an instance of an abstract class");//this is for it should not create an instance using this class
+   }
+   shape.prototype.draw = function(){
+       return "Drawing" + this.shapeName;//here we create method
+   }
+//    var shape = new shape(); if we create this it will throw an error canot create why because it is an abstract class
+    var circle = function(shapeName){
+        this.shapeName = shapeName;
+    }
+    circle.prototype = Object.create(shape.prototype);//objet.create method allow use to create without using the function .we are saying here is shape is the base type for the circle.circle inherits from shape
+    var circle = new circle("circle");
+    document.write(circle.draw());
+</script>

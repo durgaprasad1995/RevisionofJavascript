@@ -1,0 +1,94 @@
+<script>
+///Lexical Scope
+let i=1;
+const f = () =>
+{
+console.log(i);
+}
+f();
+
+//inside socpe using let 
+
+if(true)
+{
+let i=1;//this is available only for this socpe after it will not available 
+const f1 = () =>
+{
+console.log(i);
+}
+}
+//f1();//this is function is not available why because it will available for outside of the scope to solve this type of problems
+
+let f3;
+if(true)
+{
+let i =1 ;
+f3= () =>
+{
+console.log(i);
+}
+}
+console.dir(f);//this will print log with some extra information
+f3();
+
+
+//closure defining some where and call in some other block
+let f4 = () => {
+let i =1;
+return () => {
+console.log(i);
+}
+
+}
+console.dir(f4());
+
+//closure inside a loop
+
+for(let i=0;i<3;i++)
+{
+const f = () => {
+console.log(i);
+}
+f();
+}
+
+//how to call outside of the function .
+//setTIme out whenever iam passing this inside a function it will run it after the specified time.
+//setTImeout is always in milliseconds
+//when i am running this it has to hold inside the loop
+
+
+for(let i=0;i<3;i++)
+{
+setTimeout(() => {
+console.log(i);
+},1000);
+}
+console.log("After the loop");
+
+//difference between let and var using above for loop code
+// let is block level every time completing the loop it will create the new value or new i
+//let how it works see the below 
+//i=0 f(c:i(0)); i=1 f(c:i(1)); i=2 f(c:i(2)); every time new i after completing the one iteration c--->closure
+//i will get 3 different function which separte hold 3 separate variable as a closure
+//var how it works see the below
+// i=0 f(c:i(0));1st iteration ///function scope and block scope
+//function scope it doesn't really create new variable it just changes the variable and it's value.it is not a new variable it is same variable with diff value for second itration 
+//i=0 f(c:i(0)); 1st iteration
+//i=1 f(c:i(1)); 2nd iteration //this will update the same
+//i=0 f(c:i(0));
+//final output
+//i=3 f(c:i(3));
+//f(c:i(3));  same i with different values to fix this we will use imediatly invoke function 
+for(let i=0;i<3;i++)
+{
+((i)=>{
+setTimeout(() => {
+console.log(i);
+},1000);
+})(i);//the reason this works is if i wrap it to imediatly inovke function expersion it is kind of create a block scope
+}
+console.log("After the loop");
+
+//f(c:i(3));
+</script>

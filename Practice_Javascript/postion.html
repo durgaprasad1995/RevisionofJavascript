@@ -1,0 +1,101 @@
+<style>
+
+/* static */
+
+.box-orange {          
+  background: orange;
+  height: 100px;  /* without any position declaration */
+  width: 100px;       
+}
+
+.box-blue {
+  background: lightskyblue;
+  height: 100px;
+  width: 100px; 
+  position: static;   // Declared as static
+}
+
+
+
+/* relative */
+/* position: relative: An element’s new position relative to its normal position.*/
+
+/*Starting with position: relative and for all non-static position values, we are able to change an element’s default position. But only defining position: relative is not enough, we also need to set the element’s coordinates with helper properties. */
+
+/*NOTE: Using position: relative for an element, doesn’t affect other elements’ positions.*/
+.box-orange {
+  position: relative;  /*We can now move the element */
+  background: orange;
+  width: 100px;
+  height: 100px;
+  top: 100px;         /* 100px from top relative to its old position */
+  left: 100px;        /* 100px from left*/
+} 
+
+
+/* absolute */
+
+
+/* An element with position: absolute is removed from the normal document flow. It is positioned automatically to the starting point (top-left corner) of its parent element. If it doesn’t have any parent elements, then the initial document <html> will be its parent. */
+
+.box-orange {
+  position: absolute;
+  background: orange;
+  width: 100px;
+  height: 100px;
+}
+
+
+.box-orange {
+  position: absolute;
+  background: orange;
+  width: 100px;
+  height: 100px;
+  left: 5px;
+  top: 5px;
+}
+.container {
+  position: relative;
+  background: lightgray;
+}
+
+.box-orange {
+  position: absolute;
+  background: orange;
+  width: 100px;
+  height: 100px;
+  right: 5px;    /*5px relative to the most-right of parent */
+}
+
+
+/*fixed */
+
+.box-orange {
+  background: orange;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 5px;
+}
+
+/*sticky */
+
+
+.sticky {
+  position: sticky;
+  background: red;
+  top: 0;
+  padding: 10px;
+  color: white;
+}
+
+
+</style>
+<body>
+<div class="container">
+   <div class="box-orange"></div>
+   <div class="box-blue"></div>
+   <p>Scroll down the page</p>
+      <p class="sticky">I am sticky</p
+  </div>
+</body>

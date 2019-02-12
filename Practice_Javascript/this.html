@@ -1,0 +1,99 @@
+<script>
+//house using global scope
+this.table = "window table";//this is because of this is here means global scope which means we are in window scope
+console.log(window.table);//this because that table i create inside the global scope
+
+//when we say this. means we are creating a public property that can be accessible from the outside
+this.garage ={
+table:"garage table"
+}
+//how we can access this follow below
+console.log(this.garage.table);///window.garage.table why because it is global scope
+
+//this inside the object
+//what if inside the house 18year boy need private room
+let johsRoom = {
+table:"johsRoom"
+}
+//we can access using this this.johsRoom.table it will give can't read the property
+console.log(johsRoom.table);
+//this inside method .
+//object can have method
+let johsRoom1 = {
+table:"johsRoom",
+cleanTable()
+{
+console.log(`clean table ${this.table}`);
+}
+}
+johsRoom1.cleanTable();
+
+//this inside function
+const cleanTable = function(soap){//function is a set of job it is not an object
+console.log(`clean table ${this.table} using ${soap}`);//inside a function we should not have a access to the table because it doesn't know what this is 
+}
+//cleanTable() this will not execute 
+//call function to rescue
+cleanTable.call(this,'some soap')//here we are saying that execute this function as if method of this
+cleanTable.call(this.garage,'some soap')//
+cleanTable.call(johsRoom1,'some soap')//this is called some boday else method use some boday object
+//this is inside an inner function
+
+//inside a function using this is not very useful unless your call apply or bind
+
+const cleanTable1 = function(soap){
+let that = this //if
+const innerFunction = function(_soap){
+console.log(`clean table ${that.table} using ${soap}`);
+}
+innerFunction(soap);//alternative way innerFunction.call(this,soap)       innerFunction.bind(this)(soap)
+}
+cleanTable1.call(this,"Someeeee soap");
+
+//bind basically create a new function
+//if you use arrow function it will take the this outer scope
+
+const cleanTable2 = function(soap){
+
+const innerFunction = (_soap) =>{
+console.log(`clean table ${this.table} using ${soap}`);
+}
+innerFunction(soap);
+}
+cleanTable2.call(this,"soapppppppp");
+
+//this inside the constructor 
+//constructor or noting but functions
+let creatRoom =function(name){
+this.table = `${name}s table`;
+}
+//the above is constructor 
+const jillRoom = new creatRoom("jill");
+cleanTable2.call(jillRoom,"kkkkk")
+
+//prototype
+
+
+creatRoom.prototype.cleanTable = function(soap){//it will add this method into prototype of clean method  acctually it doesn't add there is space called protoype space
+console.log(`clean table ${this.table} using ${soap}`);
+}
+jillRoom.cleanTable("someeeee soap test");
+
+//this inside class
+
+class creatRoom2{
+constructor(name)
+{
+this.table =`${name} table`;
+}
+cleanTable(soap){
+console.log(`clean table ${this.table} using ${soap}`);
+}
+}
+const jillRoom2 = new creatRoom("jill");
+jillRoom2.cleanTable("someeeee soap eeeee");
+
+
+
+
+</script>

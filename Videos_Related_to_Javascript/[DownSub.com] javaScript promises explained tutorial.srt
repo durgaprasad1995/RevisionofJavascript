@@ -1,0 +1,932 @@
+1
+00:00:00,030 --> 00:00:03,240
+hello and welcome to<font color="#CCCCCC"> TechSoup tutorial</font>
+
+2
+00:00:03,240 --> 00:00:04,970
+today we are going<font color="#CCCCCC"> to learn about</font>
+
+3
+00:00:04,970 --> 00:00:08,429
+promises in JavaScript promises in
+
+4
+00:00:08,429 --> 00:00:09,990
+JavaScript<font color="#E5E5E5"> it's pretty much like</font>
+
+5
+00:00:09,990 --> 00:00:12,599
+<font color="#E5E5E5">promises in real life your kid makes you</font>
+
+6
+00:00:12,599 --> 00:00:13,170
+a promise
+
+7
+00:00:13,170 --> 00:00:15,150
+to clean<font color="#E5E5E5"> the room by end of the day</font>
+
+8
+00:00:15,150 --> 00:00:17,609
+either<font color="#E5E5E5"> by end of the day he finishes his</font>
+
+9
+00:00:17,609 --> 00:00:20,100
+promise by cleaning<font color="#E5E5E5"> the room or he fails</font>
+
+10
+00:00:20,100 --> 00:00:23,519
+<font color="#E5E5E5">in</font><font color="#CCCCCC"> JavaScript</font><font color="#E5E5E5"> promises are similar we</font>
+
+11
+00:00:23,519 --> 00:00:25,740
+will first look at a simple example of
+
+12
+00:00:25,740 --> 00:00:28,109
+promise<font color="#E5E5E5"> then we will understand why do</font>
+
+13
+00:00:28,109 --> 00:00:29,699
+we need promises in<font color="#E5E5E5"> JavaScript and</font>
+
+14
+00:00:29,699 --> 00:00:32,189
+<font color="#E5E5E5">lastly we will look at example where you</font>
+
+15
+00:00:32,189 --> 00:00:35,030
+have dependency where one promise
+
+16
+00:00:35,030 --> 00:00:38,219
+<font color="#CCCCCC">depends</font><font color="#E5E5E5"> on the second</font><font color="#CCCCCC"> promise to finish</font>
+
+17
+00:00:38,219 --> 00:00:40,680
+<font color="#E5E5E5">so firstly this</font><font color="#CCCCCC"> is how you define</font><font color="#E5E5E5"> a</font>
+
+18
+00:00:40,680 --> 00:00:43,739
+promise<font color="#E5E5E5"> you would say let this is the</font>
+
+19
+00:00:43,739 --> 00:00:48,800
+name<font color="#CCCCCC"> of</font><font color="#E5E5E5"> my promise equal to new promise</font>
+
+20
+00:00:48,800 --> 00:00:52,559
+this takes a callback function and this
+
+21
+00:00:52,559 --> 00:00:56,309
+callback<font color="#E5E5E5"> function has two arguments</font><font color="#CCCCCC"> the</font>
+
+22
+00:00:56,309 --> 00:00:59,010
+first argument is resolved
+
+23
+00:00:59,010 --> 00:01:02,309
+and the second argument is reject the
+
+24
+00:01:02,309 --> 00:01:05,129
+<font color="#CCCCCC">resolve</font><font color="#E5E5E5"> really means I am fulfilling</font>
+
+25
+00:01:05,129 --> 00:01:07,320
+<font color="#E5E5E5">this promise and I'm resolving it means</font>
+
+26
+00:01:07,320 --> 00:01:11,189
+you finished what<font color="#CCCCCC"> you said you have you</font>
+
+27
+00:01:11,189 --> 00:01:13,650
+would finish reject means promise is not
+
+28
+00:01:13,650 --> 00:01:17,340
+fulfilled<font color="#E5E5E5"> in given time or given</font>
+
+29
+00:01:17,340 --> 00:01:19,229
+constraint<font color="#E5E5E5"> I'm rejecting it so you have</font>
+
+30
+00:01:19,229 --> 00:01:21,150
+two<font color="#E5E5E5"> things either resolve it or reject</font>
+
+31
+00:01:21,150 --> 00:01:23,729
+inside here<font color="#E5E5E5"> you first thing you would do</font>
+
+32
+00:01:23,729 --> 00:01:26,790
+<font color="#E5E5E5">is because</font><font color="#CCCCCC"> a</font><font color="#E5E5E5"> promise is to clean the</font>
+
+33
+00:01:26,790 --> 00:01:28,890
+room which means you're going<font color="#E5E5E5"> to clean</font>
+
+34
+00:01:28,890 --> 00:01:31,890
+<font color="#E5E5E5">the room so I'm not going to write how</font>
+
+35
+00:01:31,890 --> 00:01:33,990
+<font color="#E5E5E5">to clean the room in JavaScript so I'm</font>
+
+36
+00:01:33,990 --> 00:01:37,560
+just gonna write a<font color="#CCCCCC"> comment that cleaning</font>
+
+37
+00:01:37,560 --> 00:01:41,280
+the room<font color="#E5E5E5"> now when the cleaning of the</font>
+
+38
+00:01:41,280 --> 00:01:44,520
+room is<font color="#CCCCCC"> finished I want</font><font color="#E5E5E5"> to set</font><font color="#CCCCCC"> up some</font>
+
+39
+00:01:44,520 --> 00:01:47,009
+status right<font color="#E5E5E5"> so here I'm just gonna</font>
+
+40
+00:01:47,009 --> 00:01:50,970
+equal to trip is clean<font color="#CCCCCC"> if the room</font><font color="#E5E5E5"> is</font>
+
+41
+00:01:50,970 --> 00:01:54,829
+clean<font color="#E5E5E5"> and when I resolve it so simply I</font>
+
+42
+00:01:54,829 --> 00:01:59,340
+would run<font color="#E5E5E5"> the function</font><font color="#CCCCCC"> resolve which is</font>
+
+43
+00:01:59,340 --> 00:02:01,310
+you know<font color="#E5E5E5"> to call my function</font>
+
+44
+00:02:01,310 --> 00:02:05,670
+mmm else<font color="#CCCCCC"> I am</font><font color="#E5E5E5"> going to reject it</font><font color="#CCCCCC"> the</font>
+
+45
+00:02:05,670 --> 00:02:08,008
+first part is to<font color="#E5E5E5"> do what you supposed</font><font color="#CCCCCC"> to</font>
+
+46
+00:02:08,008 --> 00:02:11,400
+do the promise<font color="#E5E5E5"> to do something so you're</font>
+
+47
+00:02:11,400 --> 00:02:12,140
+<font color="#E5E5E5">going</font><font color="#CCCCCC"> to do</font><font color="#E5E5E5"> that</font>
+
+48
+00:02:12,140 --> 00:02:16,340
+first and then<font color="#E5E5E5"> the second part is</font><font color="#CCCCCC"> to</font>
+
+49
+00:02:16,340 --> 00:02:18,920
+either resolve<font color="#E5E5E5"> or reject when is this</font>
+
+50
+00:02:18,920 --> 00:02:20,510
+promise<font color="#E5E5E5"> the second part is you can</font>
+
+51
+00:02:20,510 --> 00:02:23,030
+execute this<font color="#E5E5E5"> promise</font><font color="#CCCCCC"> this could be</font>
+
+52
+00:02:23,030 --> 00:02:25,760
+taking a<font color="#E5E5E5"> little bit</font><font color="#CCCCCC"> longer time</font><font color="#E5E5E5"> you have</font>
+
+53
+00:02:25,760 --> 00:02:28,300
+to wait<font color="#E5E5E5"> for</font><font color="#CCCCCC"> it</font><font color="#E5E5E5"> and there is a method</font>
+
+54
+00:02:28,300 --> 00:02:32,630
+that gets called<font color="#CCCCCC"> when the promise is</font>
+
+55
+00:02:32,630 --> 00:02:37,880
+resolved<font color="#E5E5E5"> which is call then so when this</font>
+
+56
+00:02:37,880 --> 00:02:41,360
+<font color="#E5E5E5">method is fired which means the promise</font>
+
+57
+00:02:41,360 --> 00:02:42,440
+is resolved
+
+58
+00:02:42,440 --> 00:02:47,000
+so within<font color="#E5E5E5"> this method you can have a</font>
+
+59
+00:02:47,000 --> 00:02:49,940
+callback function<font color="#E5E5E5"> and because it's only</font>
+
+60
+00:02:49,940 --> 00:02:53,300
+executed when the the promises<font color="#E5E5E5"> of room</font>
+
+61
+00:02:53,300 --> 00:02:57,800
+is and then what I<font color="#CCCCCC"> can do I can receive</font>
+
+62
+00:02:57,800 --> 00:03:02,150
+the status back from this<font color="#CCCCCC"> resolve</font>
+
+63
+00:03:02,150 --> 00:03:08,890
+function so<font color="#E5E5E5"> here I can</font><font color="#CCCCCC"> just say clean ok</font>
+
+64
+00:03:08,890 --> 00:03:14,540
+<font color="#E5E5E5">so I can</font><font color="#CCCCCC"> say from resolve which would be</font>
+
+65
+00:03:14,540 --> 00:03:20,290
+this<font color="#E5E5E5"> so when</font><font color="#CCCCCC"> it resolves it would pass</font>
+
+66
+00:03:20,290 --> 00:03:25,190
+<font color="#E5E5E5">this argument inside this</font><font color="#CCCCCC"> all and when</font>
+
+67
+00:03:25,190 --> 00:03:29,000
+the promise is fulfilled<font color="#E5E5E5"> using then it</font>
+
+68
+00:03:29,000 --> 00:03:30,500
+will pass this<font color="#E5E5E5"> argument which is the</font>
+
+69
+00:03:30,500 --> 00:03:33,739
+<font color="#E5E5E5">same same guy here clean so I can then</font>
+
+70
+00:03:33,739 --> 00:03:40,070
+<font color="#E5E5E5">simply say from resolve this so if I run</font>
+
+71
+00:03:40,070 --> 00:03:45,500
+<font color="#CCCCCC">this I get the room is clean now let's</font>
+
+72
+00:03:45,500 --> 00:03:47,420
+say if you<font color="#CCCCCC"> reject it</font><font color="#E5E5E5"> what would happen</font>
+
+73
+00:03:47,420 --> 00:03:50,570
+so for that we can chain another
+
+74
+00:03:50,570 --> 00:03:54,769
+<font color="#E5E5E5">argument called catch here</font><font color="#CCCCCC"> I would pass</font>
+
+75
+00:03:54,769 --> 00:04:00,730
+a function<font color="#E5E5E5"> and I would say from rejected</font>
+
+76
+00:04:00,820 --> 00:04:07,880
+<font color="#CCCCCC">so here I</font><font color="#E5E5E5"> would have to say not clean</font>
+
+77
+00:04:07,880 --> 00:04:12,170
+right<font color="#CCCCCC"> so if it's</font><font color="#E5E5E5"> clean then it would</font>
+
+78
+00:04:12,170 --> 00:04:13,010
+<font color="#E5E5E5">resolve it</font>
+
+79
+00:04:13,010 --> 00:04:15,590
+if it's not clean then<font color="#CCCCCC"> it</font><font color="#E5E5E5"> reject it so</font>
+
+80
+00:04:15,590 --> 00:04:18,410
+<font color="#E5E5E5">if it's going to be</font><font color="#CCCCCC"> rejected</font><font color="#E5E5E5"> I need to</font>
+
+81
+00:04:18,410 --> 00:04:22,820
+say false<font color="#E5E5E5"> here then in that case it</font>
+
+82
+00:04:22,820 --> 00:04:25,030
+would reject it
+
+83
+00:04:25,030 --> 00:04:29,860
+and I would get this<font color="#CCCCCC"> not clean</font><font color="#E5E5E5"> through</font>
+
+84
+00:04:29,860 --> 00:04:34,380
+this argument<font color="#E5E5E5"> and I can console of it</font>
+
+85
+00:04:37,810 --> 00:04:42,340
+<font color="#E5E5E5">okay so be the</font><font color="#CCCCCC"> messages the room is not</font>
+
+86
+00:04:42,340 --> 00:04:46,540
+clean<font color="#CCCCCC"> now again</font><font color="#E5E5E5"> here what we promised to</font>
+
+87
+00:04:46,540 --> 00:04:48,490
+<font color="#E5E5E5">do is happening by the way we're not</font>
+
+88
+00:04:48,490 --> 00:04:52,120
+doing<font color="#CCCCCC"> anything but in order to explain</font>
+
+89
+00:04:52,120 --> 00:04:54,550
+<font color="#E5E5E5">the concept I wanted to keep it very</font>
+
+90
+00:04:54,550 --> 00:04:59,169
+clean and assuming that<font color="#E5E5E5"> after doing this</font>
+
+91
+00:04:59,169 --> 00:05:02,380
+is clean<font color="#E5E5E5"> a set that makes the promise</font>
+
+92
+00:05:02,380 --> 00:05:05,860
+<font color="#E5E5E5">either resolve or reject</font><font color="#CCCCCC"> before</font><font color="#E5E5E5"> we move</font>
+
+93
+00:05:05,860 --> 00:05:09,070
+on I'm saving<font color="#E5E5E5"> this example here so if</font>
+
+94
+00:05:09,070 --> 00:05:11,470
+you go to<font color="#E5E5E5"> this particular URL</font><font color="#CCCCCC"> you can</font>
+
+95
+00:05:11,470 --> 00:05:13,600
+check it out<font color="#CCCCCC"> okay</font>
+
+96
+00:05:13,600 --> 00:05:15,790
+now look at a<font color="#E5E5E5"> little</font><font color="#CCCCCC"> bit of complex</font>
+
+97
+00:05:15,790 --> 00:05:19,300
+example where you<font color="#E5E5E5"> have to finish</font>
+
+98
+00:05:19,300 --> 00:05:21,400
+something<font color="#E5E5E5"> before you</font><font color="#CCCCCC"> can</font><font color="#E5E5E5"> start something</font>
+
+99
+00:05:21,400 --> 00:05:25,750
+<font color="#E5E5E5">right so let's say if you you know</font><font color="#CCCCCC"> you</font>
+
+100
+00:05:25,750 --> 00:05:29,229
+<font color="#CCCCCC">cannot remove the</font><font color="#E5E5E5"> garbage before you can</font>
+
+101
+00:05:29,229 --> 00:05:31,210
+actually<font color="#E5E5E5"> clean the room</font><font color="#CCCCCC"> see how to clean</font>
+
+102
+00:05:31,210 --> 00:05:34,000
+the room<font color="#E5E5E5"> so once you finish cleaning</font>
+
+103
+00:05:34,000 --> 00:05:36,280
+your room then you can remove the
+
+104
+00:05:36,280 --> 00:05:40,260
+<font color="#CCCCCC">garbage and once you you know</font><font color="#E5E5E5"> do both</font>
+
+105
+00:05:40,260 --> 00:05:42,310
+<font color="#CCCCCC">then you get ice cream</font>
+
+106
+00:05:42,310 --> 00:05:45,760
+<font color="#E5E5E5">you know your parents would give you ice</font>
+
+107
+00:05:45,760 --> 00:05:48,490
+<font color="#CCCCCC">cream as an award</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> cannot get the</font>
+
+108
+00:05:48,490 --> 00:05:50,320
+reward until you clean the<font color="#CCCCCC"> room and take</font>
+
+109
+00:05:50,320 --> 00:05:53,620
+the garbage<font color="#E5E5E5"> so there's dependency right</font>
+
+110
+00:05:53,620 --> 00:05:57,190
+<font color="#E5E5E5">so here in the code</font><font color="#CCCCCC"> I have three</font>
+
+111
+00:05:57,190 --> 00:06:00,370
+separate promises<font color="#CCCCCC"> basically I have three</font>
+
+112
+00:06:00,370 --> 00:06:03,510
+functions<font color="#CCCCCC"> the first function let the</font>
+
+113
+00:06:03,510 --> 00:06:06,700
+clean room<font color="#E5E5E5"> it actually returns a promise</font>
+
+114
+00:06:06,700 --> 00:06:09,240
+to clean the room<font color="#E5E5E5"> and within I'm</font>
+
+115
+00:06:09,240 --> 00:06:12,250
+directly resolving it<font color="#CCCCCC"> I don't I don't</font>
+
+116
+00:06:12,250 --> 00:06:16,060
+need<font color="#E5E5E5"> to wait for I don't we clean so I'm</font>
+
+117
+00:06:16,060 --> 00:06:17,669
+just resolving<font color="#E5E5E5"> it right away</font>
+
+118
+00:06:17,669 --> 00:06:20,919
+otherwise you would<font color="#CCCCCC"> here you would</font>
+
+119
+00:06:20,919 --> 00:06:22,419
+basically<font color="#E5E5E5"> clean the room and then</font>
+
+120
+00:06:22,419 --> 00:06:24,550
+resolve it<font color="#CCCCCC"> either resolve</font><font color="#E5E5E5"> or reject but</font>
+
+121
+00:06:24,550 --> 00:06:28,060
+I'm just resolving it<font color="#CCCCCC"> mint</font><font color="#E5E5E5"> it clean</font><font color="#CCCCCC"> same</font>
+
+122
+00:06:28,060 --> 00:06:30,190
+thing happening for remove the garbage
+
+123
+00:06:30,190 --> 00:06:36,390
+<font color="#E5E5E5">and winning the ice cream okay now I</font>
+
+124
+00:06:36,390 --> 00:06:39,370
+want<font color="#CCCCCC"> to write this nested promise where</font>
+
+125
+00:06:39,370 --> 00:06:42,520
+once the cleaning<font color="#CCCCCC"> is done I want to</font>
+
+126
+00:06:42,520 --> 00:06:44,950
+remove the garbage<font color="#E5E5E5"> and once garbage is</font>
+
+127
+00:06:44,950 --> 00:06:50,070
+removed<font color="#CCCCCC"> I want to get the ice cream</font><font color="#E5E5E5"> okay</font>
+
+128
+00:06:50,070 --> 00:06:53,260
+so<font color="#E5E5E5"> our first right</font><font color="#CCCCCC"> clean the</font><font color="#E5E5E5"> room and</font>
+
+129
+00:06:53,260 --> 00:06:55,930
+<font color="#E5E5E5">see how the syntax is so nice and this</font>
+
+130
+00:06:55,930 --> 00:07:01,890
+<font color="#CCCCCC">is</font><font color="#E5E5E5"> why we use promises so I would first</font>
+
+131
+00:07:01,890 --> 00:07:05,680
+clean<font color="#CCCCCC"> the room so when I execute</font><font color="#E5E5E5"> this</font>
+
+132
+00:07:05,680 --> 00:07:08,530
+function<font color="#CCCCCC"> ate nothing but returns this</font>
+
+133
+00:07:08,530 --> 00:07:12,750
+promise<font color="#E5E5E5"> okay that I've defined here and</font>
+
+134
+00:07:12,750 --> 00:07:17,170
+when as I said before it<font color="#E5E5E5"> has a damn</font>
+
+135
+00:07:17,170 --> 00:07:18,640
+function which<font color="#E5E5E5"> actually wait for</font>
+
+136
+00:07:18,640 --> 00:07:22,420
+promised you finished<font color="#E5E5E5"> and only then it</font>
+
+137
+00:07:22,420 --> 00:07:26,560
+would run this function<font color="#E5E5E5"> then now inside</font>
+
+138
+00:07:26,560 --> 00:07:29,920
+this dent function<font color="#E5E5E5"> I</font><font color="#CCCCCC"> would have a</font>
+
+139
+00:07:29,920 --> 00:07:33,850
+callback function since it only runs
+
+140
+00:07:33,850 --> 00:07:38,170
+when these this promise is finished then
+
+141
+00:07:38,170 --> 00:07:40,450
+I<font color="#E5E5E5"> can start another promise which is</font>
+
+142
+00:07:40,450 --> 00:07:43,390
+<font color="#CCCCCC">serial the garbage</font><font color="#E5E5E5"> so all I'm going to</font>
+
+143
+00:07:43,390 --> 00:07:49,630
+<font color="#E5E5E5">simply do is return garbage now when I</font>
+
+144
+00:07:49,630 --> 00:07:52,570
+execute<font color="#E5E5E5"> this this function it nothing</font>
+
+145
+00:07:52,570 --> 00:07:54,870
+but<font color="#CCCCCC"> it returns</font><font color="#E5E5E5"> this promise and</font>
+
+146
+00:07:54,870 --> 00:07:58,060
+basically this now became<font color="#E5E5E5"> a becomes a</font>
+
+147
+00:07:58,060 --> 00:08:02,440
+promise for<font color="#E5E5E5"> a remove the garbage so I</font>
+
+148
+00:08:02,440 --> 00:08:06,540
+can actually<font color="#E5E5E5"> run then on that promise</font>
+
+149
+00:08:06,540 --> 00:08:11,680
+<font color="#CCCCCC">within that I have a function</font><font color="#E5E5E5"> that waits</font>
+
+150
+00:08:11,680 --> 00:08:14,950
+for that promise<font color="#E5E5E5"> to</font><font color="#CCCCCC"> finish to remove the</font>
+
+151
+00:08:14,950 --> 00:08:18,840
+garbage<font color="#E5E5E5"> once it's finished</font><font color="#CCCCCC"> I can</font><font color="#E5E5E5"> return</font>
+
+152
+00:08:18,840 --> 00:08:25,420
+<font color="#E5E5E5">another function call</font><font color="#CCCCCC"> win icecream when</font>
+
+153
+00:08:25,420 --> 00:08:31,720
+that is<font color="#CCCCCC"> done I can</font><font color="#E5E5E5"> simply say I can add</font>
+
+154
+00:08:31,720 --> 00:08:35,190
+<font color="#E5E5E5">another function side which basically</font>
+
+155
+00:08:35,190 --> 00:08:39,190
+runs<font color="#E5E5E5"> when everything is done all three</font>
+
+156
+00:08:39,190 --> 00:08:42,280
+<font color="#E5E5E5">promises have been fulfilled here you</font>
+
+157
+00:08:42,280 --> 00:08:46,620
+would say if I run this
+
+158
+00:08:47,739 --> 00:08:52,670
+<font color="#E5E5E5">it</font><font color="#CCCCCC"> has finished</font><font color="#E5E5E5"> actually</font><font color="#CCCCCC"> since for every</font>
+
+159
+00:08:52,670 --> 00:08:56,689
+<font color="#E5E5E5">resolve I am getting a</font><font color="#CCCCCC"> message back into</font>
+
+160
+00:08:56,689 --> 00:08:58,749
+<font color="#E5E5E5">this</font><font color="#CCCCCC"> dent functions because when I</font>
+
+161
+00:08:58,749 --> 00:09:02,899
+<font color="#E5E5E5">finished cleaning</font><font color="#CCCCCC"> the room it sends a</font>
+
+162
+00:09:02,899 --> 00:09:06,410
+message<font color="#CCCCCC"> with</font><font color="#E5E5E5"> the</font><font color="#CCCCCC"> resolve</font><font color="#E5E5E5"> call</font><font color="#CCCCCC"> clean the</font>
+
+163
+00:09:06,410 --> 00:09:08,929
+room I can actually catch this message
+
+164
+00:09:08,929 --> 00:09:13,989
+in a result and I can pass<font color="#E5E5E5"> that message</font>
+
+165
+00:09:13,989 --> 00:09:18,379
+<font color="#E5E5E5">into the next function when I same thing</font>
+
+166
+00:09:18,379 --> 00:09:21,079
+<font color="#E5E5E5">I would get a result here as well and I</font>
+
+167
+00:09:21,079 --> 00:09:23,689
+<font color="#CCCCCC">can pass it here</font><font color="#E5E5E5"> and in the end I</font><font color="#CCCCCC"> would</font>
+
+168
+00:09:23,689 --> 00:09:25,970
+get<font color="#E5E5E5"> a result here as well</font>
+
+169
+00:09:25,970 --> 00:09:29,689
+now what I can<font color="#CCCCCC"> do I can whatever message</font>
+
+170
+00:09:29,689 --> 00:09:31,999
+that I get in the first after<font color="#E5E5E5"> cleaning</font>
+
+171
+00:09:31,999 --> 00:09:34,579
+the<font color="#E5E5E5"> room message and I can append this</font>
+
+172
+00:09:34,579 --> 00:09:39,529
+message so what is going<font color="#CCCCCC"> to do is going</font>
+
+173
+00:09:39,529 --> 00:09:42,619
+<font color="#E5E5E5">to can get all the messages resulting</font>
+
+174
+00:09:42,619 --> 00:09:46,670
+from fulfilling<font color="#CCCCCC"> the each promises oh and</font>
+
+175
+00:09:46,670 --> 00:09:51,679
+actually<font color="#CCCCCC"> I need to say finished</font><font color="#E5E5E5"> plus if</font>
+
+176
+00:09:51,679 --> 00:09:56,509
+I run this it<font color="#CCCCCC"> says finished clean the</font>
+
+177
+00:09:56,509 --> 00:10:02,410
+room<font color="#E5E5E5"> remove a garbage one ice cream</font>
+
+178
+00:10:02,799 --> 00:10:05,299
+all three done and you can see it
+
+179
+00:10:05,299 --> 00:10:08,059
+happened in that sequence<font color="#CCCCCC"> because of</font>
+
+180
+00:10:08,059 --> 00:10:11,239
+this dependency<font color="#E5E5E5"> so this is how you can</font>
+
+181
+00:10:11,239 --> 00:10:13,399
+<font color="#CCCCCC">actually put the dependency and you can</font>
+
+182
+00:10:13,399 --> 00:10:16,519
+see how clean this code is compared<font color="#E5E5E5"> to</font>
+
+183
+00:10:16,519 --> 00:10:20,720
+if you were<font color="#E5E5E5"> to use a simple callback</font>
+
+184
+00:10:20,720 --> 00:10:23,360
+function to do this without using
+
+185
+00:10:23,360 --> 00:10:26,600
+promises<font color="#E5E5E5"> you</font><font color="#CCCCCC"> will have one function</font>
+
+186
+00:10:26,600 --> 00:10:28,639
+where you you have<font color="#E5E5E5"> to nest everything</font>
+
+187
+00:10:28,639 --> 00:10:31,009
+and if you<font color="#E5E5E5"> have like a so many callback</font>
+
+188
+00:10:31,009 --> 00:10:33,319
+function it becomes a<font color="#CCCCCC"> nightmare so</font>
+
+189
+00:10:33,319 --> 00:10:35,540
+promises at least solves this problem
+
+190
+00:10:35,540 --> 00:10:37,519
+because you can independently define
+
+191
+00:10:37,519 --> 00:10:40,040
+these promises and<font color="#E5E5E5"> then when you resolve</font>
+
+192
+00:10:40,040 --> 00:10:44,989
+<font color="#E5E5E5">it it's also quite clean now I have</font>
+
+193
+00:10:44,989 --> 00:10:50,149
+saved<font color="#E5E5E5"> this example in this URL so if you</font>
+
+194
+00:10:50,149 --> 00:10:51,799
+want<font color="#E5E5E5"> to play around</font><font color="#CCCCCC"> with it you can load</font>
+
+195
+00:10:51,799 --> 00:10:55,309
+this<font color="#E5E5E5"> I will</font><font color="#CCCCCC"> also</font><font color="#E5E5E5"> provide the link in the</font>
+
+196
+00:10:55,309 --> 00:10:59,209
+YouTube video<font color="#CCCCCC"> as well now</font><font color="#E5E5E5"> let's say if</font>
+
+197
+00:10:59,209 --> 00:11:01,399
+you want<font color="#E5E5E5"> to do all these in parallel</font>
+
+198
+00:11:01,399 --> 00:11:03,619
+<font color="#CCCCCC">with you don't want to wait for one to</font>
+
+199
+00:11:03,619 --> 00:11:06,439
+finish<font color="#E5E5E5"> and second to start you just want</font>
+
+200
+00:11:06,439 --> 00:11:08,990
+them all three promises spawn at the
+
+201
+00:11:08,990 --> 00:11:12,980
+same time and you want once all<font color="#CCCCCC"> of them</font>
+
+202
+00:11:12,980 --> 00:11:15,529
+are done you want<font color="#E5E5E5"> to do something so for</font>
+
+203
+00:11:15,529 --> 00:11:20,480
+<font color="#E5E5E5">that I will do something</font><font color="#CCCCCC"> like</font><font color="#E5E5E5"> this</font><font color="#CCCCCC"> I</font>
+
+204
+00:11:20,480 --> 00:11:27,110
+would<font color="#CCCCCC"> say promise</font><font color="#E5E5E5"> dot all and inside I</font>
+
+205
+00:11:27,110 --> 00:11:28,850
+will pass an array with<font color="#CCCCCC"> all three</font>
+
+206
+00:11:28,850 --> 00:11:34,779
+promises<font color="#E5E5E5"> so I would clean the room</font>
+
+207
+00:11:38,499 --> 00:11:46,249
+remove the garbage<font color="#CCCCCC"> and when ice cream</font>
+
+208
+00:11:46,249 --> 00:11:49,279
+and they will all finish<font color="#E5E5E5"> I would</font><font color="#CCCCCC"> have it</font>
+
+209
+00:11:49,279 --> 00:11:52,610
+then<font color="#CCCCCC"> and here I would have the callback</font>
+
+210
+00:11:52,610 --> 00:11:54,999
+<font color="#CCCCCC">function</font>
+
+211
+00:11:58,410 --> 00:12:02,019
+I'll finish when I run this gives me the
+
+212
+00:12:02,019 --> 00:12:05,019
+result back<font color="#E5E5E5"> says it's all finished but</font>
+
+213
+00:12:05,019 --> 00:12:07,299
+<font color="#E5E5E5">let's say instead of waiting</font><font color="#CCCCCC"> for all the</font>
+
+214
+00:12:07,299 --> 00:12:09,910
+finish what if you just<font color="#E5E5E5"> want one of them</font>
+
+215
+00:12:09,910 --> 00:12:13,089
+<font color="#CCCCCC">to finish any of them then you want</font><font color="#E5E5E5"> to</font>
+
+216
+00:12:13,089 --> 00:12:15,489
+do<font color="#E5E5E5"> something for</font><font color="#CCCCCC"> that you would use</font>
+
+217
+00:12:15,489 --> 00:12:19,059
+instead<font color="#E5E5E5"> of all you would say please</font><font color="#CCCCCC"> you</font>
+
+218
+00:12:19,059 --> 00:12:21,879
+would take race the<font color="#CCCCCC"> de log would fire</font><font color="#E5E5E5"> up</font>
+
+219
+00:12:21,879 --> 00:12:26,939
+and say one of them is finished
+
+220
+00:12:26,939 --> 00:12:29,679
+let's<font color="#CCCCCC"> see</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> three server</font><font color="#E5E5E5"> with the same</font>
+
+221
+00:12:29,679 --> 00:12:32,529
+data<font color="#E5E5E5"> and you try to pull for redundancy</font>
+
+222
+00:12:32,529 --> 00:12:34,509
+<font color="#E5E5E5">and as soon as the first one shows up</font>
+
+223
+00:12:34,509 --> 00:12:36,519
+<font color="#CCCCCC">you are satisfied because</font><font color="#E5E5E5"> you got the</font>
+
+224
+00:12:36,519 --> 00:12:37,899
+data<font color="#CCCCCC"> right</font><font color="#E5E5E5"> you</font><font color="#CCCCCC"> don't want to wait for</font>
+
+225
+00:12:37,899 --> 00:12:39,970
+<font color="#CCCCCC">the other two to</font><font color="#E5E5E5"> finish right in that</font>
+
+226
+00:12:39,970 --> 00:12:45,699
+case you would<font color="#CCCCCC"> use</font><font color="#E5E5E5"> this then it comes</font>
+
+227
+00:12:45,699 --> 00:12:48,999
+back<font color="#E5E5E5"> with one of them is finished anyway</font>
+
+228
+00:12:48,999 --> 00:12:52,689
+so that's<font color="#E5E5E5"> one of the promises</font><font color="#CCCCCC"> I promise</font>
+
+229
+00:12:52,689 --> 00:12:55,779
+<font color="#CCCCCC">this</font><font color="#E5E5E5"> tutorial and I deliver it so please</font>
+
+230
+00:12:55,779 --> 00:12:57,790
+resolve<font color="#E5E5E5"> it if you liked the</font><font color="#CCCCCC"> tutorial</font>
+
+231
+00:12:57,790 --> 00:13:00,910
+please<font color="#CCCCCC"> give a comment</font><font color="#E5E5E5"> like it and</font>
+
+232
+00:13:00,910 --> 00:13:03,839
+subscribe thank<font color="#CCCCCC"> you</font>
+
+233
+00:13:09,240 --> 00:00:00,000
+<font color="#E5E5E5">you</font>
+

@@ -1,0 +1,49 @@
+<html>
+<head>
+
+    <title>Calling Multiple Functions</title>
+
+</head>
+
+    <body>
+          <p id="fun"></p>
+        <p>Devloping Simple Function</p>
+      
+        <input type="text" name="in" id="in" />
+        <input type="submit" onclick="function_one();" />
+                <script>
+            function function_one() {  //first when i am clicking on submit button this function is calling
+            document.getElementById("fun").innerHTML = isXgreaterThanSeven(5); // considering the next alert, I figured you wanted to call function_two first //then this function is calling
+            alert("The function called 'function_one' has been called.");
+
+            }
+            function isXgreaterThanSeven(x) { //after calling this function it came to inside the fucntion and validate the value of x
+            if (x > 7) {
+            console.log('x is greater than 7!');
+                       
+            }
+
+            console.log('x is not greater than 7');
+            validate();//after validation it will call this function then it will return back to the this fucntion and retutn  to the calling function that is function_one() 
+            return x;
+            }
+            function validate(){
+                var n = document.getElementById('in').value;
+            if(n == ""){
+            alert ("validation done");
+              
+                
+            return true;
+            }
+            for(var i = 0 ;i <= n;i++){
+                console.log("testing" + i)
+            }
+                
+            }
+               
+            
+   
+    </script>
+        
+    </body>
+</html>

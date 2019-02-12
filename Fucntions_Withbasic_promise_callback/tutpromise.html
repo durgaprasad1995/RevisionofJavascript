@@ -1,0 +1,56 @@
+<body>
+  <div id="promisreslove"></div>
+  <div id="cleanroom"></div>
+</body>
+<script>
+let promisetocleanroom = new Promise(function(resolve,reject){
+    //cleaning the room
+    let isclean = true;//true for room is clean,false for room is not clean
+    if(isclean){
+        resolve("clean");//this what he sapose to do i.e is cleaning room
+    }
+    else{
+        reject('not clean');
+    }
+})
+//there is a method that when promis is called 
+//then is method is fired the promise is resloved within this method we can have a callback function because it's only excuted when the promise is resloved 
+promisetocleanroom.then(function(fromreslove){
+      document.getElementById('promisreslove').innerHTML="Room is " + fromreslove;
+    console.log("Room is" + fromreslove ); //here i can get the status back from the reslove 
+    //for reject another argument called catch
+}).catch(function(fromreject){
+    console.log("The room is" + fromreject);
+})
+    
+   //Icream wining concept  like example if he clean the room after that he clean the grabage then he will win the ice cream this is the way below function is  
+    
+let cleanRoom = function() {
+  return new Promise(function(resolve, reject) {
+    resolve('Cleaned The Room');
+  });
+};
+
+let removeGarbage = function(message) {
+  return new Promise(function(resolve, reject) {
+    resolve(message + ' remove Garbage');
+  });
+};
+
+let winIcecream = function(message) {
+  return new Promise(function(resolve, reject) {
+    resolve( message + ' won Icecream');
+  });
+};
+
+cleanRoom().then(function(result){
+	return removeGarbage(result);
+}).then(function(result){
+	return winIcecream(result);
+}).then(function(result){
+ var des= document.getElementById('cleanroom').innerHTML=result + ' finished ';
+
+	console.log(result + ' finished ');
+})
+    
+</script>

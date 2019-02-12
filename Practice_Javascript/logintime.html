@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Login time
+        </title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+        function myFunction() {
+        var d = new Date();
+        var n = d.getHours();
+        // document.getElementById("demo").innerHTML = n; this is for displaying the current hour
+        if(n >= 0 && n < 12){
+            document.getElementById("demo").innerHTML = "good Morning";
+        }
+        else if ( n >=12 && n < 18){
+            document.getElementById("demo").innerHTML = "good after noon";
+        }
+        else
+        document.getElementById("demo").innerHTML = "good evening";
+        }
+        myFunction();
+        </script>
+    </body>
+</html>

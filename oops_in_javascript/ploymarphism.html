@@ -1,0 +1,24 @@
+<script>
+    var shape =function(){}
+    shape.prototype.draw = function(){
+        return "I am shape";
+    }
+    var circle = function(){}
+    circle.prototype = Object.create(shape.prototype);//for the circle classs shape is the parent class.It inherit shape method
+    circle.prototype.draw = function(){
+        //here we are overriding the function shape
+        return "i am circle"
+    }
+    var square = function(){}
+    square.prototype = Object.create(shape.prototype);//for the circle classs shape is the parent class.It inherit shape method
+    square.prototype.draw = function(){
+        //here we are overriding the function shape
+        return "i am square"
+    }
+    var triangle = function(){}
+    triangle.prototype = Object.create(shape.prototype);//for the circle classs shape is the parent class.It inherit shape method
+    var shapes = [new shape(),new circle,new square,new triangle];
+    shapes.forEach(function(shape){
+        document.write(shape.draw() +"</br>");
+    })
+</script>

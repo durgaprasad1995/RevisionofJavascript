@@ -1,0 +1,29 @@
+<body>
+    <div id="encapsa"></div>
+</body>
+<script>
+    //below mention commented code is procedural programing onside varibale another side function 
+//let basesalary = 30_000;
+//let overtime = 10;
+//let rate = 20;
+//    function getWage(basesalary,overtime,rate){
+//        return basesalary+(overtime*rate);
+//    }
+    
+
+    //employee is an object
+    let employee ={ 
+        basesalary:30000,
+        overtime:30,
+        rate:20,
+        getwages:function(){ //this is a method and this fucntion has no parameters why we don't have parameter all of the employee parameter model as properties of this obj employee.This whole this we call as one unit .The best functions are those with no parameters 
+    let final=this.basesalary + (this.overtime * this.rate);
+    // let dis = document.getElementById('encap').innerHTML = final 
+    // alert(final);
+    return final;
+    }
+    };
+   let dis=employee.getwages();
+   document.getElementById('encapsa').innerHTML=dis; 
+ 
+</script>

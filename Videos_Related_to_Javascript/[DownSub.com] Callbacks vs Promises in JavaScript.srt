@@ -1,0 +1,1444 @@
+1
+00:00:00,060 --> 00:00:02,159
+hi guys<font color="#CCCCCC"> this is Amer today I'm gonna be</font>
+
+2
+00:00:02,159 --> 00:00:05,190
+talking<font color="#CCCCCC"> about</font><font color="#E5E5E5"> call back</font><font color="#CCCCCC"> versus promises</font>
+
+3
+00:00:05,190 --> 00:00:07,890
+<font color="#E5E5E5">most people ask about what is the</font>
+
+4
+00:00:07,890 --> 00:00:10,440
+difference<font color="#CCCCCC"> between these two concepts in</font>
+
+5
+00:00:10,440 --> 00:00:14,040
+JavaScript<font color="#E5E5E5"> are a node GS that is the</font>
+
+6
+00:00:14,040 --> 00:00:16,199
+framework of JavaScript you might be
+
+7
+00:00:16,199 --> 00:00:19,080
+confused with<font color="#E5E5E5"> call back and promises and</font>
+
+8
+00:00:19,080 --> 00:00:21,630
+who in what scenarios we should use a
+
+9
+00:00:21,630 --> 00:00:24,810
+<font color="#E5E5E5">call back versus</font><font color="#CCCCCC"> a promises so I'll be</font>
+
+10
+00:00:24,810 --> 00:00:26,699
+<font color="#E5E5E5">giving you examples that what is the</font>
+
+11
+00:00:26,699 --> 00:00:29,130
+difference<font color="#CCCCCC"> between these two in which</font>
+
+12
+00:00:29,130 --> 00:00:31,500
+situation we need to decide whether we
+
+13
+00:00:31,500 --> 00:00:33,750
+want<font color="#E5E5E5"> to</font><font color="#CCCCCC"> use a call back or we want</font><font color="#E5E5E5"> to</font>
+
+14
+00:00:33,750 --> 00:00:36,450
+use a promise<font color="#E5E5E5"> so let's get started and</font>
+
+15
+00:00:36,450 --> 00:00:39,390
+<font color="#E5E5E5">write the code before writing the code</font><font color="#CCCCCC"> I</font>
+
+16
+00:00:39,390 --> 00:00:41,340
+want to let all of you know<font color="#CCCCCC"> that if you</font>
+
+17
+00:00:41,340 --> 00:00:43,800
+want to<font color="#E5E5E5"> buy a book related to JavaScript</font>
+
+18
+00:00:43,800 --> 00:00:46,680
+<font color="#E5E5E5">and that is a really</font><font color="#CCCCCC"> good book I'm gonna</font>
+
+19
+00:00:46,680 --> 00:00:48,780
+give the link of this book in the
+
+20
+00:00:48,780 --> 00:00:50,730
+<font color="#CCCCCC">description below if you want</font><font color="#E5E5E5"> to learn</font>
+
+21
+00:00:50,730 --> 00:00:54,420
+the more advanced java script with
+
+22
+00:00:54,420 --> 00:00:57,090
+examples then this is a really<font color="#CCCCCC"> good book</font>
+
+23
+00:00:57,090 --> 00:00:59,550
+<font color="#E5E5E5">and that includes a really good examples</font>
+
+24
+00:00:59,550 --> 00:01:01,859
+<font color="#CCCCCC">for you to learn</font><font color="#E5E5E5"> even if you already</font>
+
+25
+00:01:01,859 --> 00:01:03,750
+<font color="#E5E5E5">know</font><font color="#CCCCCC"> javascript that</font><font color="#E5E5E5"> will really help</font>
+
+26
+00:01:03,750 --> 00:01:07,560
+you in learning more advanced concepts
+
+27
+00:01:07,560 --> 00:01:10,260
+of<font color="#E5E5E5"> JavaScript so first of all</font><font color="#CCCCCC"> I will</font>
+
+28
+00:01:10,260 --> 00:01:13,380
+talk about<font color="#CCCCCC"> callback in JavaScript</font><font color="#E5E5E5"> so far</font>
+
+29
+00:01:13,380 --> 00:01:16,200
+callback<font color="#E5E5E5"> we need to define functions</font><font color="#CCCCCC"> and</font>
+
+30
+00:01:16,200 --> 00:01:17,990
+each<font color="#CCCCCC"> function will execute</font>
+
+31
+00:01:17,990 --> 00:01:21,570
+<font color="#E5E5E5">asynchronously and the second</font><font color="#CCCCCC"> function</font>
+
+32
+00:01:21,570 --> 00:01:23,549
+will be dependent on<font color="#E5E5E5"> the first function</font>
+
+33
+00:01:23,549 --> 00:01:25,290
+<font color="#CCCCCC">and the third function will be dependent</font>
+
+34
+00:01:25,290 --> 00:01:28,049
+<font color="#E5E5E5">on the second function and so on let me</font>
+
+35
+00:01:28,049 --> 00:01:30,119
+write an<font color="#E5E5E5"> example that I'll explain</font><font color="#CCCCCC"> you</font>
+
+36
+00:01:30,119 --> 00:01:34,950
+what it all about<font color="#E5E5E5"> so first of all we</font>
+
+37
+00:01:34,950 --> 00:01:37,170
+need<font color="#CCCCCC"> to define</font><font color="#E5E5E5"> a function so I'm gonna</font>
+
+38
+00:01:37,170 --> 00:01:39,090
+define three functions that<font color="#E5E5E5"> can</font><font color="#CCCCCC"> be any</font>
+
+39
+00:01:39,090 --> 00:01:43,409
+<font color="#E5E5E5">number</font><font color="#CCCCCC"> of functions like function first</font>
+
+40
+00:01:43,409 --> 00:01:46,890
+and that takes a<font color="#CCCCCC"> value and takes a</font>
+
+41
+00:01:46,890 --> 00:01:50,850
+<font color="#CCCCCC">callback so I'm</font><font color="#E5E5E5"> gonna copy this function</font>
+
+42
+00:01:50,850 --> 00:01:54,000
+<font color="#E5E5E5">and I'm gonna paste it two more times</font>
+
+43
+00:01:54,000 --> 00:01:56,100
+<font color="#E5E5E5">and I'm going to change the name of</font>
+
+44
+00:01:56,100 --> 00:02:01,759
+these functions<font color="#E5E5E5"> to second and third</font><font color="#CCCCCC"> okay</font>
+
+45
+00:02:01,759 --> 00:02:06,540
+so now what<font color="#E5E5E5"> I want</font><font color="#CCCCCC"> to do is I want to</font>
+
+46
+00:02:06,540 --> 00:02:09,959
+call the<font color="#E5E5E5"> first function and unless it</font>
+
+47
+00:02:09,959 --> 00:02:12,420
+doesn't<font color="#E5E5E5"> return me a nice</font>
+
+48
+00:02:12,420 --> 00:02:16,020
+cific result or a response<font color="#CCCCCC"> I don't want</font>
+
+49
+00:02:16,020 --> 00:02:17,940
+my second function<font color="#E5E5E5"> to be called and</font>
+
+50
+00:02:17,940 --> 00:02:20,640
+similar for<font color="#CCCCCC"> the third function</font><font color="#E5E5E5"> so I will</font>
+
+51
+00:02:20,640 --> 00:02:24,300
+<font color="#E5E5E5">use a callback for making</font><font color="#CCCCCC"> it dependent</font>
+
+52
+00:02:24,300 --> 00:02:27,510
+<font color="#E5E5E5">on each other</font><font color="#CCCCCC"> so</font><font color="#E5E5E5"> first of all I will</font>
+
+53
+00:02:27,510 --> 00:02:30,270
+call<font color="#E5E5E5"> first function and I will send it a</font>
+
+54
+00:02:30,270 --> 00:02:32,790
+value<font color="#CCCCCC"> so let's say I'm sending a dove</font>
+
+55
+00:02:32,790 --> 00:02:36,150
+value<font color="#E5E5E5"> to and after</font><font color="#CCCCCC"> that I need</font><font color="#E5E5E5"> to send</font>
+
+56
+00:02:36,150 --> 00:02:41,660
+it a function as a parameter<font color="#CCCCCC"> so function</font>
+
+57
+00:02:41,660 --> 00:02:50,269
+first result and if there is an error so
+
+58
+00:02:50,269 --> 00:02:53,850
+what it<font color="#CCCCCC"> means that</font><font color="#E5E5E5"> I'm sending out to</font>
+
+59
+00:02:53,850 --> 00:02:56,040
+<font color="#E5E5E5">two will be received in this value and</font>
+
+60
+00:02:56,040 --> 00:02:59,250
+this whole function<font color="#E5E5E5"> will be sent to this</font>
+
+61
+00:02:59,250 --> 00:03:02,819
+<font color="#E5E5E5">callback parameter all right and using</font>
+
+62
+00:03:02,819 --> 00:03:04,830
+this<font color="#CCCCCC"> callback parameter that can be</font>
+
+63
+00:03:04,830 --> 00:03:07,110
+<font color="#CCCCCC">anything I've just written it called</font>
+
+64
+00:03:07,110 --> 00:03:09,690
+back that is more meaningful<font color="#E5E5E5"> using this</font>
+
+65
+00:03:09,690 --> 00:03:13,200
+<font color="#CCCCCC">callback parameter</font><font color="#E5E5E5"> I can return the</font>
+
+66
+00:03:13,200 --> 00:03:16,650
+value that can<font color="#CCCCCC"> be received within this</font>
+
+67
+00:03:16,650 --> 00:03:18,959
+first result<font color="#E5E5E5"> and then I can send out a</font>
+
+68
+00:03:18,959 --> 00:03:22,920
+boolean whether it's a error or<font color="#CCCCCC"> not so</font>
+
+69
+00:03:22,920 --> 00:03:26,850
+let<font color="#E5E5E5"> me return like</font><font color="#CCCCCC"> callback and the</font>
+
+70
+00:03:26,850 --> 00:03:31,920
+first value is<font color="#E5E5E5"> value plus</font><font color="#CCCCCC"> two and</font><font color="#E5E5E5"> after</font>
+
+71
+00:03:31,920 --> 00:03:34,170
+that<font color="#E5E5E5"> I need to send out if there is an</font>
+
+72
+00:03:34,170 --> 00:03:38,940
+error or not<font color="#E5E5E5"> so there is no error</font><font color="#CCCCCC"> okay</font>
+
+73
+00:03:38,940 --> 00:03:42,900
+so in here<font color="#CCCCCC"> I am checking if there is an</font>
+
+74
+00:03:42,900 --> 00:03:48,390
+error if there is no error then call the
+
+75
+00:03:48,390 --> 00:03:51,290
+second function<font color="#CCCCCC"> so I'm copying this</font>
+
+76
+00:03:51,290 --> 00:03:56,880
+first<font color="#CCCCCC"> function and</font><font color="#E5E5E5"> after that I'm</font>
+
+77
+00:03:56,880 --> 00:03:59,540
+calling<font color="#E5E5E5"> my second function and I am</font>
+
+78
+00:03:59,540 --> 00:04:04,620
+receiving the second result and in the
+
+79
+00:04:04,620 --> 00:04:08,160
+<font color="#E5E5E5">second function</font><font color="#CCCCCC"> I'm</font><font color="#E5E5E5"> sending out the</font>
+
+80
+00:04:08,160 --> 00:04:13,370
+first result<font color="#CCCCCC"> okay so just copy it and</font>
+
+81
+00:04:13,370 --> 00:04:19,430
+paste it<font color="#E5E5E5"> call the</font><font color="#CCCCCC"> third function</font>
+
+82
+00:04:19,789 --> 00:04:23,789
+and I will receive a third<font color="#CCCCCC"> result from</font>
+
+83
+00:04:23,789 --> 00:04:27,419
+here and inside<font color="#CCCCCC"> it I will check the</font>
+
+84
+00:04:27,419 --> 00:04:28,699
+result
+
+85
+00:04:28,699 --> 00:04:35,009
+so third result<font color="#E5E5E5"> okay so I'm gonna copy</font>
+
+86
+00:04:35,009 --> 00:04:45,419
+these<font color="#E5E5E5"> callback statements okay so that's</font>
+
+87
+00:04:45,419 --> 00:04:49,770
+it<font color="#E5E5E5"> now what it is doing first of all I'm</font>
+
+88
+00:04:49,770 --> 00:04:52,289
+sending out<font color="#E5E5E5"> to</font><font color="#CCCCCC"> two is</font><font color="#E5E5E5"> being received</font>
+
+89
+00:04:52,289 --> 00:04:55,500
+within<font color="#E5E5E5"> this value and inside this first</font>
+
+90
+00:04:55,500 --> 00:04:57,930
+function<font color="#CCCCCC"> I'm using this callback this is</font>
+
+91
+00:04:57,930 --> 00:05:00,900
+a being<font color="#E5E5E5"> refer to a function okay</font><font color="#CCCCCC"> and</font>
+
+92
+00:05:00,900 --> 00:05:04,289
+using this function called back I am
+
+93
+00:05:04,289 --> 00:05:07,469
+adding<font color="#E5E5E5"> to within</font><font color="#CCCCCC"> the</font><font color="#E5E5E5"> value and returning</font>
+
+94
+00:05:07,469 --> 00:05:10,979
+<font color="#E5E5E5">this value and this boolean value in</font>
+
+95
+00:05:10,979 --> 00:05:13,770
+that<font color="#E5E5E5"> callback function okay and then</font>
+
+96
+00:05:13,770 --> 00:05:15,779
+inside this<font color="#CCCCCC"> function I'm checking out if</font>
+
+97
+00:05:15,779 --> 00:05:18,000
+there<font color="#CCCCCC"> is an error if there</font><font color="#E5E5E5"> is no error</font>
+
+98
+00:05:18,000 --> 00:05:20,250
+<font color="#E5E5E5">then I'm calling out the second function</font>
+
+99
+00:05:20,250 --> 00:05:22,860
+<font color="#CCCCCC">okay and inside the second function</font>
+
+100
+00:05:22,860 --> 00:05:26,849
+I am sending<font color="#CCCCCC"> out the result of the first</font>
+
+101
+00:05:26,849 --> 00:05:32,159
+callback function okay<font color="#E5E5E5"> and that will be</font>
+
+102
+00:05:32,159 --> 00:05:34,440
+received<font color="#CCCCCC"> here and again I am adding up</font>
+
+103
+00:05:34,440 --> 00:05:37,020
+<font color="#CCCCCC">two and calling back and that callback</font>
+
+104
+00:05:37,020 --> 00:05:40,259
+will send out these<font color="#E5E5E5"> two values in the</font>
+
+105
+00:05:40,259 --> 00:05:42,419
+callback<font color="#CCCCCC"> function of this second</font>
+
+106
+00:05:42,419 --> 00:05:44,699
+<font color="#CCCCCC">function and that</font><font color="#E5E5E5"> will be received in</font>
+
+107
+00:05:44,699 --> 00:05:47,729
+the<font color="#E5E5E5"> second result and error and I'm</font>
+
+108
+00:05:47,729 --> 00:05:49,379
+checking out if there<font color="#E5E5E5"> is no error that</font>
+
+109
+00:05:49,379 --> 00:05:51,089
+I'm<font color="#E5E5E5"> calling out the third function and</font>
+
+110
+00:05:51,089 --> 00:05:54,710
+that can reach up to unlimited number of
+
+111
+00:05:54,710 --> 00:05:59,940
+<font color="#E5E5E5">functions okay so the purpose</font><font color="#CCCCCC"> of doing</font>
+
+112
+00:05:59,940 --> 00:06:04,740
+<font color="#E5E5E5">it in this way</font><font color="#CCCCCC"> is that if there is there</font>
+
+113
+00:06:04,740 --> 00:06:07,409
+I'm just adding up these two value and
+
+114
+00:06:07,409 --> 00:06:11,520
+<font color="#E5E5E5">that takes no time okay but what if we</font>
+
+115
+00:06:11,520 --> 00:06:14,909
+are calling<font color="#E5E5E5"> a server cause we are</font>
+
+116
+00:06:14,909 --> 00:06:18,180
+calling an API and we are fetching<font color="#E5E5E5"> out a</font>
+
+117
+00:06:18,180 --> 00:06:21,659
+very big data<font color="#E5E5E5"> that</font><font color="#CCCCCC"> is actually</font><font color="#E5E5E5"> take some</font>
+
+118
+00:06:21,659 --> 00:06:27,060
+time so<font color="#CCCCCC"> and that data is need</font><font color="#E5E5E5"> for this</font>
+
+119
+00:06:27,060 --> 00:06:29,880
+second<font color="#CCCCCC"> function okay so I have</font><font color="#E5E5E5"> called</font>
+
+120
+00:06:29,880 --> 00:06:31,770
+the second function<font color="#E5E5E5"> within the first</font>
+
+121
+00:06:31,770 --> 00:06:32,490
+function
+
+122
+00:06:32,490 --> 00:06:35,400
+<font color="#E5E5E5">it means that unless and until the first</font>
+
+123
+00:06:35,400 --> 00:06:38,910
+function doesn't<font color="#E5E5E5"> return a specific value</font>
+
+124
+00:06:38,910 --> 00:06:42,060
+right<font color="#CCCCCC"> here don't</font><font color="#E5E5E5"> call this second</font>
+
+125
+00:06:42,060 --> 00:06:46,259
+<font color="#CCCCCC">function and if the second function this</font>
+
+126
+00:06:46,259 --> 00:06:48,449
+<font color="#CCCCCC">callback of the second function</font><font color="#E5E5E5"> doesn't</font>
+
+127
+00:06:48,449 --> 00:06:52,919
+<font color="#E5E5E5">return the result right here</font><font color="#CCCCCC"> then until</font>
+
+128
+00:06:52,919 --> 00:06:55,410
+and unless<font color="#E5E5E5"> don't call the third function</font>
+
+129
+00:06:55,410 --> 00:06:59,310
+<font color="#E5E5E5">and same goes further</font><font color="#CCCCCC"> okay and same for</font>
+
+130
+00:06:59,310 --> 00:07:02,190
+<font color="#E5E5E5">the third</font><font color="#CCCCCC"> function of force function</font><font color="#E5E5E5"> or</font>
+
+131
+00:07:02,190 --> 00:07:04,860
+fifth function<font color="#E5E5E5"> or we can call a hundreds</font>
+
+132
+00:07:04,860 --> 00:07:07,530
+of functions like<font color="#E5E5E5"> this okay</font><font color="#CCCCCC"> so let's try</font>
+
+133
+00:07:07,530 --> 00:07:09,690
+<font color="#E5E5E5">it let's dry run it first of all I'm</font>
+
+134
+00:07:09,690 --> 00:07:11,819
+sending out<font color="#E5E5E5"> two that will be four</font>
+
+135
+00:07:11,819 --> 00:07:13,919
+folders will be received<font color="#E5E5E5"> right here and</font>
+
+136
+00:07:13,919 --> 00:07:17,099
+four is sent out right here 4<font color="#CCCCCC"> plus 2 6</font>
+
+137
+00:07:17,099 --> 00:07:20,550
+<font color="#CCCCCC">and 6 will be received here and 6 is</font>
+
+138
+00:07:20,550 --> 00:07:23,400
+going<font color="#E5E5E5"> to send out here and that will be</font>
+
+139
+00:07:23,400 --> 00:07:28,380
+add up here and that will<font color="#E5E5E5"> be become it</font>
+
+140
+00:07:28,380 --> 00:07:31,169
+and then it should<font color="#CCCCCC"> be printed right</font><font color="#E5E5E5"> here</font>
+
+141
+00:07:31,169 --> 00:07:33,120
+<font color="#CCCCCC">so let's</font><font color="#E5E5E5"> check out the result whether</font>
+
+142
+00:07:33,120 --> 00:07:35,659
+it's working<font color="#CCCCCC"> or not</font><font color="#E5E5E5"> so I'm going</font><font color="#CCCCCC"> to</font>
+
+143
+00:07:35,659 --> 00:07:38,729
+click on run and run<font color="#CCCCCC"> script yes I'm</font>
+
+144
+00:07:38,729 --> 00:07:41,219
+<font color="#E5E5E5">using webstorm</font><font color="#CCCCCC"> you might be</font><font color="#E5E5E5"> using other</font>
+
+145
+00:07:41,219 --> 00:07:45,240
+IDE<font color="#E5E5E5"> that can be other that can have</font>
+
+146
+00:07:45,240 --> 00:07:47,159
+other way to run the scripts but I have
+
+147
+00:07:47,159 --> 00:07:49,469
+this way in webstorm so let's click<font color="#E5E5E5"> on</font>
+
+148
+00:07:49,469 --> 00:07:51,750
+run script and go to terminal<font color="#E5E5E5"> and you</font>
+
+149
+00:07:51,750 --> 00:07:54,930
+<font color="#E5E5E5">can see it has shown me</font><font color="#CCCCCC"> the result 8 and</font>
+
+150
+00:07:54,930 --> 00:08:00,150
+that is<font color="#E5E5E5"> correct</font><font color="#CCCCCC"> okay</font><font color="#E5E5E5"> so</font><font color="#CCCCCC"> let me</font><font color="#E5E5E5"> first try</font>
+
+151
+00:08:00,150 --> 00:08:03,900
+and give you<font color="#E5E5E5"> an overview that</font><font color="#CCCCCC"> how it</font><font color="#E5E5E5"> is</font>
+
+152
+00:08:03,900 --> 00:08:10,380
+working<font color="#CCCCCC"> so first result and</font><font color="#E5E5E5"> I'm copying</font>
+
+153
+00:08:10,380 --> 00:08:13,469
+this line and<font color="#E5E5E5"> Here I am sending out the</font>
+
+154
+00:08:13,469 --> 00:08:17,099
+second result<font color="#CCCCCC"> ok so now</font><font color="#E5E5E5"> let's run it</font>
+
+155
+00:08:17,099 --> 00:08:21,389
+again<font color="#E5E5E5"> so now you can see it has printed</font>
+
+156
+00:08:21,389 --> 00:08:25,169
+<font color="#CCCCCC">4 6 8</font><font color="#E5E5E5"> and you can see that first is</font>
+
+157
+00:08:25,169 --> 00:08:28,620
+printed<font color="#E5E5E5"> the 4 and it didn't print the</font>
+
+158
+00:08:28,620 --> 00:08:31,229
+result of the second function before<font color="#E5E5E5"> the</font>
+
+159
+00:08:31,229 --> 00:08:33,479
+result of the<font color="#E5E5E5"> first function because the</font>
+
+160
+00:08:33,479 --> 00:08:35,549
+second function<font color="#E5E5E5"> calling is dependent on</font>
+
+161
+00:08:35,549 --> 00:08:38,279
+the result of the first<font color="#E5E5E5"> function so that</font>
+
+162
+00:08:38,279 --> 00:08:42,089
+is like if we want<font color="#CCCCCC"> to face the data from</font>
+
+163
+00:08:42,089 --> 00:08:45,529
+a server<font color="#E5E5E5"> like we want to face the</font>
+
+164
+00:08:45,529 --> 00:08:48,199
+all the tweets<font color="#E5E5E5"> are from Twitter and that</font>
+
+165
+00:08:48,199 --> 00:08:51,589
+tweets needs to be saved<font color="#CCCCCC"> in database so</font>
+
+166
+00:08:51,589 --> 00:08:54,769
+<font color="#E5E5E5">we can't save an empty data to the</font>
+
+167
+00:08:54,769 --> 00:08:56,749
+database first<font color="#CCCCCC"> we need to verify</font><font color="#E5E5E5"> whether</font>
+
+168
+00:08:56,749 --> 00:08:58,850
+the all the data have been fetched<font color="#CCCCCC"> from</font>
+
+169
+00:08:58,850 --> 00:09:01,519
+<font color="#CCCCCC">the</font><font color="#E5E5E5"> Twitter and if the all the</font><font color="#CCCCCC"> data</font><font color="#E5E5E5"> have</font>
+
+170
+00:09:01,519 --> 00:09:03,709
+been fetched from<font color="#CCCCCC"> the Twitter</font><font color="#E5E5E5"> then we</font>
+
+171
+00:09:03,709 --> 00:09:06,170
+will save<font color="#CCCCCC"> that data to the</font><font color="#E5E5E5"> database so</font>
+
+172
+00:09:06,170 --> 00:09:07,670
+<font color="#CCCCCC">that is</font><font color="#E5E5E5"> really helpful to use the</font>
+
+173
+00:09:07,670 --> 00:09:10,009
+callback function<font color="#CCCCCC"> so now let's talk</font>
+
+174
+00:09:10,009 --> 00:09:12,139
+about promises<font color="#E5E5E5"> let me give you an</font>
+
+175
+00:09:12,139 --> 00:09:14,509
+example<font color="#E5E5E5"> then I will compare callback and</font>
+
+176
+00:09:14,509 --> 00:09:17,749
+promises and give you an<font color="#E5E5E5"> idea of what to</font>
+
+177
+00:09:17,749 --> 00:09:21,559
+use<font color="#E5E5E5"> when and what is good for you people</font>
+
+178
+00:09:21,559 --> 00:09:24,709
+<font color="#CCCCCC">to use in various scenarios okay so I'm</font>
+
+179
+00:09:24,709 --> 00:09:28,999
+<font color="#E5E5E5">going to comment this much code okay and</font>
+
+180
+00:09:28,999 --> 00:09:32,180
+below<font color="#CCCCCC"> that</font><font color="#E5E5E5"> I'm going to</font><font color="#CCCCCC"> use these same</font>
+
+181
+00:09:32,180 --> 00:09:35,230
+functions<font color="#CCCCCC"> with the help of promises in</font>
+
+182
+00:09:35,230 --> 00:09:38,959
+fact I won't<font color="#E5E5E5"> be commenting</font><font color="#CCCCCC"> this these</font>
+
+183
+00:09:38,959 --> 00:09:42,259
+functions<font color="#E5E5E5"> I'll be just commenting this</font>
+
+184
+00:09:42,259 --> 00:09:44,449
+first this usage of<font color="#E5E5E5"> these three</font>
+
+185
+00:09:44,449 --> 00:09:51,470
+functions<font color="#CCCCCC"> okay</font><font color="#E5E5E5"> so right here</font><font color="#CCCCCC"> there are</font>
+
+186
+00:09:51,470 --> 00:09:53,269
+many<font color="#E5E5E5"> ways</font><font color="#CCCCCC"> to use the promises in</font>
+
+187
+00:09:53,269 --> 00:09:56,720
+JavaScript and<font color="#CCCCCC"> nodejs</font><font color="#E5E5E5"> there are various</font>
+
+188
+00:09:56,720 --> 00:09:59,389
+modules available<font color="#E5E5E5"> extensions</font><font color="#CCCCCC"> available</font>
+
+189
+00:09:59,389 --> 00:10:02,420
+that provide promises but right now in
+
+190
+00:10:02,420 --> 00:10:04,309
+JavaScript<font color="#CCCCCC"> I will just give you an</font>
+
+191
+00:10:04,309 --> 00:10:06,620
+overview<font color="#E5E5E5"> using a promise constructor</font>
+
+192
+00:10:06,620 --> 00:10:09,319
+function that is<font color="#E5E5E5"> pretty basic</font><font color="#CCCCCC"> and</font><font color="#E5E5E5"> the</font>
+
+193
+00:10:09,319 --> 00:10:12,649
+general usage of promises<font color="#CCCCCC"> and that</font><font color="#E5E5E5"> is</font>
+
+194
+00:10:12,649 --> 00:10:14,899
+very<font color="#E5E5E5"> easy</font><font color="#CCCCCC"> to understand</font><font color="#E5E5E5"> and I just want</font>
+
+195
+00:10:14,899 --> 00:10:16,819
+<font color="#E5E5E5">to give you guys an idea that what is</font>
+
+196
+00:10:16,819 --> 00:10:19,639
+promises and how to use it<font color="#CCCCCC"> okay</font>
+
+197
+00:10:19,639 --> 00:10:23,540
+so now first<font color="#CCCCCC"> of</font><font color="#E5E5E5"> all I need to create</font><font color="#CCCCCC"> a</font>
+
+198
+00:10:23,540 --> 00:10:25,759
+variable<font color="#E5E5E5"> of a promise using a</font>
+
+199
+00:10:25,759 --> 00:10:28,069
+constructor<font color="#E5E5E5"> promise function so I will</font>
+
+200
+00:10:28,069 --> 00:10:34,459
+<font color="#CCCCCC">use promise equals to new promise and it</font>
+
+201
+00:10:34,459 --> 00:10:37,220
+needs a function and<font color="#E5E5E5"> that returns a</font>
+
+202
+00:10:37,220 --> 00:10:41,009
+result and reject
+
+203
+00:10:41,009 --> 00:10:45,490
+and for returning<font color="#E5E5E5"> the</font><font color="#CCCCCC"> data from within</font>
+
+204
+00:10:45,490 --> 00:10:47,829
+the promise we<font color="#CCCCCC"> need to use this resolved</font>
+
+205
+00:10:47,829 --> 00:10:50,410
+<font color="#E5E5E5">parameter and</font><font color="#CCCCCC"> that is</font><font color="#E5E5E5"> actually the</font>
+
+206
+00:10:50,410 --> 00:10:53,079
+<font color="#CCCCCC">function calling so inside</font>
+
+207
+00:10:53,079 --> 00:11:01,899
+<font color="#CCCCCC">Eid</font><font color="#E5E5E5"> let's return to</font><font color="#CCCCCC"> okay</font><font color="#E5E5E5"> so by using</font>
+
+208
+00:11:01,899 --> 00:11:05,319
+this promise we can<font color="#E5E5E5"> execute a function</font>
+
+209
+00:11:05,319 --> 00:11:08,440
+or<font color="#E5E5E5"> multiple functions so let's execute</font>
+
+210
+00:11:08,440 --> 00:11:10,720
+<font color="#E5E5E5">only one function first and see whether</font>
+
+211
+00:11:10,720 --> 00:11:11,949
+it's working<font color="#E5E5E5"> or not</font>
+
+212
+00:11:11,949 --> 00:11:18,329
+so using this promise dot then and
+
+213
+00:11:18,329 --> 00:11:25,230
+function and response<font color="#E5E5E5"> and inside it</font>
+
+214
+00:11:25,230 --> 00:11:29,319
+let's bring the response<font color="#E5E5E5"> right now I'm</font>
+
+215
+00:11:29,319 --> 00:11:31,149
+not calling<font color="#E5E5E5"> the first second and third</font>
+
+216
+00:11:31,149 --> 00:11:33,940
+function<font color="#E5E5E5"> so these are just a return here</font>
+
+217
+00:11:33,940 --> 00:11:36,160
+these are not being used<font color="#E5E5E5"> right now so</font>
+
+218
+00:11:36,160 --> 00:11:37,870
+let's save this file and<font color="#E5E5E5"> I'm going to</font>
+
+219
+00:11:37,870 --> 00:11:42,009
+click on run and run script<font color="#E5E5E5"> and you can</font>
+
+220
+00:11:42,009 --> 00:11:45,550
+see it has printed<font color="#CCCCCC"> - okay</font><font color="#E5E5E5"> so what it is</font>
+
+221
+00:11:45,550 --> 00:11:49,449
+<font color="#CCCCCC">doing is using this promise variable it</font>
+
+222
+00:11:49,449 --> 00:11:52,569
+is using this then function make sure
+
+223
+00:11:52,569 --> 00:11:54,850
+and<font color="#E5E5E5"> remember that if you are using a</font>
+
+224
+00:11:54,850 --> 00:11:57,970
+constructor<font color="#E5E5E5"> promise function and in most</font>
+
+225
+00:11:57,970 --> 00:12:00,069
+<font color="#E5E5E5">of the cases most people use the same</font>
+
+226
+00:12:00,069 --> 00:12:01,959
+technique of using promises<font color="#E5E5E5"> they use</font>
+
+227
+00:12:01,959 --> 00:12:07,449
+then it means<font color="#CCCCCC"> that don't call</font><font color="#E5E5E5"> don't</font>
+
+228
+00:12:07,449 --> 00:12:10,089
+execute<font color="#E5E5E5"> this</font><font color="#CCCCCC"> function that is within</font><font color="#E5E5E5"> the</font>
+
+229
+00:12:10,089 --> 00:12:12,819
+then function<font color="#E5E5E5"> unless and until this</font>
+
+230
+00:12:12,819 --> 00:12:16,630
+promise return the result<font color="#E5E5E5"> okay</font><font color="#CCCCCC"> and when</font>
+
+231
+00:12:16,630 --> 00:12:18,610
+this promise will Reiser<font color="#E5E5E5"> return the</font>
+
+232
+00:12:18,610 --> 00:12:21,910
+result when this<font color="#CCCCCC"> resolve will be caught</font>
+
+233
+00:12:21,910 --> 00:12:24,610
+<font color="#E5E5E5">and we can call a server call inside it</font>
+
+234
+00:12:24,610 --> 00:12:27,279
+we can call<font color="#E5E5E5"> a database</font><font color="#CCCCCC"> call we can call</font>
+
+235
+00:12:27,279 --> 00:12:29,500
+any kind of API right now it not take
+
+236
+00:12:29,500 --> 00:12:32,139
+any<font color="#CCCCCC"> time but if you are calling</font><font color="#E5E5E5"> a server</font>
+
+237
+00:12:32,139 --> 00:12:34,389
+call that might take time so we need to
+
+238
+00:12:34,389 --> 00:12:38,769
+add promises inside it or even<font color="#E5E5E5"> we can</font>
+
+239
+00:12:38,769 --> 00:12:40,990
+use<font color="#E5E5E5"> callbacks inside the promises as</font>
+
+240
+00:12:40,990 --> 00:12:45,160
+well<font color="#E5E5E5"> okay so</font><font color="#CCCCCC"> now</font><font color="#E5E5E5"> let's create and use</font>
+
+241
+00:12:45,160 --> 00:12:47,230
+these more functions inside<font color="#E5E5E5"> these</font>
+
+242
+00:12:47,230 --> 00:12:54,660
+promises<font color="#E5E5E5"> so first of all let me</font>
+
+243
+00:12:54,690 --> 00:12:57,880
+remove this<font color="#E5E5E5"> control</font><font color="#CCCCCC"> double yolk response</font>
+
+244
+00:12:57,880 --> 00:13:01,540
+and I'm going<font color="#E5E5E5"> to use this function</font><font color="#CCCCCC"> okay</font>
+
+245
+00:13:01,540 --> 00:13:05,500
+so so I'm going<font color="#E5E5E5"> to remove this function</font>
+
+246
+00:13:05,500 --> 00:13:09,130
+and before<font color="#E5E5E5"> using these</font><font color="#CCCCCC"> functions let me</font>
+
+247
+00:13:09,130 --> 00:13:10,840
+remove the<font color="#CCCCCC"> callback because</font><font color="#E5E5E5"> we are using</font>
+
+248
+00:13:10,840 --> 00:13:12,790
+<font color="#CCCCCC">promises so we don't need call back</font>
+
+249
+00:13:12,790 --> 00:13:17,650
+<font color="#CCCCCC">right here and instead</font><font color="#E5E5E5"> of these</font>
+
+250
+00:13:17,650 --> 00:13:25,380
+callbacks<font color="#CCCCCC"> we need to return these values</font>
+
+251
+00:13:26,100 --> 00:13:30,640
+<font color="#E5E5E5">okay so let's copy this line and copy</font>
+
+252
+00:13:30,640 --> 00:13:42,250
+here<font color="#E5E5E5"> and copy here okay</font><font color="#CCCCCC"> so now let's use</font>
+
+253
+00:13:42,250 --> 00:13:45,280
+this promise dot then and we need to
+
+254
+00:13:45,280 --> 00:13:50,770
+call the functions<font color="#CCCCCC"> so then first dot</font>
+
+255
+00:13:50,770 --> 00:13:58,230
+then second dot then third dot then and
+
+256
+00:13:58,230 --> 00:14:03,730
+function and response and console dot
+
+257
+00:14:03,730 --> 00:14:11,890
+log and response<font color="#CCCCCC"> okay so let's run it</font>
+
+258
+00:14:11,890 --> 00:14:15,310
+and<font color="#E5E5E5"> you</font><font color="#CCCCCC"> can see it has printed</font><font color="#E5E5E5"> eight so</font>
+
+259
+00:14:15,310 --> 00:14:18,960
+let<font color="#E5E5E5"> me explain you how is</font><font color="#CCCCCC"> it</font><font color="#E5E5E5"> working so</font>
+
+260
+00:14:18,960 --> 00:14:21,670
+promise dot then and I'm using this
+
+261
+00:14:21,670 --> 00:14:24,970
+function and it<font color="#CCCCCC"> is calling</font><font color="#E5E5E5"> this function</font>
+
+262
+00:14:24,970 --> 00:14:28,050
+<font color="#CCCCCC">I'm not sending out any value inside it</font>
+
+263
+00:14:28,050 --> 00:14:31,120
+instead<font color="#E5E5E5"> it will automatically receive</font>
+
+264
+00:14:31,120 --> 00:14:33,490
+<font color="#E5E5E5">the value from the previous function</font>
+
+265
+00:14:33,490 --> 00:14:37,120
+<font color="#CCCCCC">right here the</font><font color="#E5E5E5"> previous result of this</font>
+
+266
+00:14:37,120 --> 00:14:39,670
+promise is this this<font color="#E5E5E5"> promise this</font>
+
+267
+00:14:39,670 --> 00:14:41,740
+<font color="#E5E5E5">function and whatever will be returned</font>
+
+268
+00:14:41,740 --> 00:14:44,770
+from this<font color="#CCCCCC"> resolve</font><font color="#E5E5E5"> is becoming the</font>
+
+269
+00:14:44,770 --> 00:14:46,780
+parameter that is going to be sent from
+
+270
+00:14:46,780 --> 00:14:49,780
+within<font color="#E5E5E5"> this then and this first function</font>
+
+271
+00:14:49,780 --> 00:14:54,700
+okay<font color="#E5E5E5"> so this is being sent out to right</font>
+
+272
+00:14:54,700 --> 00:14:57,070
+here and then<font color="#E5E5E5"> two plus two equals to 4</font>
+
+273
+00:14:57,070 --> 00:15:00,850
+and then 4<font color="#CCCCCC"> is being used in the second</font>
+
+274
+00:15:00,850 --> 00:15:03,520
+function<font color="#E5E5E5"> and then four three is being</font>
+
+275
+00:15:03,520 --> 00:15:06,190
+received here<font color="#CCCCCC"> 4 plus</font><font color="#E5E5E5"> 2 equals to 6 and</font>
+
+276
+00:15:06,190 --> 00:15:07,600
+it is called
+
+277
+00:15:07,600 --> 00:15:10,630
+third and third is receiving<font color="#CCCCCC"> 6 and then</font>
+
+278
+00:15:10,630 --> 00:15:14,259
+6<font color="#CCCCCC"> plus</font><font color="#E5E5E5"> 2 equals to 8 and then 8 is being</font>
+
+279
+00:15:14,259 --> 00:15:17,019
+received<font color="#E5E5E5"> within this response and</font><font color="#CCCCCC"> that</font>
+
+280
+00:15:17,019 --> 00:15:20,199
+response is being logged out and<font color="#E5E5E5"> that's</font>
+
+281
+00:15:20,199 --> 00:15:22,709
+why you have seen<font color="#CCCCCC"> that result</font><font color="#E5E5E5"> 8</font>
+
+282
+00:15:22,709 --> 00:15:28,420
+<font color="#CCCCCC">ok so let's compare the callbacks and</font>
+
+283
+00:15:28,420 --> 00:15:31,060
+the function we<font color="#E5E5E5"> are executing</font><font color="#CCCCCC"> the same</font>
+
+284
+00:15:31,060 --> 00:15:32,769
+<font color="#E5E5E5">kind of</font><font color="#CCCCCC"> functionality using the</font>
+
+285
+00:15:32,769 --> 00:15:35,110
+<font color="#E5E5E5">callbacks and the functions we can also</font>
+
+286
+00:15:35,110 --> 00:15:39,550
+use<font color="#E5E5E5"> before</font><font color="#CCCCCC"> returning right here</font><font color="#E5E5E5"> we can</font>
+
+287
+00:15:39,550 --> 00:15:41,380
+<font color="#E5E5E5">also use callback function we can</font><font color="#CCCCCC"> use</font>
+
+288
+00:15:41,380 --> 00:15:43,630
+the promises within the callbacks<font color="#E5E5E5"> or a</font>
+
+289
+00:15:43,630 --> 00:15:45,790
+callback within the promises so it's up
+
+290
+00:15:45,790 --> 00:15:49,269
+to<font color="#CCCCCC"> us that how we want</font><font color="#E5E5E5"> to use it</font><font color="#CCCCCC"> ok</font><font color="#E5E5E5"> we</font>
+
+291
+00:15:49,269 --> 00:15:51,279
+need<font color="#E5E5E5"> to use a callback right here if</font>
+
+292
+00:15:51,279 --> 00:15:53,079
+within<font color="#E5E5E5"> this first</font><font color="#CCCCCC"> function we need</font><font color="#E5E5E5"> to</font>
+
+293
+00:15:53,079 --> 00:15:54,910
+<font color="#E5E5E5">fight the data from somewhere</font><font color="#CCCCCC"> that will</font>
+
+294
+00:15:54,910 --> 00:15:57,339
+take time<font color="#E5E5E5"> so we don't want to return the</font>
+
+295
+00:15:57,339 --> 00:16:00,819
+value<font color="#CCCCCC"> from here</font><font color="#E5E5E5"> until it it it receives</font>
+
+296
+00:16:00,819 --> 00:16:03,850
+the data<font color="#E5E5E5"> from that server ok so we need</font>
+
+297
+00:16:03,850 --> 00:16:06,490
+<font color="#E5E5E5">to wait for</font><font color="#CCCCCC"> the server to send</font><font color="#E5E5E5"> the data</font>
+
+298
+00:16:06,490 --> 00:16:08,920
+and<font color="#E5E5E5"> then we will receive we can return</font>
+
+299
+00:16:08,920 --> 00:16:10,899
+<font color="#E5E5E5">the data within that callback function</font>
+
+300
+00:16:10,899 --> 00:16:16,660
+<font color="#CCCCCC">okay</font><font color="#E5E5E5"> so right here let</font><font color="#CCCCCC"> me bring it up a</font>
+
+301
+00:16:16,660 --> 00:16:17,110
+bit
+
+302
+00:16:17,110 --> 00:16:22,209
+<font color="#E5E5E5">so in callback we use this bunch of code</font>
+
+303
+00:16:22,209 --> 00:16:25,660
+right<font color="#CCCCCC"> here but in promises we just wrote</font>
+
+304
+00:16:25,660 --> 00:16:31,540
+this function<font color="#CCCCCC"> so</font><font color="#E5E5E5"> you can see that the in</font>
+
+305
+00:16:31,540 --> 00:16:34,509
+promises we have<font color="#CCCCCC"> the minimal lines of</font>
+
+306
+00:16:34,509 --> 00:16:37,630
+code and that is more cleaner and in
+
+307
+00:16:37,630 --> 00:16:40,569
+callbacks that<font color="#E5E5E5"> becomes more messy and</font>
+
+308
+00:16:40,569 --> 00:16:42,850
+that<font color="#E5E5E5"> is very</font><font color="#CCCCCC"> difficult to understand if</font>
+
+309
+00:16:42,850 --> 00:16:46,149
+we want to<font color="#E5E5E5"> see and revise our code after</font>
+
+310
+00:16:46,149 --> 00:16:47,949
+a few months then we<font color="#E5E5E5"> must be</font><font color="#CCCCCC"> able to</font>
+
+311
+00:16:47,949 --> 00:16:51,490
+remember it<font color="#CCCCCC"> that what I</font><font color="#E5E5E5"> did and right</font>
+
+312
+00:16:51,490 --> 00:16:53,380
+now these<font color="#CCCCCC"> are just three callbacks but</font>
+
+313
+00:16:53,380 --> 00:16:56,189
+in<font color="#CCCCCC"> real-time</font><font color="#E5E5E5"> applications we might have</font>
+
+314
+00:16:56,189 --> 00:16:59,410
+<font color="#CCCCCC">20</font><font color="#E5E5E5"> plus or the 50 plus callback</font>
+
+315
+00:16:59,410 --> 00:17:01,240
+functions within<font color="#E5E5E5"> the other function so</font>
+
+316
+00:17:01,240 --> 00:17:03,670
+<font color="#CCCCCC">that will become really messy and that</font>
+
+317
+00:17:03,670 --> 00:17:07,390
+messiness<font color="#E5E5E5"> is generally known as callback</font>
+
+318
+00:17:07,390 --> 00:17:12,039
+hell<font color="#E5E5E5"> so contact hell lead us to the</font>
+
+319
+00:17:12,039 --> 00:17:14,619
+promises<font color="#CCCCCC"> and</font><font color="#E5E5E5"> that forced us</font><font color="#CCCCCC"> to use the</font>
+
+320
+00:17:14,619 --> 00:17:16,990
+promises because promises are more
+
+321
+00:17:16,990 --> 00:17:20,319
+cleaner and more easy to<font color="#E5E5E5"> remember</font>
+
+322
+00:17:20,319 --> 00:17:23,619
+<font color="#CCCCCC">or easy to</font><font color="#E5E5E5"> revise in the future okay so</font>
+
+323
+00:17:23,619 --> 00:17:28,269
+that's why if<font color="#E5E5E5"> we want</font><font color="#CCCCCC"> to use promises or</font>
+
+324
+00:17:28,269 --> 00:17:29,740
+if<font color="#CCCCCC"> we want to</font><font color="#E5E5E5"> call</font>
+
+325
+00:17:29,740 --> 00:17:31,690
+so<font color="#E5E5E5"> many functions that are dependent on</font>
+
+326
+00:17:31,690 --> 00:17:34,179
+<font color="#E5E5E5">the other function results then it is</font>
+
+327
+00:17:34,179 --> 00:17:37,570
+recommended<font color="#CCCCCC"> that we can use promises and</font>
+
+328
+00:17:37,570 --> 00:17:40,450
+we need to use promises we can also use
+
+329
+00:17:40,450 --> 00:17:43,360
+callbacks<font color="#CCCCCC"> but that will</font><font color="#E5E5E5"> not be a good</font>
+
+330
+00:17:43,360 --> 00:17:47,110
+<font color="#E5E5E5">practice for other people who are your</font>
+
+331
+00:17:47,110 --> 00:17:48,850
+team members who want<font color="#CCCCCC"> to see the code</font>
+
+332
+00:17:48,850 --> 00:17:50,950
+<font color="#E5E5E5">that will</font><font color="#CCCCCC"> be difficult for them to</font><font color="#E5E5E5"> get</font>
+
+333
+00:17:50,950 --> 00:17:54,039
+<font color="#E5E5E5">the idea what is happening</font><font color="#CCCCCC"> here</font><font color="#E5E5E5"> so that</font>
+
+334
+00:17:54,039 --> 00:17:56,200
+is the actually reason both are the
+
+335
+00:17:56,200 --> 00:17:58,090
+things are saying both<font color="#E5E5E5"> perform the same</font>
+
+336
+00:17:58,090 --> 00:18:00,879
+functionality<font color="#CCCCCC"> there is</font><font color="#E5E5E5"> nothing that a</font>
+
+337
+00:18:00,879 --> 00:18:03,460
+callback can do that<font color="#E5E5E5"> a promise can't do</font>
+
+338
+00:18:03,460 --> 00:18:06,370
+and same as the promise<font color="#E5E5E5"> there is</font><font color="#CCCCCC"> nothing</font>
+
+339
+00:18:06,370 --> 00:18:08,980
+<font color="#CCCCCC">that promise can</font><font color="#E5E5E5"> do that a callback</font>
+
+340
+00:18:08,980 --> 00:18:13,570
+can't do so it's up to<font color="#E5E5E5"> you it's up to us</font>
+
+341
+00:18:13,570 --> 00:18:15,700
+that how we want to<font color="#CCCCCC"> use both the things</font>
+
+342
+00:18:15,700 --> 00:18:18,279
+we can merge both the things so but we
+
+343
+00:18:18,279 --> 00:18:20,669
+want to follow<font color="#E5E5E5"> the best practices</font><font color="#CCCCCC"> and</font>
+
+344
+00:18:20,669 --> 00:18:24,990
+make our code more cleaner and more
+
+345
+00:18:24,990 --> 00:18:27,639
+<font color="#CCCCCC">good-looking so that's it for this video</font>
+
+346
+00:18:27,639 --> 00:18:29,230
+I hope<font color="#CCCCCC"> that you have liked it if you</font>
+
+347
+00:18:29,230 --> 00:18:31,149
+<font color="#E5E5E5">have any question just comment below</font><font color="#CCCCCC"> and</font>
+
+348
+00:18:31,149 --> 00:18:33,879
+I just want to remember you<font color="#CCCCCC"> that in the</font>
+
+349
+00:18:33,879 --> 00:18:35,049
+<font color="#E5E5E5">next video I</font><font color="#CCCCCC"> will be talking about</font>
+
+350
+00:18:35,049 --> 00:18:38,259
+<font color="#CCCCCC">asynchronous programming in node.js and</font>
+
+351
+00:18:38,259 --> 00:18:39,700
+that will be very<font color="#CCCCCC"> helpful for you guys</font>
+
+352
+00:18:39,700 --> 00:18:42,970
+<font color="#E5E5E5">who wants to write asynchronous nowadays</font>
+
+353
+00:18:42,970 --> 00:18:45,370
+<font color="#CCCCCC">and many things is asynchronous</font><font color="#E5E5E5"> so we</font>
+
+354
+00:18:45,370 --> 00:18:47,440
+need to<font color="#E5E5E5"> learn</font><font color="#CCCCCC"> that what are the best</font>
+
+355
+00:18:47,440 --> 00:18:49,690
+practices<font color="#E5E5E5"> of writing asynchronous code</font>
+
+356
+00:18:49,690 --> 00:18:53,080
+using node<font color="#E5E5E5"> so wait</font><font color="#CCCCCC"> for it make sure</font><font color="#E5E5E5"> to</font>
+
+357
+00:18:53,080 --> 00:18:54,700
+subscribe my channel don't<font color="#E5E5E5"> forget to</font>
+
+358
+00:18:54,700 --> 00:18:59,049
+<font color="#E5E5E5">subscribe</font><font color="#CCCCCC"> that is really helpful for</font><font color="#E5E5E5"> us</font>
+
+359
+00:18:59,049 --> 00:19:01,870
+that really<font color="#E5E5E5"> support us that encouraged</font>
+
+360
+00:19:01,870 --> 00:19:04,570
+<font color="#E5E5E5">us to create</font><font color="#CCCCCC"> more</font><font color="#E5E5E5"> and more new</font><font color="#CCCCCC"> videos</font>
+
+361
+00:19:04,570 --> 00:00:00,000
+thanks for<font color="#E5E5E5"> watching stay tuned</font>
+
